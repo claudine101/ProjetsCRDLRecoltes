@@ -31,8 +31,7 @@ namespace TEMPLATE.Controllers
             return View(colline);
         }
 
-        //
-        // GET: /Colline/Create
+
 
         public ActionResult Create()
         {
