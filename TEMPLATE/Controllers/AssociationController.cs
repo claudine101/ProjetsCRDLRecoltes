@@ -94,21 +94,12 @@ namespace TEMPLATE.Controllers
             ViewData["historique"] = historique.ToList();
             return View();
         }
+        
+        
         //POUR RAPPORT 
         public ActionResult GetData()
         {
             RecolteEntities context = new RecolteEntities();
-
-            //var query = context.Produits .GroupBy(p => p.produitName)
-            //       .Select(g => new { name = g.Key, count = g.Sum(w => w.PrixUnitaire) }).ToList();
-
-            //var list = context.clients.GroupBy(t => new { t.NOM_client, t.ID_client })
-            //  .Select(i => new
-            //  {
-            //      name = i.Key.NOM_client,
-            //      count = i.Sum(w => w.ID_client)
-            //  }).ToList();
-
             var quantite = from a in db.associations
                            join c in db.clients
                            on a.ID_association equals c.ID_association
