@@ -157,14 +157,6 @@ namespace TEMPLATE.Controllers
             return View(client);
         }
 
-
-
-
-
-
-
-
-
         public ActionResult Edit(int id = 0)
         {
             client client = db.clients.Find(id);
@@ -179,10 +171,10 @@ namespace TEMPLATE.Controllers
             ViewBag.ID_colline = new SelectList(db.collines, "ID_colline", "NOM_colline");
             return View();
         }
-
-        //
-        // POST: /Client/Edit/5
-
+        
+        
+        
+        
         [HttpPost]
         public ActionResult Edit(client client)
         {
