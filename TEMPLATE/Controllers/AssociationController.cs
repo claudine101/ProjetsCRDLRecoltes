@@ -42,8 +42,6 @@ namespace TEMPLATE.Controllers
                                };
             return Json(NombreClient, JsonRequestBehavior.AllowGet);
         }
-
-
         public ActionResult Index()
         {
 
