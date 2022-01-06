@@ -87,9 +87,6 @@ namespace TEMPLATE.Controllers
             return View(zone);
         }
 
-        //
-        // POST: /Zone/Delete/5
-
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
