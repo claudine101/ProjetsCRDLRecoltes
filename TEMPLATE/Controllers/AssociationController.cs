@@ -241,6 +241,8 @@ namespace TEMPLATE.Controllers
             base.Dispose(disposing);
 
         }
+        
+        
         public JsonResult getCommune(int id)
         {
             db.Configuration.ProxyCreationEnabled = false;
