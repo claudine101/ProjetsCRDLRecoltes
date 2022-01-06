@@ -130,6 +130,10 @@ namespace TEMPLATE.Controllers
             }
             return View(client);
         }
+
+        //
+        // POST: /Client/Delete/5
+
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
@@ -146,7 +150,3 @@ namespace TEMPLATE.Controllers
         }
     }
 }
-
-
-
-
