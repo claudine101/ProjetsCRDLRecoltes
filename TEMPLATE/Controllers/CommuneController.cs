@@ -62,9 +62,6 @@ namespace TEMPLATE.Controllers
             return View(commune);
         }
 
-        //
-        // POST: /Commune/Edit/5
-
         [HttpPost]
         public ActionResult Edit(commune commune)
         {
