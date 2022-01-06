@@ -1,125 +1,125 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using TEMPLATE.Models;
+﻿//using System;
+//using System.Collections.Generic;
+//using System.Data;
+//using System.Data.Entity;
+//using System.Linq;
+//using System.Web;
+//using System.Web.Mvc;
+//using TEMPLATE.Models;
 
-namespace TEMPLATE.Controllers
-{
-    public class EmployeAssociationController : Controller
-    {
-        private RecolteEntities db = new RecolteEntities();
+//namespace TEMPLATE.Controllers
+//{
+//    public class EmployeAssociationController : Controller
+//    {
+//        private RecolteEntities db = new RecolteEntities();
 
-        //
-        // GET: /EmployeAssociation/
+//        //
+//        // GET: /EmployeAssociation/
 
-        public ActionResult Index()
-        {
-            var employe_association = db.employe_association.Include(e => e.association);
-            return View(employe_association.ToList());
-        }
+//        public ActionResult Index()
+//        {
+//            var employe_association = db.employe_association.Include(e => e.association);
+//            return View(employe_association.ToList());
+//        }
 
-        //
-        // GET: /EmployeAssociation/Details/5
+//        //
+//        // GET: /EmployeAssociation/Details/5
 
-        public ActionResult Details(int id = 0)
-        {
-            employe_association employe_association = db.employe_association.Find(id);
-            if (employe_association == null)
-            {
-                return HttpNotFound();
-            }
-            return View(employe_association);
-        }
+//        public ActionResult Details(int id = 0)
+//        {
+//            employe_association employe_association = db.employe_association.Find(id);
+//            if (employe_association == null)
+//            {
+//                return HttpNotFound();
+//            }
+//            return View(employe_association);
+//        }
 
-        //
-        // GET: /EmployeAssociation/Create
+//        //
+//        // GET: /EmployeAssociation/Create
 
-        public ActionResult Create()
-        {
-            ViewBag.ID_association = new SelectList(db.associations, "ID_association", "NOM_association");
-            return View();
-        }
+//        public ActionResult Create()
+//        {
+//            ViewBag.ID_association = new SelectList(db.associations, "ID_association", "NOM_association");
+//            return View();
+//        }
 
-        //
-        // POST: /EmployeAssociation/Create
+//        //
+//        // POST: /EmployeAssociation/Create
 
-        [HttpPost]
-        public ActionResult Create(employe_association employe_association)
-        {
-            if (ModelState.IsValid)
-            {
-                db.employe_association.Add(employe_association);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+//        [HttpPost]
+//        public ActionResult Create(employe_association employe_association)
+//        {
+//            if (ModelState.IsValid)
+//            {
+//                db.employe_association.Add(employe_association);
+//                db.SaveChanges();
+//                return RedirectToAction("Index");
+//            }
 
-            ViewBag.ID_association = new SelectList(db.associations, "ID_association", "NOM_association", employe_association.ID_association);
-            return View(employe_association);
-        }
+//            ViewBag.ID_association = new SelectList(db.associations, "ID_association", "NOM_association", employe_association.ID_association);
+//            return View(employe_association);
+//        }
 
-        //
-        // GET: /EmployeAssociation/Edit/5
+//        //
+//        // GET: /EmployeAssociation/Edit/5
 
-        public ActionResult Edit(int id = 0)
-        {
-            employe_association employe_association = db.employe_association.Find(id);
-            if (employe_association == null)
-            {
-                return HttpNotFound();
-            }
-            ViewBag.ID_association = new SelectList(db.associations, "ID_association", "NOM_association", employe_association.ID_association);
-            return View(employe_association);
-        }
+//        public ActionResult Edit(int id = 0)
+//        {
+//            employe_association employe_association = db.employe_association.Find(id);
+//            if (employe_association == null)
+//            {
+//                return HttpNotFound();
+//            }
+//            ViewBag.ID_association = new SelectList(db.associations, "ID_association", "NOM_association", employe_association.ID_association);
+//            return View(employe_association);
+//        }
 
-        //
-        // POST: /EmployeAssociation/Edit/5
+//        //
+//        // POST: /EmployeAssociation/Edit/5
 
-        [HttpPost]
-        public ActionResult Edit(employe_association employe_association)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(employe_association).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            ViewBag.ID_association = new SelectList(db.associations, "ID_association", "NOM_association", employe_association.ID_association);
-            return View(employe_association);
-        }
+//        [HttpPost]
+//        public ActionResult Edit(employe_association employe_association)
+//        {
+//            if (ModelState.IsValid)
+//            {
+//                db.Entry(employe_association).State = EntityState.Modified;
+//                db.SaveChanges();
+//                return RedirectToAction("Index");
+//            }
+//            ViewBag.ID_association = new SelectList(db.associations, "ID_association", "NOM_association", employe_association.ID_association);
+//            return View(employe_association);
+//        }
 
-        //
-        // GET: /EmployeAssociation/Delete/5
+//        //
+//        // GET: /EmployeAssociation/Delete/5
 
-        public ActionResult Delete(int id = 0)
-        {
-            employe_association employe_association = db.employe_association.Find(id);
-            if (employe_association == null)
-            {
-                return HttpNotFound();
-            }
-            return View(employe_association);
-        }
+//        public ActionResult Delete(int id = 0)
+//        {
+//            employe_association employe_association = db.employe_association.Find(id);
+//            if (employe_association == null)
+//            {
+//                return HttpNotFound();
+//            }
+//            return View(employe_association);
+//        }
 
-        //
-        // POST: /EmployeAssociation/Delete/5
+//        //
+//        // POST: /EmployeAssociation/Delete/5
 
-        [HttpPost, ActionName("Delete")]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            employe_association employe_association = db.employe_association.Find(id);
-            db.employe_association.Remove(employe_association);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
+//        [HttpPost, ActionName("Delete")]
+//        public ActionResult DeleteConfirmed(int id)
+//        {
+//            employe_association employe_association = db.employe_association.Find(id);
+//            db.employe_association.Remove(employe_association);
+//            db.SaveChanges();
+//            return RedirectToAction("Index");
+//        }
 
-        protected override void Dispose(bool disposing)
-        {
-            db.Dispose();
-            base.Dispose(disposing);
-        }
-    }
-}
+//        protected override void Dispose(bool disposing)
+//        {
+//            db.Dispose();
+//            base.Dispose(disposing);
+//        }
+//    }
+//}

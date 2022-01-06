@@ -1,125 +1,125 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Data.Entity;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
-using TEMPLATE.Models;
+﻿//using System;
+//using System.Collections.Generic;
+//using System.Data;
+//using System.Data.Entity;
+//using System.Linq;
+//using System.Web;
+//using System.Web.Mvc;
+//using TEMPLATE.Models;
 
-namespace TEMPLATE.Controllers
-{
-    public class EmployeStationController : Controller
-    {
-        private RecolteEntities db = new RecolteEntities();
+//namespace TEMPLATE.Controllers
+//{
+//    public class EmployeStationController : Controller
+//    {
+//        private RecolteEntities db = new RecolteEntities();
 
-        //
-        // GET: /EmployeStation/
+//        //
+//        // GET: /EmployeStation/
 
-        public ActionResult Index()
-        {
-            var employe_station_lavage = db.employe_station_lavage.Include(e => e.station_lavage);
-            return View(employe_station_lavage.ToList());
-        }
+//        public ActionResult Index()
+//        {
+//            var employe_station_lavage = db.employe_station_lavage.Include(e => e.station_lavage);
+//            return View(employe_station_lavage.ToList());
+//        }
 
-        //
-        // GET: /EmployeStation/Details/5
+//        //
+//        // GET: /EmployeStation/Details/5
 
-        public ActionResult Details(int id = 0)
-        {
-            employe_station_lavage employe_station_lavage = db.employe_station_lavage.Find(id);
-            if (employe_station_lavage == null)
-            {
-                return HttpNotFound();
-            }
-            return View(employe_station_lavage);
-        }
+//        public ActionResult Details(int id = 0)
+//        {
+//            employe_station_lavage employe_station_lavage = db.employe_station_lavage.Find(id);
+//            if (employe_station_lavage == null)
+//            {
+//                return HttpNotFound();
+//            }
+//            return View(employe_station_lavage);
+//        }
 
-        //
-        // GET: /EmployeStation/Create
+//        //
+//        // GET: /EmployeStation/Create
 
-        public ActionResult Create()
-        {
-            ViewBag.ID_station = new SelectList(db.station_lavage, "ID_station", "NOM_station");
-            return View();
-        }
+//        public ActionResult Create()
+//        {
+//            ViewBag.ID_station = new SelectList(db.station_lavage, "ID_station", "NOM_station");
+//            return View();
+//        }
 
-        //
-        // POST: /EmployeStation/Create
+//        //
+//        // POST: /EmployeStation/Create
 
-        [HttpPost]
-        public ActionResult Create(employe_station_lavage employe_station_lavage)
-        {
-            if (ModelState.IsValid)
-            {
-                db.employe_station_lavage.Add(employe_station_lavage);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+//        [HttpPost]
+//        public ActionResult Create(employe_station_lavage employe_station_lavage)
+//        {
+//            if (ModelState.IsValid)
+//            {
+//                db.employe_station_lavage.Add(employe_station_lavage);
+//                db.SaveChanges();
+//                return RedirectToAction("Index");
+//            }
 
-            ViewBag.ID_station = new SelectList(db.station_lavage, "ID_station", "NOM_station", employe_station_lavage.ID_station);
-            return View(employe_station_lavage);
-        }
+//            ViewBag.ID_station = new SelectList(db.station_lavage, "ID_station", "NOM_station", employe_station_lavage.ID_station);
+//            return View(employe_station_lavage);
+//        }
 
-        //
-        // GET: /EmployeStation/Edit/5
+//        //
+//        // GET: /EmployeStation/Edit/5
 
-        public ActionResult Edit(int id = 0)
-        {
-            employe_station_lavage employe_station_lavage = db.employe_station_lavage.Find(id);
-            if (employe_station_lavage == null)
-            {
-                return HttpNotFound();
-            }
-            ViewBag.ID_station = new SelectList(db.station_lavage, "ID_station", "NOM_station", employe_station_lavage.ID_station);
-            return View(employe_station_lavage);
-        }
+//        public ActionResult Edit(int id = 0)
+//        {
+//            employe_station_lavage employe_station_lavage = db.employe_station_lavage.Find(id);
+//            if (employe_station_lavage == null)
+//            {
+//                return HttpNotFound();
+//            }
+//            ViewBag.ID_station = new SelectList(db.station_lavage, "ID_station", "NOM_station", employe_station_lavage.ID_station);
+//            return View(employe_station_lavage);
+//        }
 
-        //
-        // POST: /EmployeStation/Edit/5
+//        //
+//        // POST: /EmployeStation/Edit/5
 
-        [HttpPost]
-        public ActionResult Edit(employe_station_lavage employe_station_lavage)
-        {
-            if (ModelState.IsValid)
-            {
-                db.Entry(employe_station_lavage).State = EntityState.Modified;
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
-            ViewBag.ID_station = new SelectList(db.station_lavage, "ID_station", "NOM_station", employe_station_lavage.ID_station);
-            return View(employe_station_lavage);
-        }
+//        [HttpPost]
+//        public ActionResult Edit(employe_station_lavage employe_station_lavage)
+//        {
+//            if (ModelState.IsValid)
+//            {
+//                db.Entry(employe_station_lavage).State = EntityState.Modified;
+//                db.SaveChanges();
+//                return RedirectToAction("Index");
+//            }
+//            ViewBag.ID_station = new SelectList(db.station_lavage, "ID_station", "NOM_station", employe_station_lavage.ID_station);
+//            return View(employe_station_lavage);
+//        }
 
-        //
-        // GET: /EmployeStation/Delete/5
+//        //
+//        // GET: /EmployeStation/Delete/5
 
-        public ActionResult Delete(int id = 0)
-        {
-            employe_station_lavage employe_station_lavage = db.employe_station_lavage.Find(id);
-            if (employe_station_lavage == null)
-            {
-                return HttpNotFound();
-            }
-            return View(employe_station_lavage);
-        }
+//        public ActionResult Delete(int id = 0)
+//        {
+//            employe_station_lavage employe_station_lavage = db.employe_station_lavage.Find(id);
+//            if (employe_station_lavage == null)
+//            {
+//                return HttpNotFound();
+//            }
+//            return View(employe_station_lavage);
+//        }
 
-        //
-        // POST: /EmployeStation/Delete/5
+//        //
+//        // POST: /EmployeStation/Delete/5
 
-        [HttpPost, ActionName("Delete")]
-        public ActionResult DeleteConfirmed(int id)
-        {
-            employe_station_lavage employe_station_lavage = db.employe_station_lavage.Find(id);
-            db.employe_station_lavage.Remove(employe_station_lavage);
-            db.SaveChanges();
-            return RedirectToAction("Index");
-        }
+//        [HttpPost, ActionName("Delete")]
+//        public ActionResult DeleteConfirmed(int id)
+//        {
+//            employe_station_lavage employe_station_lavage = db.employe_station_lavage.Find(id);
+//            db.employe_station_lavage.Remove(employe_station_lavage);
+//            db.SaveChanges();
+//            return RedirectToAction("Index");
+//        }
 
-        protected override void Dispose(bool disposing)
-        {
-            db.Dispose();
-            base.Dispose(disposing);
-        }
-    }
-}
+//        protected override void Dispose(bool disposing)
+//        {
+//            db.Dispose();
+//            base.Dispose(disposing);
+//        }
+//    }
+//}
