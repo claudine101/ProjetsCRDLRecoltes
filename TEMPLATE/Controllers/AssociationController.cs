@@ -161,6 +161,7 @@ namespace TEMPLATE.Controllers
         }
        
         
+
         public ActionResult Create()
         {
             ViewBag.ID_province = new SelectList(db.provinces, "ID_province", "NOM_province");
