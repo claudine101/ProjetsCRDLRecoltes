@@ -37,32 +37,23 @@
 <div class="card-body rec-pat" >
   <div class="container-fluid">
       <div class="row">
-           @if (Session["IDEmploye"] != null)
-      { 
-         <div class="col-md-12" id="containerClient1"  style="border: 1px solid #d2d7db;"></div>
-           @section scripts
-    {
-       <script src="~/Scripts/stationClientDashboard.js"></script>
-
-}
+         @if (Session["IDEmploye"] != null)
+         { 
+             <div class="col-md-12" id="containerClient1"  style="border: 1px solid #d2d7db;"></div>
+               @section scripts
+              {
+                <script src="~/Scripts/stationClientDashboard.js"></script>
+               }
            }
           else
-         { 
-         <div class="col-md-12" id="containerClient"  style="border: 1px solid #d2d7db;"></div>
-          @section scripts
-    {
-
-    <script src="~/Scripts/stationClient.js"></script>
-}
-           }
-          
+          { 
+                  <div class="col-md-12" id="containerClient"  style="border: 1px solid #d2d7db;"></div>
+                    @section scripts
+                    {
+                      <script src="~/Scripts/stationClient.js"></script>
+                    }
+           } 
         </div>
-       @*
-       <div class="col-md-6" id="containerStationClient"  style="border: 1px solid #d2d7db;"></div>
-       <div class="row"><div class="col-md-6" id="containerAssociationClient"  style="border: 1px solid #d2d7db;"></div>
-          <div class="col-md-6" id="containerAssociationQuantite"  style="border: 1px solid #d2d7db;"></div>
-        </div>*@
-    
 </div>
 <div class="modal fade" id="myModal" role="dialog">
   <div class="modal-dialog modal-lg" style ="width:1000px;">
