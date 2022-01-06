@@ -199,6 +199,8 @@ namespace TEMPLATE.Controllers
             ViewBag.ID_colline = new SelectList(db.collines, "ID_colline", "NOM_colline");
             return View(association);
         }
+
+
         [HttpPost]
         public ActionResult Edit(association association)
         {
