@@ -156,7 +156,6 @@ namespace TEMPLATE.Controllers
             ViewBag.ID_colline = new SelectList(db.collines, "ID_colline", "NOM_colline", client.ID_colline);
             return View(client);
         }
-
         public ActionResult Edit(int id = 0)
         {
             client client = db.clients.Find(id);
@@ -171,10 +170,6 @@ namespace TEMPLATE.Controllers
             ViewBag.ID_colline = new SelectList(db.collines, "ID_colline", "NOM_colline");
             return View();
         }
-        
-        
-        
-        
         [HttpPost]
         public ActionResult Edit(client client)
         {
@@ -188,10 +183,6 @@ namespace TEMPLATE.Controllers
             ViewBag.ID_colline = new SelectList(db.collines, "ID_colline", "NOM_colline", client.ID_colline);
             return View(client);
         }
-
-        //
-        // GET: /Client/Delete/5
-
         public ActionResult Delete(int id = 0)
         {
             client client = db.clients.Find(id);
