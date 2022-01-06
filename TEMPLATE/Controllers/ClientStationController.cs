@@ -143,9 +143,6 @@ namespace TEMPLATE.Controllers
             return View();
         }
 
-        //
-        // POST: /Client/Create
-
         [HttpPost]
         public ActionResult Create(client client)
         {
