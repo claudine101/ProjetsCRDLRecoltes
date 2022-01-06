@@ -20,8 +20,6 @@ namespace TEMPLATE.Controllers
             return View(collines.ToList());
         }
 
-        //
-        // GET: /Colline/Details/5
 
         public ActionResult Details(int id = 0)
         {
