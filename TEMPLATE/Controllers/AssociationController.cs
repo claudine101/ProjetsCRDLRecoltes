@@ -84,6 +84,8 @@ namespace TEMPLATE.Controllers
             return View();
         }
         //POUR ASSOCITION INACTIF
+        
+        
         public ActionResult Indexe()
         {
             var association = db.associations.Include(a => a.colline);
