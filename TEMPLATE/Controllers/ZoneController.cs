@@ -76,8 +76,6 @@ namespace TEMPLATE.Controllers
             return View(zone);
         }
 
-        //
-        // GET: /Zone/Delete/5
 
         public ActionResult Delete(int id = 0)
         {
