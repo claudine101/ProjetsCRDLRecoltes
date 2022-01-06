@@ -39,9 +39,7 @@ namespace TEMPLATE.Controllers
             return View();
         }
 
-        //
-        // POST: /Colline/Create
-
+    
         [HttpPost]
         public ActionResult Create(colline colline)
         {
