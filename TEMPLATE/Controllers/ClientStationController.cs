@@ -192,9 +192,6 @@ namespace TEMPLATE.Controllers
             }
             return View(client);
         }
-
-
-
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
@@ -203,7 +200,6 @@ namespace TEMPLATE.Controllers
             db.SaveChanges();
             return RedirectToAction("Index");
         }
-
         protected override void Dispose(bool disposing)
         {
             db.Dispose();
