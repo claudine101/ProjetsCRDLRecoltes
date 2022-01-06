@@ -54,8 +54,6 @@ namespace TEMPLATE.Controllers
             return View(colline);
         }
 
-        //
-        // GET: /Colline/Edit/5
 
         public ActionResult Edit(int id = 0)
         {
