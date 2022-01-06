@@ -16,6 +16,15 @@ namespace TEMPLATE.Controllers
         {
             return View();
         }
+
+
+
+
+
+
+
+
+
          public ActionResult Index()
         {
             var IDemploye = 0;
