@@ -38,8 +38,6 @@ namespace TEMPLATE.Controllers
             return View();
         }
 
-        //
-        // POST: /Zone/Create
 
         [HttpPost]
         public ActionResult Create(zone zone)
