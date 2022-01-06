@@ -225,6 +225,8 @@ namespace TEMPLATE.Controllers
             return View(association);
         }
         [HttpPost, ActionName("Delete")]
+        
+        
         public ActionResult DeleteConfirmed(int id)
         {
             association association = db.associations.Find(id);
