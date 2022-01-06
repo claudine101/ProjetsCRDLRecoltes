@@ -149,6 +149,7 @@ namespace TEMPLATE.Controllers
                             ;
             return Json(donne, JsonRequestBehavior.AllowGet);
         }
+        
         public ActionResult Details(int id = 0)
         {
             association association = db.associations.Find(id);
@@ -158,6 +159,8 @@ namespace TEMPLATE.Controllers
             }
             return View(association);
         }
+       
+        
         public ActionResult Create()
         {
             ViewBag.ID_province = new SelectList(db.provinces, "ID_province", "NOM_province");
