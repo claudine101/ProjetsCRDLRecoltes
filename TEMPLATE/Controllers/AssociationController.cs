@@ -249,6 +249,7 @@ namespace TEMPLATE.Controllers
             List<commune> commune = db.communes.Where(x => x.ID_province == id).ToList();
             return Json(commune, JsonRequestBehavior.AllowGet);
         }
+        
         public JsonResult getZone(int id)
         {
             db.Configuration.ProxyCreationEnabled = false;
