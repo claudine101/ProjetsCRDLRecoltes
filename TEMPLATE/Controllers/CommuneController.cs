@@ -37,9 +37,6 @@ namespace TEMPLATE.Controllers
             return View();
         }
 
-        //
-        // POST: /Commune/Create
-
         [HttpPost]
         public ActionResult Create(commune commune)
         {
