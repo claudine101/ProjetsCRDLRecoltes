@@ -62,48 +62,7 @@ namespace TEMPLATE.Controllers
             Session.Abandon();
 
             return RedirectToAction("Login", "Dashboard");
-        }
-//        //public ActionResult Login(string email, string password)
-//        //{
-//        //    if (ModelState.IsValid)
-//        //    {
-//        //        var f_password = GetMD5(password);
-//        //        var data = db.utilisateurs.Where(s => s.username.Equals(email) && s.passwords.Equals(password)).ToList();
-//        //        if (data.Count() > 0)
-//        //        {
-//        //            //add session
-//        //            Session["FullName"] = data.FirstOrDefault().username ;
-//        //            //Session["Email"] = data.FirstOrDefault().Email;
-//        //            Session["Idemploye"] = data.FirstOrDefault().ID_employe;
-//        //            return RedirectToAction("Index");
-//        //        }
-//        //        else
-//        //        {
-//        //            ViewBag.error = "Login failed";
-//        //            return RedirectToAction("Login");
-//        //        }
-//        //    }
-//        //    return View();
-//        //}
-
-//        //create a string MD5
-//        public static string GetMD5(string str)
-//        {
-//            MD5 md5 = new MD5CryptoServiceProvider();
-//            byte[] fromData = Encoding.UTF8.GetBytes(str);
-//            byte[] targetData = md5.ComputeHash(fromData);
-//            string byte2String = null;
-
-//            for (int i = 0; i < targetData.Length; i++)
-//            {
-//                byte2String += targetData[i].ToString("x2");
-
-//            }
-//            return byte2String;
-//        }
-
-//        //
-//        // GET: /Dashbord/
+        }    
 //        public ActionResult GetData()
 //        {
 //            RecolteEntities context = new RecolteEntities();
@@ -179,10 +138,10 @@ namespace TEMPLATE.Controllers
 //                               };
 //            return Json(NombreClient, JsonRequestBehavior.AllowGet);
 //        }
-//        public ActionResult Index()
-//        {
-//            return View();
-//        }
+        public ActionResult Index()
+        {
+            return View();
+        }
         
 //        public ActionResult IndexAssociation()
 //        {
