@@ -185,6 +185,7 @@ namespace TEMPLATE.Controllers
             ViewBag.ID_colline = new SelectList(db.collines, "ID_colline", "NOM_colline", association.ID_colline);
             return View(association);
         }
+        
         public ActionResult Edit(int id = 0)
         {
             association association = db.associations.Find(id);
