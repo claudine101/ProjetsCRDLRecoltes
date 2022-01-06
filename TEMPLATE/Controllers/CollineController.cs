@@ -79,9 +79,6 @@ namespace TEMPLATE.Controllers
             return View(colline);
         }
 
-        //
-        // GET: /Colline/Delete/5
-
         public ActionResult Delete(int id = 0)
 
         {
@@ -92,9 +89,6 @@ namespace TEMPLATE.Controllers
             }
             return View(colline);
         }
-
-        //
-        // POST: /Colline/Delete/5
 
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
