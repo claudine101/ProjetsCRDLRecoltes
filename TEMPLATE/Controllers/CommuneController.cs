@@ -12,14 +12,13 @@ namespace TEMPLATE.Controllers
     public class CommuneController : Controller
     {
         private RecolteEntities db = new RecolteEntities();
+
         public ActionResult Index()
         {
             var communes = db.communes.Include(c => c.province);
             return View(communes.ToList());
         }
 
-        //
-        // GET: /Commune/Details/5
 
         public ActionResult Details(int id = 0)
         {
