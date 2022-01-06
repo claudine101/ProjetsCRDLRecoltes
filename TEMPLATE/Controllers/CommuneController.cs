@@ -30,8 +30,6 @@ namespace TEMPLATE.Controllers
             return View(commune);
         }
 
-        //
-        // GET: /Commune/Create
 
         public ActionResult Create()
         {
