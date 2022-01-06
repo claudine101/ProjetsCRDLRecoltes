@@ -19,6 +19,10 @@ namespace TEMPLATE.Controllers
         {
             return View();
         }
+
+
+
+
         public ActionResult RapportClient()
         {
             ;// var employe_association = db.employe_association.Include(e => e.association);
