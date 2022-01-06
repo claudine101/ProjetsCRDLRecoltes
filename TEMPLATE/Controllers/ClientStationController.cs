@@ -142,7 +142,6 @@ namespace TEMPLATE.Controllers
             ViewBag.ID_colline = new SelectList(db.collines, "ID_colline", "NOM_colline");
             return View();
         }
-
         [HttpPost]
         public ActionResult Create(client client)
         {
@@ -158,8 +157,13 @@ namespace TEMPLATE.Controllers
             return View(client);
         }
 
-        //
-        // GET: /Client/Edit/5
+
+
+
+
+
+
+
 
         public ActionResult Edit(int id = 0)
         {
