@@ -124,16 +124,6 @@ namespace TEMPLATE.Controllers
             var recoltes = db.recoltes.Include(r => r.client).Include(r => r.qualite).Include(r => r.station_lavage);
             return View(recolt);
         }
-
-
-
-
-
-
-
-
-
-
         public ActionResult Details(int id = 0)
         {
             client client = db.clients.Find(id);
@@ -144,13 +134,11 @@ namespace TEMPLATE.Controllers
             return View(client);
         }
 
-        //
-        // GET: /Client/Create
+
+
 
         public ActionResult Create()
         {
-
-
             ViewBag.ID_province = new SelectList(db.provinces, "ID_province", "NOM_province");
             ViewBag.ID_commune = new SelectList(db.communes, "ID_commune", "NOM_commune");
             ViewBag.ID_zone = new SelectList(db.zones, "ID_zone", "NOM_zone");
