@@ -75,9 +75,6 @@ namespace TEMPLATE.Controllers
             return View(commune);
         }
 
-        //
-        // GET: /Commune/Delete/5
-
         public ActionResult Delete(int id = 0)
         {
             commune commune = db.communes.Find(id);
