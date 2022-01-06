@@ -53,8 +53,6 @@ namespace TEMPLATE.Controllers
             return View(zone);
         }
 
-
-
         public ActionResult Edit(int id = 0)
         {
             zone zone = db.zones.Find(id);
@@ -65,10 +63,6 @@ namespace TEMPLATE.Controllers
             ViewBag.ID_commune = new SelectList(db.communes, "ID_commune", "NOM_commune", zone.ID_commune);
             return View(zone);
         }
-
-        //
-        // POST: /Zone/Edit/5
-
         [HttpPost]
         public ActionResult Edit(zone zone)
         {
