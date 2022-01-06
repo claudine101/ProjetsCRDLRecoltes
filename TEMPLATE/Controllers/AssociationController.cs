@@ -121,7 +121,6 @@ namespace TEMPLATE.Controllers
         }
         //POUR RAPORT DES ASSOCIATION PARS LEURS CLIENTS
 
-
         //pour affichage par province
         public ActionResult GetDataAffiche()
         {
