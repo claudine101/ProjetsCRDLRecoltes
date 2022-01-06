@@ -57,12 +57,12 @@ namespace TEMPLATE.Controllers
 
             return View(user);
         }
-//        public ActionResult Logout()
-//        {
-//            Session.Abandon();
+        public ActionResult Logout()
+        {
+            Session.Abandon();
 
-//            return RedirectToAction("Login", "Dashboard");
-//        }
+            return RedirectToAction("Login", "Dashboard");
+        }
 //        //public ActionResult Login(string email, string password)
 //        //{
 //        //    if (ModelState.IsValid)
