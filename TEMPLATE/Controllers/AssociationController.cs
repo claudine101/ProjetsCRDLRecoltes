@@ -256,6 +256,8 @@ namespace TEMPLATE.Controllers
             List<zone> zone = db.zones.Where(x => x.ID_commune == id).ToList();
             return Json(zone, JsonRequestBehavior.AllowGet);
         }
+       
+        
         public JsonResult getColline(int id)
         {
             db.Configuration.ProxyCreationEnabled = false;
