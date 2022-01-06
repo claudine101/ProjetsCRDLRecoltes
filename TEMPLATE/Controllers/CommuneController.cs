@@ -51,9 +51,6 @@ namespace TEMPLATE.Controllers
             return View(commune);
         }
 
-        //
-        // GET: /Commune/Edit/5
-
         public ActionResult Edit(int id = 0)
         {
             commune commune = db.communes.Find(id);
