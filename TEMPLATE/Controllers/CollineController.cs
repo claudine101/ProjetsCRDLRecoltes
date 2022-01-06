@@ -66,9 +66,6 @@ namespace TEMPLATE.Controllers
             return View(colline);
         }
 
-        //
-        // POST: /Colline/Edit/5
-
         [HttpPost]
         public ActionResult Edit(colline colline)
         {
@@ -86,6 +83,7 @@ namespace TEMPLATE.Controllers
         // GET: /Colline/Delete/5
 
         public ActionResult Delete(int id = 0)
+
         {
             colline colline = db.collines.Find(id);
             if (colline == null)
