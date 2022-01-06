@@ -16,15 +16,6 @@ namespace TEMPLATE.Controllers
         {
             return View();
         }
-
-
-
-
-
-
-
-
-
          public ActionResult Index()
         {
             var IDemploye = 0;
@@ -133,8 +124,15 @@ namespace TEMPLATE.Controllers
             var recoltes = db.recoltes.Include(r => r.client).Include(r => r.qualite).Include(r => r.station_lavage);
             return View(recolt);
         }
-        //
-        // GET: /Client/Details/5
+
+
+
+
+
+
+
+
+
 
         public ActionResult Details(int id = 0)
         {
