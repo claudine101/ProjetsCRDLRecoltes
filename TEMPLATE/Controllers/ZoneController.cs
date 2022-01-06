@@ -53,8 +53,6 @@ namespace TEMPLATE.Controllers
             return View(zone);
         }
 
-        //
-        // GET: /Zone/Edit/5
 
         public ActionResult Edit(int id = 0)
         {
