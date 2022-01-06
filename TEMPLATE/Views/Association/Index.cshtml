@@ -47,7 +47,6 @@
             IDassocition.Add(iteme.ID_association);
         }
         <div class="container-fluid">
-
              <H1 style="color:blue">AFFICHER PAR:</H1>
               <div class="container-fluid " >
                   <div class="row">
@@ -72,7 +71,6 @@
                     <th>DATE DE CREATION</th>
                     <th>COLLINE</th>
                     <th>ETAT</th>
-                    
                 </tr>
                     </thead>
                 @{ int NO=0;}
@@ -82,7 +80,7 @@
                         NO=NO+1;
                         if (IDassocition.Contains(item.ID_association) == true)
                         {
- <tr>
+                          <tr>
                                 <td>
                                     @NO
                                 </td>
@@ -141,7 +139,6 @@
 
     </div>
  </div>
- 
      @section scripts
     {
     <script src="~/Scripts/tables1.js"></script>
