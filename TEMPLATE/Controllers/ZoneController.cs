@@ -31,8 +31,6 @@ namespace TEMPLATE.Controllers
             return View(zone);
         }
 
-        //
-        // GET: /Zone/Create
 
         public ActionResult Create()
         {
