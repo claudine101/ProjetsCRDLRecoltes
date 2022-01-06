@@ -44,43 +44,43 @@ namespace TEMPLATE
             bundles.Add(new StyleBundle("~/Assets/css").Include(
                "~/Assets/css/bootstrap.css",
                "~/Assets/css/atlantis.css",
-               "~/Assets/css/demo.css",             
+               "~/Assets/css/demo.css",
                "~/Assets/css/fonts.css",
                "~/Assets/css/all.css"
-               //"~/Assets/css/jquery.dataTables.css",
-               //"~/Assets/css/dataTables.bootstrap4s.css"
+                //"~/Assets/css/jquery.dataTables.css",
+                //"~/Assets/css/dataTables.bootstrap4s.css"
                ));
 
-             bundles.Add(new ScriptBundle("~/Assets/js/core").Include(
-                "~/Assets/js/core/jquery.3.2.1.js",
-                "~/Assets/js/core/popper.js",
-                "~/Assets/js/core/bootstrap.js"));
-            
+            bundles.Add(new ScriptBundle("~/Assets/js/core").Include(
+               "~/Assets/js/core/jquery.3.2.1.js",
+               "~/Assets/js/core/popper.js",
+               "~/Assets/js/core/bootstrap.js"));
+
             bundles.Add(new ScriptBundle("~/Assets/js/plugin/jquery-ui-1.12.1.custom").Include(
             "~/Assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.js"));
 
             bundles.Add(new ScriptBundle("~/Assets/js/plugin/jquery-ui-touch-punch").Include(
             "~/Assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.js"));
-            
-             bundles.Add(new ScriptBundle("~/Assets/js/plugin/jquery-scrollbar").Include(
-            "~/Assets/js/plugin/jquery-scrollbar/jquery.scrollbar.js"));
-            
-             bundles.Add(new ScriptBundle("~/Assets/js/plugin/moment").Include(
-            "~/Assets/js/plugin/moment/moment.js"));
 
-             bundles.Add(new ScriptBundle("~/Assets/js/plugin/jquery.sparkline").Include(
-             "~/Assets/js/plugin/jquery.sparkline/jquery.sparkline.js"));
+            bundles.Add(new ScriptBundle("~/Assets/js/plugin/jquery-scrollbar").Include(
+           "~/Assets/js/plugin/jquery-scrollbar/jquery.scrollbar.js"));
 
-           
-             bundles.Add(new ScriptBundle("~/Assets/js/plugin/chart.js").Include(
-            "~/Assets/js/plugin/chart.js/chart.js"));
+            bundles.Add(new ScriptBundle("~/Assets/js/plugin/moment").Include(
+           "~/Assets/js/plugin/moment/moment.js"));
 
-             bundles.Add(new ScriptBundle("~/Assets/js/plugin/chart-circle").Include(
-             "~/Assets/js/plugin/chart-circle/circles.js"));
+            bundles.Add(new ScriptBundle("~/Assets/js/plugin/jquery.sparkline").Include(
+            "~/Assets/js/plugin/jquery.sparkline/jquery.sparkline.js"));
 
-             
-           bundles.Add(new ScriptBundle("~/Assets/js/plugin/datatables").Include(
-            "~/Assets/js/plugin/datatables/datatables.js"));
+
+            bundles.Add(new ScriptBundle("~/Assets/js/plugin/chart.js").Include(
+           "~/Assets/js/plugin/chart.js/chart.js"));
+
+            bundles.Add(new ScriptBundle("~/Assets/js/plugin/chart-circle").Include(
+            "~/Assets/js/plugin/chart-circle/circles.js"));
+
+
+            bundles.Add(new ScriptBundle("~/Assets/js/plugin/datatables").Include(
+             "~/Assets/js/plugin/datatables/datatables.js"));
 
             bundles.Add(new ScriptBundle("~/Assets/js/plugin/bootstrap-notify").Include(
             "~/Assets/js/plugin//bootstrap-notify/bootstrap-notify.js"));
@@ -88,8 +88,8 @@ namespace TEMPLATE
             bundles.Add(new ScriptBundle("~/Assets/js/plugin/bootstrap-toggle").Include(
             "~/Assets/js/plugin/bootstrap-toggle/bootstrap-toggle.js"));
 
-               bundles.Add(new ScriptBundle("~/Assets/js/plugin/jqvmap").Include(
-            "~/Assets/js/plugin/jqvmap/jquery.vmap.js"));
+            bundles.Add(new ScriptBundle("~/Assets/js/plugin/jqvmap").Include(
+         "~/Assets/js/plugin/jqvmap/jquery.vmap.js"));
 
             bundles.Add(new ScriptBundle("~/Assets/js/plugin/jqvmap/maps").Include(
             "~/Assets/js/plugin/jqvmap/maps/jquery.vmap.world.js"));
@@ -102,9 +102,9 @@ namespace TEMPLATE
 
             bundles.Add(new ScriptBundle("~/Assets/js/plugin/fullcalendar").Include(
             "~/Assets/js/plugin/fullcalendar/fullcalendar.js"));
-            
-             bundles.Add(new ScriptBundle("~/Assets/js/plugin/datepicker").Include(
-            "~/Assets/js/plugin/datepicker/bootstrap-datetimepicker.js"));
+
+            bundles.Add(new ScriptBundle("~/Assets/js/plugin/datepicker").Include(
+           "~/Assets/js/plugin/datepicker/bootstrap-datetimepicker.js"));
 
             bundles.Add(new ScriptBundle("~/Assets/js/plugin/bootstrap-tagsinput").Include(
             "~/Assets/js/plugin/bootstrap-tagsinput/bootstrap-tagsinput.js"));
@@ -139,13 +139,13 @@ namespace TEMPLATE
               "~/Assets/js/tables.js",
               "~/Assets/js/highcharts.js",
               "~/Assets/js/highcharts-more.js",
-              //"~/Assets/js/jquery.dataTables.js",
-              //"~/Assets/js/dataTables.bootstrap4.js",
-              //"~/Assets/js/jquery-3.5.1.js",
-              //"~/Assets/js/dataTables.buttons.js",
+                //"~/Assets/js/jquery.dataTables.js",
+                //"~/Assets/js/dataTables.bootstrap4.js",
+                //"~/Assets/js/jquery-3.5.1.js",
+                //"~/Assets/js/dataTables.buttons.js",
               "~/Assets/js/buttons.print.js"
-              
-              
+
+
               ));
 
             bundles.Add(new ScriptBundle("~/Assets/js/datatables").Include(
