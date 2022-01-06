@@ -1,0 +1,125 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data;
+using System.Data.Entity;
+using System.Linq;
+using System.Web;
+using System.Web.Mvc;
+using TEMPLATE.Models;
+
+namespace TEMPLATE.Controllers
+{
+    public class CollineController : Controller
+    {
+        private RecolteEntities db = new RecolteEntities();
+
+        //
+        // GET: /Colline/
+
+        public ActionResult Index()
+        {
+            var collines = db.collines.Include(c => c.zone);
+            return View(collines.ToList());
+        }
+
+        //
+        // GET: /Colline/Details/5
+
+        public ActionResult Details(int id = 0)
+        {
+            colline colline = db.collines.Find(id);
+            if (colline == null)
+            {
+                return HttpNotFound();
+            }
+            return View(colline);
+        }
+
+        //
+        // GET: /Colline/Create
+
+        public ActionResult Create()
+        {
+            ViewBag.ID_zone = new SelectList(db.zones, "ID_zone", "NOM_zone");
+            return View();
+        }
+
+        //
+        // POST: /Colline/Create
+
+        [HttpPost]
+        public ActionResult Create(colline colline)
+        {
+            if (ModelState.IsValid)
+            {
+                db.collines.Add(colline);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            ViewBag.ID_zone = new SelectList(db.zones, "ID_zone", "NOM_zone", colline.ID_zone);
+            return View(colline);
+        }
+
+        //
+        // GET: /Colline/Edit/5
+
+        public ActionResult Edit(int id = 0)
+        {
+            colline colline = db.collines.Find(id);
+            if (colline == null)
+            {
+                return HttpNotFound();
+            }
+            ViewBag.ID_zone = new SelectList(db.zones, "ID_zone", "NOM_zone", colline.ID_zone);
+            return View(colline);
+        }
+
+        //
+        // POST: /Colline/Edit/5
+
+        [HttpPost]
+        public ActionResult Edit(colline colline)
+        {
+            if (ModelState.IsValid)
+            {
+                db.Entry(colline).State = EntityState.Modified;
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+            ViewBag.ID_zone = new SelectList(db.zones, "ID_zone", "NOM_zone", colline.ID_zone);
+            return View(colline);
+        }
+
+        //
+        // GET: /Colline/Delete/5
+
+        public ActionResult Delete(int id = 0)
+        {
+            colline colline = db.collines.Find(id);
+            if (colline == null)
+            {
+                return HttpNotFound();
+            }
+            return View(colline);
+        }
+
+        //
+        // POST: /Colline/Delete/5
+
+        [HttpPost, ActionName("Delete")]
+        public ActionResult DeleteConfirmed(int id)
+        {
+            colline colline = db.collines.Find(id);
+            db.collines.Remove(colline);
+            db.SaveChanges();
+            return RedirectToAction("Index");
+        }
+
+        protected override void Dispose(bool disposing)
+        {
+            db.Dispose();
+            base.Dispose(disposing);
+        }
+    }
+}

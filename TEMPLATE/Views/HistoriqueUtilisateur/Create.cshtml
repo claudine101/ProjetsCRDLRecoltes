@@ -1,0 +1,88 @@
+﻿@model TEMPLATE.Models.historique_utilisateur
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layouts/_Default.cshtml";
+}
+<div class="main-panel">
+			<div class="container">
+         	<div class="panel-header bg-primary-gradient">
+					<div class="page-inner py-5">
+						<div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
+							<div>
+							   <h2 class="text-white pb-2 fw-bold">
+								Historique_Emprunt
+							   </h2>
+							</div>
+							<div class="ml-md-auto py-2 py-md-0">
+							<!-- PAGE-HEADER -->
+							<div class="page-header">
+								<ol class="breadcrumb">
+									<li class="breadcrumb-item">
+										<a href="#">Home</a>
+									</li>
+									<li class="breadcrumb-item active" aria-current="page">
+										Modification
+									</li>
+								</ol>
+							</div>
+                            <!-- PAGE-HEADER END -->
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+                    <div class="container_fluid">
+                    	<div class="row">
+                    		<article class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    			
+                    		</article>
+                    		<article class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+@using (Html.BeginForm()) {
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>historique_utilisateur</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ID_histoUtilisateur)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ID_histoUtilisateur)
+            @Html.ValidationMessageFor(model => model.ID_histoUtilisateur)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ID_utilisateur, "utilisateur")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("ID_utilisateur", String.Empty)
+            @Html.ValidationMessageFor(model => model.ID_utilisateur)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.DATE_desactive)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.DATE_desactive)
+            @Html.ValidationMessageFor(model => model.DATE_desactive)
+        </div>
+
+     <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+                    			
+                    		</article>
+                    		<article class="col-xs-12 col-sm-12 col-md-3 col-lg-3">
+                    			
+                    		</article>
+                    		
+                    	</div>
+                    	
+                    </div>

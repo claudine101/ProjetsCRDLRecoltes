@@ -1,0 +1,43 @@
+﻿@model TEMPLATE.Models.province
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>province</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ID_province)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ID_province)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NOM_province)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NOM_province)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LATITUDE_province)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LATITUDE_province)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LONGITUDE_province)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LONGITUDE_province)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

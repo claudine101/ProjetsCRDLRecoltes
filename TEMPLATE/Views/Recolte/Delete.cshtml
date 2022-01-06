@@ -1,0 +1,67 @@
+﻿@model TEMPLATE.Models.recolte
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>recolte</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ID_recolte)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ID_recolte)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.client.CNI)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.client.CNI)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.qualite.NOM_qualite)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.qualite.NOM_qualite)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.station_lavage.NOM_station)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.station_lavage.NOM_station)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.quantite)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.quantite)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Prix)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Prix)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Date_insertion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Date_insertion)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

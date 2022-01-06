@@ -1,0 +1,112 @@
+﻿@model TEMPLATE.Models.recolte
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layouts/_DefaultStation.cshtml";
+}
+<div class="main-panel">
+    <div class="container">
+    <div class="panel-header bg-primary-gradient">
+	    <div class="page-inner py-5">
+		    <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
+			    <div>
+				    <h2 class="text-white pb-2 fw-bold">
+                         ENREGISTREMENT DES RECOLTES DANS @Session["association"]
+
+				    </h2>
+			    </div>
+			    <div class="ml-md-auto py-2 py-md-0">
+			    <!-- PAGE-HEADER -->
+			    <div class="page-header">
+				    <ol class="breadcrumb">
+					    <li class="breadcrumb-item">
+						    <a href="#">Recolte</a>
+					    </li>
+					    <li class="breadcrumb-item active" aria-current="page">
+						    Ajouter
+					    </li>
+				    </ol>
+			    </div>
+                <!-- PAGE-HEADER END -->
+			    </div>
+		    </div>
+	    </div>
+    </div>
+    <div class="container-fluid" style="background-color:moccasin">
+        <div class="row">
+            <article class="col-xs-12 col-sm-12 col-md-3 col-lg-3">     
+            </article>
+            <article class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="background-color:#D291BC;margin-top:4px;margin-bottom:4px">
+              @using (Html.BeginForm()) 
+              {
+                
+                <div class="bg-light border  margin-top">
+                  <div class="form-horizontal  "   >
+                        <h4 style="text-align:center ;color:blue">Ajouter une nouvelle recolte</h4>
+                        <hr />
+                       <p><h1>Prix actuelle de la serise A:<i style="color:blue">@ViewBag.prixSerieA FBU </i> </h1></p>
+                        <p><h1>Prix actuelle de la serise B:<i style="color:blue">@ViewBag.prixSerieB FBU </i> </h1></p>
+                        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                       <div class="editor-field">
+                            @Html.HiddenFor(model => model.ID_recolte)
+                            @Html.ValidationMessageFor(model => model.ID_recolte)
+                        </div>
+                      <div class="form-group">
+                         <div class="col-md-12">
+                            <label><b style="font-size:20px"> Qualite:</b></label>
+                            @Html.DropDownList("ID_client", null, "Choisir le client", htmlAttributes: new { @class = "form-control " })
+                            @Html.ValidationMessageFor(model => model.ID_qualite, "", new { @class = "text-danger" })
+                           </div>
+                        </div>
+                       <div class="form-group">
+                         <div class="col-md-12">
+                            <label><b style="font-size:20px"> Qualite:</b></label>
+                            @Html.DropDownList("ID_qualite", null, "Choisir la qualite", htmlAttributes: new { @class = "form-control " })
+                            @Html.ValidationMessageFor(model => model.ID_qualite, "", new { @class = "text-danger" })
+                           </div>
+                        </div>
+                      <div class="form-group">
+                          <div class="col-md-12">
+                            <label><b style="font-size:20px">Station:</b></label>
+                            <input type="text" readonly="" value="@Session["associat"]" class="form-control total" />
+                            <input type="hidden" name="ID_station" value="@Session["associatID"]" class="form-control total" />
+                          </div>
+                       </div>
+                      <div class="form-group">
+                            <div class="col-md-12"  >
+                                <label><b style="font-size:20px">Quantite:</b></label>
+                                @Html.TextBoxFor(model => model.quantite, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.quantite)
+                            </div>
+                       </div>
+                      <div class="form-group">
+                            <div class="col-md-12"  >
+                                <label><b style="font-size:20px">Prix:</b></label>
+                                @Html.TextBoxFor(model => model.Prix, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Prix)
+                            </div>
+                        </div>
+
+                     <div class="form-group">
+                            <div class="col-md-12"  >
+                                <label>Date</label>
+                                @Html.TextBoxFor(model => model.Date_insertion, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Date_insertion)
+                            </div>
+                        </div>
+                       <div class="form-group">
+                            <div class="col-md-offset-4 col-md-10">
+                                <input type="submit" value="Enregistrer" class="btn btn-success pull-right" />
+                            </div>
+                        </div>
+                    </div>
+                 </div>
+                    <div>
+                        @Html.ActionLink("Retour", "Index")
+                    </div>
+}
+</article>
+<article class="col-xs-12 col-sm-12 col-md-3 col-lg-3">    
+</article>
+</div>
+</div>
+</div>

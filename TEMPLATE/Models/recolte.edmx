@@ -1,0 +1,1240 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="RecolteModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityContainer Name="RecolteModelStoreContainer">
+          <EntitySet Name="association" EntityType="RecolteModel.Store.association" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="client" EntityType="RecolteModel.Store.client" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="collines" EntityType="RecolteModel.Store.collines" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="communes" EntityType="RecolteModel.Store.communes" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="employe_association" EntityType="RecolteModel.Store.employe_association" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="employe_station_lavage" EntityType="RecolteModel.Store.employe_station_lavage" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="historique_asscociation" EntityType="RecolteModel.Store.historique_asscociation" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="historique_prix" EntityType="RecolteModel.Store.historique_prix" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="historique_station" EntityType="RecolteModel.Store.historique_station" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="historique_utilisateur" EntityType="RecolteModel.Store.historique_utilisateur" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="profiles" EntityType="RecolteModel.Store.profiles" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="provinces" EntityType="RecolteModel.Store.provinces" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="qualite" EntityType="RecolteModel.Store.qualite" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="recolte" EntityType="RecolteModel.Store.recolte" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="station_lavage" EntityType="RecolteModel.Store.station_lavage" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="utilisateur" EntityType="RecolteModel.Store.utilisateur" store:Type="Tables" Schema="dbo" />
+          <EntitySet Name="zones" EntityType="RecolteModel.Store.zones" store:Type="Tables" Schema="dbo" />
+          <AssociationSet Name="FK__associati__ID_co__2A4B4B5E" Association="RecolteModel.Store.FK__associati__ID_co__2A4B4B5E">
+            <End Role="collines" EntitySet="collines" />
+            <End Role="association" EntitySet="association" />
+          </AssociationSet>
+          <AssociationSet Name="FK__client__ID_assoc__5CD6CB2B" Association="RecolteModel.Store.FK__client__ID_assoc__5CD6CB2B">
+            <End Role="association" EntitySet="association" />
+            <End Role="client" EntitySet="client" />
+          </AssociationSet>
+          <AssociationSet Name="FK__client__ID_colli__5BE2A6F2" Association="RecolteModel.Store.FK__client__ID_colli__5BE2A6F2">
+            <End Role="collines" EntitySet="collines" />
+            <End Role="client" EntitySet="client" />
+          </AssociationSet>
+          <AssociationSet Name="FK__collines__ID_zon__276EDEB3" Association="RecolteModel.Store.FK__collines__ID_zon__276EDEB3">
+            <End Role="zones" EntitySet="zones" />
+            <End Role="collines" EntitySet="collines" />
+          </AssociationSet>
+          <AssociationSet Name="FK__communes__ID_pro__1CF15040" Association="RecolteModel.Store.FK__communes__ID_pro__1CF15040">
+            <End Role="provinces" EntitySet="provinces" />
+            <End Role="communes" EntitySet="communes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__employe_a__ID_as__31EC6D26" Association="RecolteModel.Store.FK__employe_a__ID_as__31EC6D26">
+            <End Role="association" EntitySet="association" />
+            <End Role="employe_association" EntitySet="employe_association" />
+          </AssociationSet>
+          <AssociationSet Name="FK__employe_s__ID_st__34C8D9D1" Association="RecolteModel.Store.FK__employe_s__ID_st__34C8D9D1">
+            <End Role="station_lavage" EntitySet="station_lavage" />
+            <End Role="employe_station_lavage" EntitySet="employe_station_lavage" />
+          </AssociationSet>
+          <AssociationSet Name="FK__historiqu__ID_as__3B75D760" Association="RecolteModel.Store.FK__historiqu__ID_as__3B75D760">
+            <End Role="association" EntitySet="association" />
+            <End Role="historique_asscociation" EntitySet="historique_asscociation" />
+          </AssociationSet>
+          <AssociationSet Name="FK__historiqu__ID_qu__5629CD9C" Association="RecolteModel.Store.FK__historiqu__ID_qu__5629CD9C">
+            <End Role="qualite" EntitySet="qualite" />
+            <End Role="historique_prix" EntitySet="historique_prix" />
+          </AssociationSet>
+          <AssociationSet Name="FK__historiqu__ID_st__37A5467C" Association="RecolteModel.Store.FK__historiqu__ID_st__37A5467C">
+            <End Role="station_lavage" EntitySet="station_lavage" />
+            <End Role="historique_station" EntitySet="historique_station" />
+          </AssociationSet>
+          <AssociationSet Name="FK__historiqu__ID_ut__5165187F" Association="RecolteModel.Store.FK__historiqu__ID_ut__5165187F">
+            <End Role="utilisateur" EntitySet="utilisateur" />
+            <End Role="historique_utilisateur" EntitySet="historique_utilisateur" />
+          </AssociationSet>
+          <AssociationSet Name="FK__recolte__ID_clie__60A75C0F" Association="RecolteModel.Store.FK__recolte__ID_clie__60A75C0F">
+            <End Role="client" EntitySet="client" />
+            <End Role="recolte" EntitySet="recolte" />
+          </AssociationSet>
+          <AssociationSet Name="FK__recolte__ID_qual__619B8048" Association="RecolteModel.Store.FK__recolte__ID_qual__619B8048">
+            <End Role="qualite" EntitySet="qualite" />
+            <End Role="recolte" EntitySet="recolte" />
+          </AssociationSet>
+          <AssociationSet Name="FK__recolte__ID_stat__628FA481" Association="RecolteModel.Store.FK__recolte__ID_stat__628FA481">
+            <End Role="station_lavage" EntitySet="station_lavage" />
+            <End Role="recolte" EntitySet="recolte" />
+          </AssociationSet>
+          <AssociationSet Name="FK__station_l__ID_Zo__2E1BDC42" Association="RecolteModel.Store.FK__station_l__ID_Zo__2E1BDC42">
+            <End Role="zones" EntitySet="zones" />
+            <End Role="station_lavage" EntitySet="station_lavage" />
+          </AssociationSet>
+          <AssociationSet Name="FK__utilisate__ID_em__48CFD27E" Association="RecolteModel.Store.FK__utilisate__ID_em__48CFD27E">
+            <End Role="employe_association" EntitySet="employe_association" />
+            <End Role="utilisateur" EntitySet="utilisateur" />
+          </AssociationSet>
+          <AssociationSet Name="FK__utilisate__ID_em__4AB81AF0" Association="RecolteModel.Store.FK__utilisate__ID_em__4AB81AF0">
+            <End Role="employe_station_lavage" EntitySet="employe_station_lavage" />
+            <End Role="utilisateur" EntitySet="utilisateur" />
+          </AssociationSet>
+          <AssociationSet Name="FK__utilisate__ID_pr__47DBAE45" Association="RecolteModel.Store.FK__utilisate__ID_pr__47DBAE45">
+            <End Role="profiles" EntitySet="profiles" />
+            <End Role="utilisateur" EntitySet="utilisateur" />
+          </AssociationSet>
+          <AssociationSet Name="FK__zones__ID_commun__22AA2996" Association="RecolteModel.Store.FK__zones__ID_commun__22AA2996">
+            <End Role="communes" EntitySet="communes" />
+            <End Role="zones" EntitySet="zones" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="association">
+          <Key>
+            <PropertyRef Name="ID_association" />
+          </Key>
+          <Property Name="ID_association" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID_colline" Type="int" Nullable="false" />
+          <Property Name="NOM_association" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="TEL_association" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="DATE_association" Type="datetime" />
+        </EntityType>
+        <EntityType Name="client">
+          <Key>
+            <PropertyRef Name="ID_client" />
+          </Key>
+          <Property Name="ID_client" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CNI" Type="varchar" MaxLength="50" />
+          <Property Name="NOM_client" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="PRENOM_client" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="TEL_client" Type="varchar" Nullable="false" MaxLength="20" />
+          <Property Name="ID_colline" Type="int" Nullable="false" />
+          <Property Name="ID_association" Type="int" Nullable="false" />
+          <Property Name="DATE_insertion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="collines">
+          <Key>
+            <PropertyRef Name="ID_colline" />
+          </Key>
+          <Property Name="ID_colline" Type="int" Nullable="false" />
+          <Property Name="NOM_colline" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="ID_zone" Type="int" Nullable="false" />
+        </EntityType>
+        <EntityType Name="communes">
+          <Key>
+            <PropertyRef Name="ID_commune" />
+          </Key>
+          <Property Name="ID_commune" Type="int" Nullable="false" />
+          <Property Name="NOM_commune" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="ID_province" Type="int" />
+          <Property Name="LATITUDE_commune" Type="float" Nullable="false" />
+          <Property Name="LONGITUDE_commune" Type="float" Nullable="false" />
+        </EntityType>
+        <EntityType Name="employe_association">
+          <Key>
+            <PropertyRef Name="ID_employe" />
+          </Key>
+          <Property Name="ID_employe" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CNI" Type="varchar" MaxLength="50" />
+          <Property Name="ID_association" Type="int" Nullable="false" />
+          <Property Name="NOM_employe" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="PRENOM_employe" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="TEL_employe" Type="varchar" MaxLength="30" />
+          <Property Name="EMAIL_employe" Type="varchar" MaxLength="100" />
+          <Property Name="Statut" Type="varchar" MaxLength="40" />
+        </EntityType>
+        <EntityType Name="employe_station_lavage">
+          <Key>
+            <PropertyRef Name="ID_employ" />
+          </Key>
+          <Property Name="ID_employ" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="CNI" Type="varchar" MaxLength="50" />
+          <Property Name="ID_station" Type="int" Nullable="false" />
+          <Property Name="NOM_employe" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="PRENOM_employe" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="TEL_employe" Type="varchar" MaxLength="30" />
+          <Property Name="EMAIL_employe" Type="varchar" MaxLength="100" />
+          <Property Name="Statut" Type="varchar" MaxLength="40" />
+        </EntityType>
+        <EntityType Name="historique_asscociation">
+          <Key>
+            <PropertyRef Name="ID_histoAssoc" />
+          </Key>
+          <Property Name="ID_histoAssoc" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID_association" Type="int" Nullable="false" />
+          <Property Name="DATE_desactive" Type="datetime" />
+        </EntityType>
+        <EntityType Name="historique_prix">
+          <Key>
+            <PropertyRef Name="ID_histoPrix" />
+          </Key>
+          <Property Name="ID_histoPrix" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID_qualite" Type="int" Nullable="false" />
+          <Property Name="PRIX" Type="float" Nullable="false" />
+          <Property Name="DATE_insertion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="historique_station">
+          <Key>
+            <PropertyRef Name="ID_histoStation" />
+          </Key>
+          <Property Name="ID_histoStation" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID_station" Type="int" Nullable="false" />
+          <Property Name="DATE_desactive" Type="datetime" />
+        </EntityType>
+        <EntityType Name="historique_utilisateur">
+          <Key>
+            <PropertyRef Name="ID_histoUtilisateur" />
+          </Key>
+          <Property Name="ID_histoUtilisateur" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID_utilisateur" Type="int" Nullable="false" />
+          <Property Name="DATE_desactive" Type="datetime" />
+        </EntityType>
+        <EntityType Name="profiles">
+          <Key>
+            <PropertyRef Name="ID_profile" />
+          </Key>
+          <Property Name="ID_profile" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NOM_profile" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="provinces">
+          <Key>
+            <PropertyRef Name="ID_province" />
+          </Key>
+          <Property Name="ID_province" Type="int" Nullable="false" />
+          <Property Name="NOM_province" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="LATITUDE_province" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="LONGITUDE_province" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="qualite">
+          <Key>
+            <PropertyRef Name="ID_qualite" />
+          </Key>
+          <Property Name="ID_qualite" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="NOM_qualite" Type="varchar" Nullable="false" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="recolte">
+          <Key>
+            <PropertyRef Name="ID_recolte" />
+          </Key>
+          <Property Name="ID_recolte" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID_client" Type="int" Nullable="false" />
+          <Property Name="ID_qualite" Type="int" Nullable="false" />
+          <Property Name="ID_station" Type="int" Nullable="false" />
+          <Property Name="quantite" Type="float" Nullable="false" />
+          <Property Name="Prix" Type="float" Nullable="false" />
+          <Property Name="Date_insertion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="station_lavage">
+          <Key>
+            <PropertyRef Name="ID_station" />
+          </Key>
+          <Property Name="ID_station" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID_Zone" Type="int" Nullable="false" />
+          <Property Name="NOM_station" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="TEL_station" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="DATE_insertion" Type="datetime" />
+        </EntityType>
+        <EntityType Name="utilisateur">
+          <Key>
+            <PropertyRef Name="ID_utilisateur" />
+          </Key>
+          <Property Name="ID_utilisateur" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+          <Property Name="ID_profile" Type="int" Nullable="false" />
+          <Property Name="ID_employ" Type="int" />
+          <Property Name="ID_employe" Type="int" />
+          <Property Name="username" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="passwords" Type="varchar" Nullable="false" MaxLength="1000" />
+        </EntityType>
+        <EntityType Name="zones">
+          <Key>
+            <PropertyRef Name="ID_zone" />
+          </Key>
+          <Property Name="ID_zone" Type="int" Nullable="false" />
+          <Property Name="NOM_zone" Type="varchar" Nullable="false" MaxLength="100" />
+          <Property Name="ID_commune" Type="int" Nullable="false" />
+          <Property Name="LATITUDE_zone" Type="varchar" Nullable="false" MaxLength="50" />
+          <Property Name="LONGITUDE_zone" Type="varchar" Nullable="false" MaxLength="50" />
+        </EntityType>
+        <Association Name="FK__associati__ID_co__2A4B4B5E">
+          <End Role="collines" Type="RecolteModel.Store.collines" Multiplicity="1" />
+          <End Role="association" Type="RecolteModel.Store.association" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="collines">
+              <PropertyRef Name="ID_colline" />
+            </Principal>
+            <Dependent Role="association">
+              <PropertyRef Name="ID_colline" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__client__ID_assoc__5CD6CB2B">
+          <End Role="association" Type="RecolteModel.Store.association" Multiplicity="1" />
+          <End Role="client" Type="RecolteModel.Store.client" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="association">
+              <PropertyRef Name="ID_association" />
+            </Principal>
+            <Dependent Role="client">
+              <PropertyRef Name="ID_association" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__client__ID_colli__5BE2A6F2">
+          <End Role="collines" Type="RecolteModel.Store.collines" Multiplicity="1" />
+          <End Role="client" Type="RecolteModel.Store.client" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="collines">
+              <PropertyRef Name="ID_colline" />
+            </Principal>
+            <Dependent Role="client">
+              <PropertyRef Name="ID_colline" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__collines__ID_zon__276EDEB3">
+          <End Role="zones" Type="RecolteModel.Store.zones" Multiplicity="1" />
+          <End Role="collines" Type="RecolteModel.Store.collines" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zones">
+              <PropertyRef Name="ID_zone" />
+            </Principal>
+            <Dependent Role="collines">
+              <PropertyRef Name="ID_zone" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__communes__ID_pro__1CF15040">
+          <End Role="provinces" Type="RecolteModel.Store.provinces" Multiplicity="0..1" />
+          <End Role="communes" Type="RecolteModel.Store.communes" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="provinces">
+              <PropertyRef Name="ID_province" />
+            </Principal>
+            <Dependent Role="communes">
+              <PropertyRef Name="ID_province" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__employe_a__ID_as__31EC6D26">
+          <End Role="association" Type="RecolteModel.Store.association" Multiplicity="1" />
+          <End Role="employe_association" Type="RecolteModel.Store.employe_association" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="association">
+              <PropertyRef Name="ID_association" />
+            </Principal>
+            <Dependent Role="employe_association">
+              <PropertyRef Name="ID_association" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__employe_s__ID_st__34C8D9D1">
+          <End Role="station_lavage" Type="RecolteModel.Store.station_lavage" Multiplicity="1" />
+          <End Role="employe_station_lavage" Type="RecolteModel.Store.employe_station_lavage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="station_lavage">
+              <PropertyRef Name="ID_station" />
+            </Principal>
+            <Dependent Role="employe_station_lavage">
+              <PropertyRef Name="ID_station" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__historiqu__ID_as__3B75D760">
+          <End Role="association" Type="RecolteModel.Store.association" Multiplicity="1" />
+          <End Role="historique_asscociation" Type="RecolteModel.Store.historique_asscociation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="association">
+              <PropertyRef Name="ID_association" />
+            </Principal>
+            <Dependent Role="historique_asscociation">
+              <PropertyRef Name="ID_association" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__historiqu__ID_qu__5629CD9C">
+          <End Role="qualite" Type="RecolteModel.Store.qualite" Multiplicity="1" />
+          <End Role="historique_prix" Type="RecolteModel.Store.historique_prix" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="qualite">
+              <PropertyRef Name="ID_qualite" />
+            </Principal>
+            <Dependent Role="historique_prix">
+              <PropertyRef Name="ID_qualite" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__historiqu__ID_st__37A5467C">
+          <End Role="station_lavage" Type="RecolteModel.Store.station_lavage" Multiplicity="1" />
+          <End Role="historique_station" Type="RecolteModel.Store.historique_station" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="station_lavage">
+              <PropertyRef Name="ID_station" />
+            </Principal>
+            <Dependent Role="historique_station">
+              <PropertyRef Name="ID_station" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__historiqu__ID_ut__5165187F">
+          <End Role="utilisateur" Type="RecolteModel.Store.utilisateur" Multiplicity="1" />
+          <End Role="historique_utilisateur" Type="RecolteModel.Store.historique_utilisateur" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="utilisateur">
+              <PropertyRef Name="ID_utilisateur" />
+            </Principal>
+            <Dependent Role="historique_utilisateur">
+              <PropertyRef Name="ID_utilisateur" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__recolte__ID_clie__60A75C0F">
+          <End Role="client" Type="RecolteModel.Store.client" Multiplicity="1" />
+          <End Role="recolte" Type="RecolteModel.Store.recolte" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="client">
+              <PropertyRef Name="ID_client" />
+            </Principal>
+            <Dependent Role="recolte">
+              <PropertyRef Name="ID_client" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__recolte__ID_qual__619B8048">
+          <End Role="qualite" Type="RecolteModel.Store.qualite" Multiplicity="1" />
+          <End Role="recolte" Type="RecolteModel.Store.recolte" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="qualite">
+              <PropertyRef Name="ID_qualite" />
+            </Principal>
+            <Dependent Role="recolte">
+              <PropertyRef Name="ID_qualite" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__recolte__ID_stat__628FA481">
+          <End Role="station_lavage" Type="RecolteModel.Store.station_lavage" Multiplicity="1" />
+          <End Role="recolte" Type="RecolteModel.Store.recolte" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="station_lavage">
+              <PropertyRef Name="ID_station" />
+            </Principal>
+            <Dependent Role="recolte">
+              <PropertyRef Name="ID_station" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__station_l__ID_Zo__2E1BDC42">
+          <End Role="zones" Type="RecolteModel.Store.zones" Multiplicity="1" />
+          <End Role="station_lavage" Type="RecolteModel.Store.station_lavage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zones">
+              <PropertyRef Name="ID_zone" />
+            </Principal>
+            <Dependent Role="station_lavage">
+              <PropertyRef Name="ID_Zone" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__utilisate__ID_em__48CFD27E">
+          <End Role="employe_association" Type="RecolteModel.Store.employe_association" Multiplicity="0..1" />
+          <End Role="utilisateur" Type="RecolteModel.Store.utilisateur" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="employe_association">
+              <PropertyRef Name="ID_employe" />
+            </Principal>
+            <Dependent Role="utilisateur">
+              <PropertyRef Name="ID_employ" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__utilisate__ID_em__4AB81AF0">
+          <End Role="employe_station_lavage" Type="RecolteModel.Store.employe_station_lavage" Multiplicity="0..1" />
+          <End Role="utilisateur" Type="RecolteModel.Store.utilisateur" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="employe_station_lavage">
+              <PropertyRef Name="ID_employ" />
+            </Principal>
+            <Dependent Role="utilisateur">
+              <PropertyRef Name="ID_employe" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__utilisate__ID_pr__47DBAE45">
+          <End Role="profiles" Type="RecolteModel.Store.profiles" Multiplicity="1" />
+          <End Role="utilisateur" Type="RecolteModel.Store.utilisateur" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="profiles">
+              <PropertyRef Name="ID_profile" />
+            </Principal>
+            <Dependent Role="utilisateur">
+              <PropertyRef Name="ID_profile" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__zones__ID_commun__22AA2996">
+          <End Role="communes" Type="RecolteModel.Store.communes" Multiplicity="1" />
+          <End Role="zones" Type="RecolteModel.Store.zones" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="communes">
+              <PropertyRef Name="ID_commune" />
+            </Principal>
+            <Dependent Role="zones">
+              <PropertyRef Name="ID_commune" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="RecolteModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="RecolteEntities" p1:LazyLoadingEnabled="true">
+          <EntitySet Name="associations" EntityType="RecolteModel.association" />
+          <EntitySet Name="clients" EntityType="RecolteModel.client" />
+          <EntitySet Name="collines" EntityType="RecolteModel.colline" />
+          <EntitySet Name="communes" EntityType="RecolteModel.commune" />
+          <EntitySet Name="employe_association" EntityType="RecolteModel.employe_association" />
+          <EntitySet Name="employe_station_lavage" EntityType="RecolteModel.employe_station_lavage" />
+          <EntitySet Name="historique_asscociation" EntityType="RecolteModel.historique_asscociation" />
+          <EntitySet Name="historique_prix" EntityType="RecolteModel.historique_prix" />
+          <EntitySet Name="historique_station" EntityType="RecolteModel.historique_station" />
+          <EntitySet Name="historique_utilisateur" EntityType="RecolteModel.historique_utilisateur" />
+          <EntitySet Name="profiles" EntityType="RecolteModel.profile" />
+          <EntitySet Name="provinces" EntityType="RecolteModel.province" />
+          <EntitySet Name="qualites" EntityType="RecolteModel.qualite" />
+          <EntitySet Name="recoltes" EntityType="RecolteModel.recolte" />
+          <EntitySet Name="station_lavage" EntityType="RecolteModel.station_lavage" />
+          <EntitySet Name="utilisateurs" EntityType="RecolteModel.utilisateur" />
+          <EntitySet Name="zones" EntityType="RecolteModel.zone" />
+          <AssociationSet Name="FK__associati__ID_co__2A4B4B5E" Association="RecolteModel.FK__associati__ID_co__2A4B4B5E">
+            <End Role="collines" EntitySet="collines" />
+            <End Role="association" EntitySet="associations" />
+          </AssociationSet>
+          <AssociationSet Name="FK__client__ID_assoc__5CD6CB2B" Association="RecolteModel.FK__client__ID_assoc__5CD6CB2B">
+            <End Role="association" EntitySet="associations" />
+            <End Role="client" EntitySet="clients" />
+          </AssociationSet>
+          <AssociationSet Name="FK__employe_a__ID_as__31EC6D26" Association="RecolteModel.FK__employe_a__ID_as__31EC6D26">
+            <End Role="association" EntitySet="associations" />
+            <End Role="employe_association" EntitySet="employe_association" />
+          </AssociationSet>
+          <AssociationSet Name="FK__historiqu__ID_as__3B75D760" Association="RecolteModel.FK__historiqu__ID_as__3B75D760">
+            <End Role="association" EntitySet="associations" />
+            <End Role="historique_asscociation" EntitySet="historique_asscociation" />
+          </AssociationSet>
+          <AssociationSet Name="FK__client__ID_colli__5BE2A6F2" Association="RecolteModel.FK__client__ID_colli__5BE2A6F2">
+            <End Role="collines" EntitySet="collines" />
+            <End Role="client" EntitySet="clients" />
+          </AssociationSet>
+          <AssociationSet Name="FK__recolte__ID_clie__60A75C0F" Association="RecolteModel.FK__recolte__ID_clie__60A75C0F">
+            <End Role="client" EntitySet="clients" />
+            <End Role="recolte" EntitySet="recoltes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__collines__ID_zon__276EDEB3" Association="RecolteModel.FK__collines__ID_zon__276EDEB3">
+            <End Role="zones" EntitySet="zones" />
+            <End Role="collines" EntitySet="collines" />
+          </AssociationSet>
+          <AssociationSet Name="FK__communes__ID_pro__1CF15040" Association="RecolteModel.FK__communes__ID_pro__1CF15040">
+            <End Role="provinces" EntitySet="provinces" />
+            <End Role="communes" EntitySet="communes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__zones__ID_commun__22AA2996" Association="RecolteModel.FK__zones__ID_commun__22AA2996">
+            <End Role="communes" EntitySet="communes" />
+            <End Role="zones" EntitySet="zones" />
+          </AssociationSet>
+          <AssociationSet Name="FK__utilisate__ID_em__48CFD27E" Association="RecolteModel.FK__utilisate__ID_em__48CFD27E">
+            <End Role="employe_association" EntitySet="employe_association" />
+            <End Role="utilisateur" EntitySet="utilisateurs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__employe_s__ID_st__34C8D9D1" Association="RecolteModel.FK__employe_s__ID_st__34C8D9D1">
+            <End Role="station_lavage" EntitySet="station_lavage" />
+            <End Role="employe_station_lavage" EntitySet="employe_station_lavage" />
+          </AssociationSet>
+          <AssociationSet Name="FK__utilisate__ID_em__4AB81AF0" Association="RecolteModel.FK__utilisate__ID_em__4AB81AF0">
+            <End Role="employe_station_lavage" EntitySet="employe_station_lavage" />
+            <End Role="utilisateur" EntitySet="utilisateurs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__historiqu__ID_qu__5629CD9C" Association="RecolteModel.FK__historiqu__ID_qu__5629CD9C">
+            <End Role="qualite" EntitySet="qualites" />
+            <End Role="historique_prix" EntitySet="historique_prix" />
+          </AssociationSet>
+          <AssociationSet Name="FK__historiqu__ID_st__37A5467C" Association="RecolteModel.FK__historiqu__ID_st__37A5467C">
+            <End Role="station_lavage" EntitySet="station_lavage" />
+            <End Role="historique_station" EntitySet="historique_station" />
+          </AssociationSet>
+          <AssociationSet Name="FK__historiqu__ID_ut__5165187F" Association="RecolteModel.FK__historiqu__ID_ut__5165187F">
+            <End Role="utilisateur" EntitySet="utilisateurs" />
+            <End Role="historique_utilisateur" EntitySet="historique_utilisateur" />
+          </AssociationSet>
+          <AssociationSet Name="FK__utilisate__ID_pr__47DBAE45" Association="RecolteModel.FK__utilisate__ID_pr__47DBAE45">
+            <End Role="profiles" EntitySet="profiles" />
+            <End Role="utilisateur" EntitySet="utilisateurs" />
+          </AssociationSet>
+          <AssociationSet Name="FK__recolte__ID_qual__619B8048" Association="RecolteModel.FK__recolte__ID_qual__619B8048">
+            <End Role="qualite" EntitySet="qualites" />
+            <End Role="recolte" EntitySet="recoltes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__recolte__ID_stat__628FA481" Association="RecolteModel.FK__recolte__ID_stat__628FA481">
+            <End Role="station_lavage" EntitySet="station_lavage" />
+            <End Role="recolte" EntitySet="recoltes" />
+          </AssociationSet>
+          <AssociationSet Name="FK__station_l__ID_Zo__2E1BDC42" Association="RecolteModel.FK__station_l__ID_Zo__2E1BDC42">
+            <End Role="zones" EntitySet="zones" />
+            <End Role="station_lavage" EntitySet="station_lavage" />
+          </AssociationSet>
+        </EntityContainer>
+        <EntityType Name="association">
+          <Key>
+            <PropertyRef Name="ID_association" />
+          </Key>
+          <Property Name="ID_association" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_colline" Type="Int32" Nullable="false" />
+          <Property Name="NOM_association" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="TEL_association" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DATE_association" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="colline" Relationship="RecolteModel.FK__associati__ID_co__2A4B4B5E" FromRole="association" ToRole="collines" />
+          <NavigationProperty Name="clients" Relationship="RecolteModel.FK__client__ID_assoc__5CD6CB2B" FromRole="association" ToRole="client" />
+          <NavigationProperty Name="employe_association" Relationship="RecolteModel.FK__employe_a__ID_as__31EC6D26" FromRole="association" ToRole="employe_association" />
+          <NavigationProperty Name="historique_asscociation" Relationship="RecolteModel.FK__historiqu__ID_as__3B75D760" FromRole="association" ToRole="historique_asscociation" />
+        </EntityType>
+        <EntityType Name="client">
+          <Key>
+            <PropertyRef Name="ID_client" />
+          </Key>
+          <Property Name="ID_client" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="CNI" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="NOM_client" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="PRENOM_client" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="TEL_client" Type="String" Nullable="false" MaxLength="20" Unicode="false" FixedLength="false" />
+          <Property Name="ID_colline" Type="Int32" Nullable="false" />
+          <Property Name="ID_association" Type="Int32" Nullable="false" />
+          <Property Name="DATE_insertion" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="association" Relationship="RecolteModel.FK__client__ID_assoc__5CD6CB2B" FromRole="client" ToRole="association" />
+          <NavigationProperty Name="colline" Relationship="RecolteModel.FK__client__ID_colli__5BE2A6F2" FromRole="client" ToRole="collines" />
+          <NavigationProperty Name="recoltes" Relationship="RecolteModel.FK__recolte__ID_clie__60A75C0F" FromRole="client" ToRole="recolte" />
+        </EntityType>
+        <EntityType Name="colline">
+          <Key>
+            <PropertyRef Name="ID_colline" />
+          </Key>
+          <Property Name="ID_colline" Type="Int32" Nullable="false" />
+          <Property Name="NOM_colline" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="ID_zone" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="associations" Relationship="RecolteModel.FK__associati__ID_co__2A4B4B5E" FromRole="collines" ToRole="association" />
+          <NavigationProperty Name="clients" Relationship="RecolteModel.FK__client__ID_colli__5BE2A6F2" FromRole="collines" ToRole="client" />
+          <NavigationProperty Name="zone" Relationship="RecolteModel.FK__collines__ID_zon__276EDEB3" FromRole="collines" ToRole="zones" />
+        </EntityType>
+        <EntityType Name="commune">
+          <Key>
+            <PropertyRef Name="ID_commune" />
+          </Key>
+          <Property Name="ID_commune" Type="Int32" Nullable="false" />
+          <Property Name="NOM_commune" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="ID_province" Type="Int32" />
+          <Property Name="LATITUDE_commune" Type="Double" Nullable="false" />
+          <Property Name="LONGITUDE_commune" Type="Double" Nullable="false" />
+          <NavigationProperty Name="province" Relationship="RecolteModel.FK__communes__ID_pro__1CF15040" FromRole="communes" ToRole="provinces" />
+          <NavigationProperty Name="zones" Relationship="RecolteModel.FK__zones__ID_commun__22AA2996" FromRole="communes" ToRole="zones" />
+        </EntityType>
+        <EntityType Name="employe_association">
+          <Key>
+            <PropertyRef Name="ID_employe" />
+          </Key>
+          <Property Name="ID_employe" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="CNI" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ID_association" Type="Int32" Nullable="false" />
+          <Property Name="NOM_employe" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="PRENOM_employe" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="TEL_employe" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="EMAIL_employe" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Statut" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="association" Relationship="RecolteModel.FK__employe_a__ID_as__31EC6D26" FromRole="employe_association" ToRole="association" />
+          <NavigationProperty Name="utilisateurs" Relationship="RecolteModel.FK__utilisate__ID_em__48CFD27E" FromRole="employe_association" ToRole="utilisateur" />
+        </EntityType>
+        <EntityType Name="employe_station_lavage">
+          <Key>
+            <PropertyRef Name="ID_employ" />
+          </Key>
+          <Property Name="ID_employ" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="CNI" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="ID_station" Type="Int32" Nullable="false" />
+          <Property Name="NOM_employe" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="PRENOM_employe" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="TEL_employe" Type="String" MaxLength="30" Unicode="false" FixedLength="false" />
+          <Property Name="EMAIL_employe" Type="String" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="Statut" Type="String" MaxLength="40" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="station_lavage" Relationship="RecolteModel.FK__employe_s__ID_st__34C8D9D1" FromRole="employe_station_lavage" ToRole="station_lavage" />
+          <NavigationProperty Name="utilisateurs" Relationship="RecolteModel.FK__utilisate__ID_em__4AB81AF0" FromRole="employe_station_lavage" ToRole="utilisateur" />
+        </EntityType>
+        <EntityType Name="historique_asscociation">
+          <Key>
+            <PropertyRef Name="ID_histoAssoc" />
+          </Key>
+          <Property Name="ID_histoAssoc" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_association" Type="Int32" Nullable="false" />
+          <Property Name="DATE_desactive" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="association" Relationship="RecolteModel.FK__historiqu__ID_as__3B75D760" FromRole="historique_asscociation" ToRole="association" />
+        </EntityType>
+        <EntityType Name="historique_prix">
+          <Key>
+            <PropertyRef Name="ID_histoPrix" />
+          </Key>
+          <Property Name="ID_histoPrix" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_qualite" Type="Int32" Nullable="false" />
+          <Property Name="PRIX" Type="Double" Nullable="false" />
+          <Property Name="DATE_insertion" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="qualite" Relationship="RecolteModel.FK__historiqu__ID_qu__5629CD9C" FromRole="historique_prix" ToRole="qualite" />
+        </EntityType>
+        <EntityType Name="historique_station">
+          <Key>
+            <PropertyRef Name="ID_histoStation" />
+          </Key>
+          <Property Name="ID_histoStation" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_station" Type="Int32" Nullable="false" />
+          <Property Name="DATE_desactive" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="station_lavage" Relationship="RecolteModel.FK__historiqu__ID_st__37A5467C" FromRole="historique_station" ToRole="station_lavage" />
+        </EntityType>
+        <EntityType Name="historique_utilisateur">
+          <Key>
+            <PropertyRef Name="ID_histoUtilisateur" />
+          </Key>
+          <Property Name="ID_histoUtilisateur" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_utilisateur" Type="Int32" Nullable="false" />
+          <Property Name="DATE_desactive" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="utilisateur" Relationship="RecolteModel.FK__historiqu__ID_ut__5165187F" FromRole="historique_utilisateur" ToRole="utilisateur" />
+        </EntityType>
+        <EntityType Name="profile">
+          <Key>
+            <PropertyRef Name="ID_profile" />
+          </Key>
+          <Property Name="ID_profile" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="NOM_profile" Type="String" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="utilisateurs" Relationship="RecolteModel.FK__utilisate__ID_pr__47DBAE45" FromRole="profiles" ToRole="utilisateur" />
+        </EntityType>
+        <EntityType Name="province">
+          <Key>
+            <PropertyRef Name="ID_province" />
+          </Key>
+          <Property Name="ID_province" Type="Int32" Nullable="false" />
+          <Property Name="NOM_province" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="LATITUDE_province" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="LONGITUDE_province" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="communes" Relationship="RecolteModel.FK__communes__ID_pro__1CF15040" FromRole="provinces" ToRole="communes" />
+        </EntityType>
+        <EntityType Name="qualite">
+          <Key>
+            <PropertyRef Name="ID_qualite" />
+          </Key>
+          <Property Name="ID_qualite" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="NOM_qualite" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="historique_prix" Relationship="RecolteModel.FK__historiqu__ID_qu__5629CD9C" FromRole="qualite" ToRole="historique_prix" />
+          <NavigationProperty Name="recoltes" Relationship="RecolteModel.FK__recolte__ID_qual__619B8048" FromRole="qualite" ToRole="recolte" />
+        </EntityType>
+        <EntityType Name="recolte">
+          <Key>
+            <PropertyRef Name="ID_recolte" />
+          </Key>
+          <Property Name="ID_recolte" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_client" Type="Int32" Nullable="false" />
+          <Property Name="ID_qualite" Type="Int32" Nullable="false" />
+          <Property Name="ID_station" Type="Int32" Nullable="false" />
+          <Property Name="quantite" Type="Double" Nullable="false" />
+          <Property Name="Prix" Type="Double" Nullable="false" />
+          <Property Name="Date_insertion" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="client" Relationship="RecolteModel.FK__recolte__ID_clie__60A75C0F" FromRole="recolte" ToRole="client" />
+          <NavigationProperty Name="qualite" Relationship="RecolteModel.FK__recolte__ID_qual__619B8048" FromRole="recolte" ToRole="qualite" />
+          <NavigationProperty Name="station_lavage" Relationship="RecolteModel.FK__recolte__ID_stat__628FA481" FromRole="recolte" ToRole="station_lavage" />
+        </EntityType>
+        <EntityType Name="station_lavage">
+          <Key>
+            <PropertyRef Name="ID_station" />
+          </Key>
+          <Property Name="ID_station" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_Zone" Type="Int32" Nullable="false" />
+          <Property Name="NOM_station" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="TEL_station" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="DATE_insertion" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="employe_station_lavage" Relationship="RecolteModel.FK__employe_s__ID_st__34C8D9D1" FromRole="station_lavage" ToRole="employe_station_lavage" />
+          <NavigationProperty Name="historique_station" Relationship="RecolteModel.FK__historiqu__ID_st__37A5467C" FromRole="station_lavage" ToRole="historique_station" />
+          <NavigationProperty Name="recoltes" Relationship="RecolteModel.FK__recolte__ID_stat__628FA481" FromRole="station_lavage" ToRole="recolte" />
+          <NavigationProperty Name="zone" Relationship="RecolteModel.FK__station_l__ID_Zo__2E1BDC42" FromRole="station_lavage" ToRole="zones" />
+        </EntityType>
+        <EntityType Name="utilisateur">
+          <Key>
+            <PropertyRef Name="ID_utilisateur" />
+          </Key>
+          <Property Name="ID_utilisateur" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+          <Property Name="ID_profile" Type="Int32" Nullable="false" />
+          <Property Name="ID_employ" Type="Int32" />
+          <Property Name="ID_employe" Type="Int32" />
+          <Property Name="username" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="passwords" Type="String" Nullable="false" MaxLength="1000" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="employe_association" Relationship="RecolteModel.FK__utilisate__ID_em__48CFD27E" FromRole="utilisateur" ToRole="employe_association" />
+          <NavigationProperty Name="employe_station_lavage" Relationship="RecolteModel.FK__utilisate__ID_em__4AB81AF0" FromRole="utilisateur" ToRole="employe_station_lavage" />
+          <NavigationProperty Name="historique_utilisateur" Relationship="RecolteModel.FK__historiqu__ID_ut__5165187F" FromRole="utilisateur" ToRole="historique_utilisateur" />
+          <NavigationProperty Name="profile" Relationship="RecolteModel.FK__utilisate__ID_pr__47DBAE45" FromRole="utilisateur" ToRole="profiles" />
+        </EntityType>
+        <EntityType Name="zone">
+          <Key>
+            <PropertyRef Name="ID_zone" />
+          </Key>
+          <Property Name="ID_zone" Type="Int32" Nullable="false" />
+          <Property Name="NOM_zone" Type="String" Nullable="false" MaxLength="100" Unicode="false" FixedLength="false" />
+          <Property Name="ID_commune" Type="Int32" Nullable="false" />
+          <Property Name="LATITUDE_zone" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <Property Name="LONGITUDE_zone" Type="String" Nullable="false" MaxLength="50" Unicode="false" FixedLength="false" />
+          <NavigationProperty Name="collines" Relationship="RecolteModel.FK__collines__ID_zon__276EDEB3" FromRole="zones" ToRole="collines" />
+          <NavigationProperty Name="commune" Relationship="RecolteModel.FK__zones__ID_commun__22AA2996" FromRole="zones" ToRole="communes" />
+          <NavigationProperty Name="station_lavage" Relationship="RecolteModel.FK__station_l__ID_Zo__2E1BDC42" FromRole="zones" ToRole="station_lavage" />
+        </EntityType>
+        <Association Name="FK__associati__ID_co__2A4B4B5E">
+          <End Role="collines" Type="RecolteModel.colline" Multiplicity="1" />
+          <End Role="association" Type="RecolteModel.association" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="collines">
+              <PropertyRef Name="ID_colline" />
+            </Principal>
+            <Dependent Role="association">
+              <PropertyRef Name="ID_colline" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__client__ID_assoc__5CD6CB2B">
+          <End Role="association" Type="RecolteModel.association" Multiplicity="1" />
+          <End Role="client" Type="RecolteModel.client" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="association">
+              <PropertyRef Name="ID_association" />
+            </Principal>
+            <Dependent Role="client">
+              <PropertyRef Name="ID_association" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__employe_a__ID_as__31EC6D26">
+          <End Role="association" Type="RecolteModel.association" Multiplicity="1" />
+          <End Role="employe_association" Type="RecolteModel.employe_association" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="association">
+              <PropertyRef Name="ID_association" />
+            </Principal>
+            <Dependent Role="employe_association">
+              <PropertyRef Name="ID_association" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__historiqu__ID_as__3B75D760">
+          <End Role="association" Type="RecolteModel.association" Multiplicity="1" />
+          <End Role="historique_asscociation" Type="RecolteModel.historique_asscociation" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="association">
+              <PropertyRef Name="ID_association" />
+            </Principal>
+            <Dependent Role="historique_asscociation">
+              <PropertyRef Name="ID_association" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__client__ID_colli__5BE2A6F2">
+          <End Role="collines" Type="RecolteModel.colline" Multiplicity="1" />
+          <End Role="client" Type="RecolteModel.client" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="collines">
+              <PropertyRef Name="ID_colline" />
+            </Principal>
+            <Dependent Role="client">
+              <PropertyRef Name="ID_colline" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__recolte__ID_clie__60A75C0F">
+          <End Role="client" Type="RecolteModel.client" Multiplicity="1" />
+          <End Role="recolte" Type="RecolteModel.recolte" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="client">
+              <PropertyRef Name="ID_client" />
+            </Principal>
+            <Dependent Role="recolte">
+              <PropertyRef Name="ID_client" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__collines__ID_zon__276EDEB3">
+          <End Role="zones" Type="RecolteModel.zone" Multiplicity="1" />
+          <End Role="collines" Type="RecolteModel.colline" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zones">
+              <PropertyRef Name="ID_zone" />
+            </Principal>
+            <Dependent Role="collines">
+              <PropertyRef Name="ID_zone" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__communes__ID_pro__1CF15040">
+          <End Role="provinces" Type="RecolteModel.province" Multiplicity="0..1" />
+          <End Role="communes" Type="RecolteModel.commune" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="provinces">
+              <PropertyRef Name="ID_province" />
+            </Principal>
+            <Dependent Role="communes">
+              <PropertyRef Name="ID_province" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__zones__ID_commun__22AA2996">
+          <End Role="communes" Type="RecolteModel.commune" Multiplicity="1" />
+          <End Role="zones" Type="RecolteModel.zone" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="communes">
+              <PropertyRef Name="ID_commune" />
+            </Principal>
+            <Dependent Role="zones">
+              <PropertyRef Name="ID_commune" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__utilisate__ID_em__48CFD27E">
+          <End Role="employe_association" Type="RecolteModel.employe_association" Multiplicity="0..1" />
+          <End Role="utilisateur" Type="RecolteModel.utilisateur" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="employe_association">
+              <PropertyRef Name="ID_employe" />
+            </Principal>
+            <Dependent Role="utilisateur">
+              <PropertyRef Name="ID_employ" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__employe_s__ID_st__34C8D9D1">
+          <End Role="station_lavage" Type="RecolteModel.station_lavage" Multiplicity="1" />
+          <End Role="employe_station_lavage" Type="RecolteModel.employe_station_lavage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="station_lavage">
+              <PropertyRef Name="ID_station" />
+            </Principal>
+            <Dependent Role="employe_station_lavage">
+              <PropertyRef Name="ID_station" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__utilisate__ID_em__4AB81AF0">
+          <End Role="employe_station_lavage" Type="RecolteModel.employe_station_lavage" Multiplicity="0..1" />
+          <End Role="utilisateur" Type="RecolteModel.utilisateur" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="employe_station_lavage">
+              <PropertyRef Name="ID_employ" />
+            </Principal>
+            <Dependent Role="utilisateur">
+              <PropertyRef Name="ID_employe" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__historiqu__ID_qu__5629CD9C">
+          <End Role="qualite" Type="RecolteModel.qualite" Multiplicity="1" />
+          <End Role="historique_prix" Type="RecolteModel.historique_prix" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="qualite">
+              <PropertyRef Name="ID_qualite" />
+            </Principal>
+            <Dependent Role="historique_prix">
+              <PropertyRef Name="ID_qualite" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__historiqu__ID_st__37A5467C">
+          <End Role="station_lavage" Type="RecolteModel.station_lavage" Multiplicity="1" />
+          <End Role="historique_station" Type="RecolteModel.historique_station" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="station_lavage">
+              <PropertyRef Name="ID_station" />
+            </Principal>
+            <Dependent Role="historique_station">
+              <PropertyRef Name="ID_station" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__historiqu__ID_ut__5165187F">
+          <End Role="utilisateur" Type="RecolteModel.utilisateur" Multiplicity="1" />
+          <End Role="historique_utilisateur" Type="RecolteModel.historique_utilisateur" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="utilisateur">
+              <PropertyRef Name="ID_utilisateur" />
+            </Principal>
+            <Dependent Role="historique_utilisateur">
+              <PropertyRef Name="ID_utilisateur" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__utilisate__ID_pr__47DBAE45">
+          <End Role="profiles" Type="RecolteModel.profile" Multiplicity="1" />
+          <End Role="utilisateur" Type="RecolteModel.utilisateur" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="profiles">
+              <PropertyRef Name="ID_profile" />
+            </Principal>
+            <Dependent Role="utilisateur">
+              <PropertyRef Name="ID_profile" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__recolte__ID_qual__619B8048">
+          <End Role="qualite" Type="RecolteModel.qualite" Multiplicity="1" />
+          <End Role="recolte" Type="RecolteModel.recolte" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="qualite">
+              <PropertyRef Name="ID_qualite" />
+            </Principal>
+            <Dependent Role="recolte">
+              <PropertyRef Name="ID_qualite" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__recolte__ID_stat__628FA481">
+          <End Role="station_lavage" Type="RecolteModel.station_lavage" Multiplicity="1" />
+          <End Role="recolte" Type="RecolteModel.recolte" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="station_lavage">
+              <PropertyRef Name="ID_station" />
+            </Principal>
+            <Dependent Role="recolte">
+              <PropertyRef Name="ID_station" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__station_l__ID_Zo__2E1BDC42">
+          <End Role="zones" Type="RecolteModel.zone" Multiplicity="1" />
+          <End Role="station_lavage" Type="RecolteModel.station_lavage" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="zones">
+              <PropertyRef Name="ID_zone" />
+            </Principal>
+            <Dependent Role="station_lavage">
+              <PropertyRef Name="ID_Zone" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="RecolteModelStoreContainer" CdmEntityContainer="RecolteEntities">
+          <EntitySetMapping Name="associations">
+            <EntityTypeMapping TypeName="RecolteModel.association">
+              <MappingFragment StoreEntitySet="association">
+                <ScalarProperty Name="ID_association" ColumnName="ID_association" />
+                <ScalarProperty Name="ID_colline" ColumnName="ID_colline" />
+                <ScalarProperty Name="NOM_association" ColumnName="NOM_association" />
+                <ScalarProperty Name="TEL_association" ColumnName="TEL_association" />
+                <ScalarProperty Name="DATE_association" ColumnName="DATE_association" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="clients">
+            <EntityTypeMapping TypeName="RecolteModel.client">
+              <MappingFragment StoreEntitySet="client">
+                <ScalarProperty Name="ID_client" ColumnName="ID_client" />
+                <ScalarProperty Name="CNI" ColumnName="CNI" />
+                <ScalarProperty Name="NOM_client" ColumnName="NOM_client" />
+                <ScalarProperty Name="PRENOM_client" ColumnName="PRENOM_client" />
+                <ScalarProperty Name="TEL_client" ColumnName="TEL_client" />
+                <ScalarProperty Name="ID_colline" ColumnName="ID_colline" />
+                <ScalarProperty Name="ID_association" ColumnName="ID_association" />
+                <ScalarProperty Name="DATE_insertion" ColumnName="DATE_insertion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="collines">
+            <EntityTypeMapping TypeName="RecolteModel.colline">
+              <MappingFragment StoreEntitySet="collines">
+                <ScalarProperty Name="ID_colline" ColumnName="ID_colline" />
+                <ScalarProperty Name="NOM_colline" ColumnName="NOM_colline" />
+                <ScalarProperty Name="ID_zone" ColumnName="ID_zone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="communes">
+            <EntityTypeMapping TypeName="RecolteModel.commune">
+              <MappingFragment StoreEntitySet="communes">
+                <ScalarProperty Name="ID_commune" ColumnName="ID_commune" />
+                <ScalarProperty Name="NOM_commune" ColumnName="NOM_commune" />
+                <ScalarProperty Name="ID_province" ColumnName="ID_province" />
+                <ScalarProperty Name="LATITUDE_commune" ColumnName="LATITUDE_commune" />
+                <ScalarProperty Name="LONGITUDE_commune" ColumnName="LONGITUDE_commune" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="employe_association">
+            <EntityTypeMapping TypeName="RecolteModel.employe_association">
+              <MappingFragment StoreEntitySet="employe_association">
+                <ScalarProperty Name="ID_employe" ColumnName="ID_employe" />
+                <ScalarProperty Name="CNI" ColumnName="CNI" />
+                <ScalarProperty Name="ID_association" ColumnName="ID_association" />
+                <ScalarProperty Name="NOM_employe" ColumnName="NOM_employe" />
+                <ScalarProperty Name="PRENOM_employe" ColumnName="PRENOM_employe" />
+                <ScalarProperty Name="TEL_employe" ColumnName="TEL_employe" />
+                <ScalarProperty Name="EMAIL_employe" ColumnName="EMAIL_employe" />
+                <ScalarProperty Name="Statut" ColumnName="Statut" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="employe_station_lavage">
+            <EntityTypeMapping TypeName="RecolteModel.employe_station_lavage">
+              <MappingFragment StoreEntitySet="employe_station_lavage">
+                <ScalarProperty Name="ID_employ" ColumnName="ID_employ" />
+                <ScalarProperty Name="CNI" ColumnName="CNI" />
+                <ScalarProperty Name="ID_station" ColumnName="ID_station" />
+                <ScalarProperty Name="NOM_employe" ColumnName="NOM_employe" />
+                <ScalarProperty Name="PRENOM_employe" ColumnName="PRENOM_employe" />
+                <ScalarProperty Name="TEL_employe" ColumnName="TEL_employe" />
+                <ScalarProperty Name="EMAIL_employe" ColumnName="EMAIL_employe" />
+                <ScalarProperty Name="Statut" ColumnName="Statut" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="historique_asscociation">
+            <EntityTypeMapping TypeName="RecolteModel.historique_asscociation">
+              <MappingFragment StoreEntitySet="historique_asscociation">
+                <ScalarProperty Name="ID_histoAssoc" ColumnName="ID_histoAssoc" />
+                <ScalarProperty Name="ID_association" ColumnName="ID_association" />
+                <ScalarProperty Name="DATE_desactive" ColumnName="DATE_desactive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="historique_prix">
+            <EntityTypeMapping TypeName="RecolteModel.historique_prix">
+              <MappingFragment StoreEntitySet="historique_prix">
+                <ScalarProperty Name="ID_histoPrix" ColumnName="ID_histoPrix" />
+                <ScalarProperty Name="ID_qualite" ColumnName="ID_qualite" />
+                <ScalarProperty Name="PRIX" ColumnName="PRIX" />
+                <ScalarProperty Name="DATE_insertion" ColumnName="DATE_insertion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="historique_station">
+            <EntityTypeMapping TypeName="RecolteModel.historique_station">
+              <MappingFragment StoreEntitySet="historique_station">
+                <ScalarProperty Name="ID_histoStation" ColumnName="ID_histoStation" />
+                <ScalarProperty Name="ID_station" ColumnName="ID_station" />
+                <ScalarProperty Name="DATE_desactive" ColumnName="DATE_desactive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="historique_utilisateur">
+            <EntityTypeMapping TypeName="RecolteModel.historique_utilisateur">
+              <MappingFragment StoreEntitySet="historique_utilisateur">
+                <ScalarProperty Name="ID_histoUtilisateur" ColumnName="ID_histoUtilisateur" />
+                <ScalarProperty Name="ID_utilisateur" ColumnName="ID_utilisateur" />
+                <ScalarProperty Name="DATE_desactive" ColumnName="DATE_desactive" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="profiles">
+            <EntityTypeMapping TypeName="RecolteModel.profile">
+              <MappingFragment StoreEntitySet="profiles">
+                <ScalarProperty Name="ID_profile" ColumnName="ID_profile" />
+                <ScalarProperty Name="NOM_profile" ColumnName="NOM_profile" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="provinces">
+            <EntityTypeMapping TypeName="RecolteModel.province">
+              <MappingFragment StoreEntitySet="provinces">
+                <ScalarProperty Name="ID_province" ColumnName="ID_province" />
+                <ScalarProperty Name="NOM_province" ColumnName="NOM_province" />
+                <ScalarProperty Name="LATITUDE_province" ColumnName="LATITUDE_province" />
+                <ScalarProperty Name="LONGITUDE_province" ColumnName="LONGITUDE_province" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="qualites">
+            <EntityTypeMapping TypeName="RecolteModel.qualite">
+              <MappingFragment StoreEntitySet="qualite">
+                <ScalarProperty Name="ID_qualite" ColumnName="ID_qualite" />
+                <ScalarProperty Name="NOM_qualite" ColumnName="NOM_qualite" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="recoltes">
+            <EntityTypeMapping TypeName="RecolteModel.recolte">
+              <MappingFragment StoreEntitySet="recolte">
+                <ScalarProperty Name="ID_recolte" ColumnName="ID_recolte" />
+                <ScalarProperty Name="ID_client" ColumnName="ID_client" />
+                <ScalarProperty Name="ID_qualite" ColumnName="ID_qualite" />
+                <ScalarProperty Name="ID_station" ColumnName="ID_station" />
+                <ScalarProperty Name="quantite" ColumnName="quantite" />
+                <ScalarProperty Name="Prix" ColumnName="Prix" />
+                <ScalarProperty Name="Date_insertion" ColumnName="Date_insertion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="station_lavage">
+            <EntityTypeMapping TypeName="RecolteModel.station_lavage">
+              <MappingFragment StoreEntitySet="station_lavage">
+                <ScalarProperty Name="ID_station" ColumnName="ID_station" />
+                <ScalarProperty Name="ID_Zone" ColumnName="ID_Zone" />
+                <ScalarProperty Name="NOM_station" ColumnName="NOM_station" />
+                <ScalarProperty Name="TEL_station" ColumnName="TEL_station" />
+                <ScalarProperty Name="DATE_insertion" ColumnName="DATE_insertion" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="utilisateurs">
+            <EntityTypeMapping TypeName="RecolteModel.utilisateur">
+              <MappingFragment StoreEntitySet="utilisateur">
+                <ScalarProperty Name="ID_utilisateur" ColumnName="ID_utilisateur" />
+                <ScalarProperty Name="ID_profile" ColumnName="ID_profile" />
+                <ScalarProperty Name="ID_employ" ColumnName="ID_employ" />
+                <ScalarProperty Name="ID_employe" ColumnName="ID_employe" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="passwords" ColumnName="passwords" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="zones">
+            <EntityTypeMapping TypeName="RecolteModel.zone">
+              <MappingFragment StoreEntitySet="zones">
+                <ScalarProperty Name="ID_zone" ColumnName="ID_zone" />
+                <ScalarProperty Name="NOM_zone" ColumnName="NOM_zone" />
+                <ScalarProperty Name="ID_commune" ColumnName="ID_commune" />
+                <ScalarProperty Name="LATITUDE_zone" ColumnName="LATITUDE_zone" />
+                <ScalarProperty Name="LONGITUDE_zone" ColumnName="LONGITUDE_zone" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="False" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="True" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="Aucun" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,53 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layouts/_DefaultStation.cshtml";
+}
+<div class="main-panel">
+ <div class="container">
+
+    <div class="panel-header bg-primary-gradient">
+       <div class="page-inner py-3">
+          <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
+             <div>
+              <h2 class="text-white pb-2 fw-bold">
+                ENREGISTREMENT DES RECOLTES DANS @Session["association"]
+            </h2>
+        </div>
+        <div class="ml-md-auto py-2 py-md-0">
+         <!-- PAGE-HEADER -->
+         <div class="page-header">
+            <ol class="breadcrumb">
+               <li class="breadcrumb-item">
+                  <a href="#">Station</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="#">Rapport</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page" >
+              Client 
+          </li>
+      </ol>
+  </div>
+  <!-- PAGE-HEADER END -->
+</div>
+</div>
+</div>
+</div>
+<div class="card-body rec-pat" >
+  <div class="container-fluid">
+      <div class="row">
+             
+    <div class="col-md-12" id="containerClient"></div>
+    <div class="col-md-12" id="containerQualite"></div>
+</div>
+
+   </div>
+</div>
+ </div>
+</div>
+    @section scripts
+    {
+    <script src="~/Scripts/stationClient.js"></script>
+    <script src="~/Scripts/stationQualite.js"></script>
+}

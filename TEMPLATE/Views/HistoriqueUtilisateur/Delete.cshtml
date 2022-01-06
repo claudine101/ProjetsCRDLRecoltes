@@ -1,0 +1,39 @@
+﻿@model TEMPLATE.Models.historique_utilisateur
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>historique_utilisateur</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ID_histoUtilisateur)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ID_histoUtilisateur)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.utilisateur.username)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.utilisateur.username)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DATE_desactive)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DATE_desactive)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

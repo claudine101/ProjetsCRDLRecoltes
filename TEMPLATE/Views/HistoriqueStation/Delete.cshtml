@@ -1,0 +1,71 @@
+﻿@model TEMPLATE.Models.historique_station
+ @{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layouts/_Default.cshtml";
+}
+<div class="main-panel">
+    <div class="container">
+    <div class="panel-header bg-primary-gradient">
+	    <div class="page-inner py-5">
+		    <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
+			    <div>
+				    <h2 class="text-white pb-2 fw-bold">Station lavage</h2>
+			    </div>
+			    <div class="ml-md-auto py-2 py-md-0">
+			    <!-- PAGE-HEADER -->
+			    <div class="page-header">
+				    <ol class="breadcrumb">
+					    <li class="breadcrumb-item">
+						    <a href="#">Station lavage</a>
+					    </li>
+					    <li class="breadcrumb-item active" aria-current="page">
+						    Active
+					    </li>
+				    </ol>
+			    </div>
+                <!-- PAGE-HEADER END -->
+			    </div>
+		    </div>
+	    </div>
+    </div>
+    <div class="container-fluid" style="background-color:moccasin">
+        <div class="row">
+            <article class="col-xs-12 col-sm-12 col-md-3 col-lg-3">     
+            </article>
+            <article class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="background-color:#D291BC;margin-top:4px;margin-bottom:4px">
+                <h3>Voulez vous active cette station ?</h3>
+                <div class="display-label">
+                     @Html.DisplayNameFor(model => model.ID_histoStation)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.ID_histoStation)
+                </div>
+                <div class="display-label">
+                     @Html.DisplayNameFor(model => model.station_lavage.NOM_station)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.station_lavage.NOM_station)
+                </div>
+                <div class="display-label">
+                     @Html.DisplayNameFor(model => model.DATE_desactive)
+                </div>
+                <div class="display-field">
+                    @Html.DisplayFor(model => model.DATE_desactive)
+                </div>
+                @using (Html.BeginForm()) 
+                {
+                    <div class="form-group">
+                        <div class="col-md-offset-4 col-md-10">
+                            <input type="submit" value="Active" class="btn btn-info pull-right" />
+                        </div>
+                    </div>
+                    <p>
+                        @Html.ActionLink("Retour", "Index")
+                    </p>
+               }
+            </article>
+            <article class="col-xs-12 col-sm-12 col-md-3 col-lg-3">    
+            </article>
+        </div>
+    </div>
+</div>
