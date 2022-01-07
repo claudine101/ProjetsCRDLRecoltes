@@ -143,6 +143,7 @@ namespace TEMPLATE.Controllers
             return View();
         }
 
+
         public ActionResult GetDataClient()
         {
             RecolteEntities context = new RecolteEntities();
