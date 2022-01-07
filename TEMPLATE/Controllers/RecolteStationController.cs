@@ -517,6 +517,7 @@ namespace TEMPLATE.Controllers
             return RedirectToAction("Indexe");
         }
 
+
         public ActionResult Details(int idclient = 0, int idqualite = 0, int idstation = 0)
         {
             if (Session["IDEmploye"] != null)
