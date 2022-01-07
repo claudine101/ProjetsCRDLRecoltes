@@ -89,9 +89,6 @@ namespace TEMPLATE.Controllers
             return View(utilisateur);
         }
 
-        //
-        // POST: /Utilisateur/Delete/5
-
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
