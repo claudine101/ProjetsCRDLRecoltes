@@ -27,9 +27,6 @@ namespace TEMPLATE.Controllers
             return View(qualite);
         }
 
-        //
-        // GET: /QualiteStation/Create
-
         public ActionResult Create()
         {
             return View();
