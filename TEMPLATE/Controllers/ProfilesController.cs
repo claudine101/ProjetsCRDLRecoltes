@@ -16,10 +16,6 @@ namespace TEMPLATE.Controllers
         {
             return View(db.profiles.ToList());
         }
-
-        //
-        // GET: /Profiles/Details/5
-
         public ActionResult Details(int id = 0)
         {
             profile profile = db.profiles.Find(id);
