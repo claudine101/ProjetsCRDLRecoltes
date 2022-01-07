@@ -36,9 +36,6 @@ namespace TEMPLATE.Controllers
             return View();
         }
 
-        //
-        // POST: /HistoriqueStation/Create
-
         [HttpPost]
         public ActionResult Create(historique_station historique_station)
         {
