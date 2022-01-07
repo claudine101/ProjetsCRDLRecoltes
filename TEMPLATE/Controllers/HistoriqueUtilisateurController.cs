@@ -47,7 +47,8 @@ namespace TEMPLATE.Controllers
             return View(historique_utilisateur);
         }
 
-        //
+        /
+        /
         // GET: /HistoriqueUtilisateur/Edit/5
 
         public ActionResult Edit(int id = 0)
