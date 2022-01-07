@@ -13,17 +13,12 @@ namespace TEMPLATE.Controllers
     {
         private RecolteEntities db = new RecolteEntities();
 
-        //
-        // GET: /EmployeAssociation/
-
         public ActionResult Index()
         {
             var employe_association = db.employe_association.Include(e => e.association);
             return View(employe_association.ToList());
         }
 
-        //
-        // GET: /EmployeAssociation/Details/5
 
         public ActionResult Details(int id = 0)
         {
