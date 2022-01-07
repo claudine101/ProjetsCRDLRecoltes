@@ -59,8 +59,6 @@ namespace TEMPLATE.Controllers
             return View(historique_prix);
         }
 
-        //
-        // POST: /HistoriquePrix/Edit/5
 
         [HttpPost]
         public ActionResult Edit(historique_prix historique_prix)
