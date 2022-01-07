@@ -12,11 +12,6 @@ namespace TEMPLATE.Controllers
     public class HistoriqueAssoctionController : Controller
     {
         private RecolteEntities db = new RecolteEntities();
-
-
-
-
-
         public ActionResult Index()
         {
             var historique_asscociation = db.historique_asscociation.Include(h => h.association);
