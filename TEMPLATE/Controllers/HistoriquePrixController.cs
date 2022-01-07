@@ -33,11 +33,6 @@ namespace TEMPLATE.Controllers
             return View();
         }
 
-
-
-        //
-        // POST: /HistoriquePrix/Create
-
         [HttpPost]
         public ActionResult Create(historique_prix historique_prix)
         {
