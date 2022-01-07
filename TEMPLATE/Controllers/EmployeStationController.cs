@@ -76,6 +76,7 @@ namespace TEMPLATE.Controllers
         }
 
 
+
         public ActionResult Delete(int id = 0)
         {
             employe_station_lavage employe_station_lavage = db.employe_station_lavage.Find(id);
