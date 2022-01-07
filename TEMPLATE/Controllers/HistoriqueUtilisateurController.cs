@@ -33,10 +33,6 @@ namespace TEMPLATE.Controllers
             ViewBag.ID_utilisateur = new SelectList(db.utilisateurs, "ID_utilisateur", "username");
             return View();
         }
-
-        //
-        // POST: /HistoriqueUtilisateur/Create
-
         [HttpPost]
         public ActionResult Create(historique_utilisateur historique_utilisateur)
         {
