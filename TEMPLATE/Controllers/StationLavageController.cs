@@ -49,7 +49,7 @@ namespace TEMPLATE.Controllers
             ViewBag.ID_zone = new SelectList(db.zones, "ID_zone", "NOM_zone");
             return View();
         }
-        // POST: /StationLavage/Create
+  
         [HttpPost]
         public ActionResult Create(station_lavage station_lavage)
         {
