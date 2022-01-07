@@ -62,10 +62,6 @@ namespace TEMPLATE.Controllers
             }
             return View(profile);
         }
-
-        //
-        // GET: /Profiles/Delete/5
-
         public ActionResult Delete(int id = 0)
         {
             profile profile = db.profiles.Find(id);
