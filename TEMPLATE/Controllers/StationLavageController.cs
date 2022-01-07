@@ -137,6 +137,7 @@ namespace TEMPLATE.Controllers
 
             return Json(quantite, JsonRequestBehavior.AllowGet);
         }
+        
         public ActionResult RapportClient()
         {
             return View();
