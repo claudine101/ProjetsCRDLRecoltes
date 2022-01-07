@@ -14,6 +14,7 @@ namespace TEMPLATE.Controllers
         private RecolteEntities db = new RecolteEntities();
 
 
+
         public ActionResult Index()
         {
             var historique_asscociation = db.historique_asscociation.Include(h => h.association);
@@ -29,13 +30,6 @@ namespace TEMPLATE.Controllers
             }
             return View(historique_asscociation);
         }
-
-     
-
-
-
-
-
         public ActionResult Create()
         {
             ViewBag.ID_association = new SelectList(db.associations, "ID_association", "NOM_association");
