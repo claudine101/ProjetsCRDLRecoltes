@@ -777,6 +777,8 @@ namespace TEMPLATE.Controllers
                 return Json(NombreClient, JsonRequestBehavior.AllowGet);
             }
         }
+       
+        
         //POUR CLIENT PAR ASSOCIATION
         public JsonResult getClient(int id)
         {
