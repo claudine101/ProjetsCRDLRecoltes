@@ -56,10 +56,6 @@ namespace TEMPLATE.Controllers
             ViewBag.ID_qualite = new SelectList(db.qualites, "ID_qualite", "NOM_qualite", historique_prix.ID_qualite);
             return View(historique_prix);
         }
-
-        //
-        // POST: /HistoriquePrixStation/Edit/5
-
         [HttpPost]
         public ActionResult Edit(historique_prix historique_prix)
         {
