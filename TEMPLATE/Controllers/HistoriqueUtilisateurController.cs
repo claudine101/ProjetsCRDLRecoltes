@@ -28,9 +28,6 @@ namespace TEMPLATE.Controllers
             return View(historique_utilisateur);
         }
 
-        //
-        // GET: /HistoriqueUtilisateur/Create
-
         public ActionResult Create()
         {
             ViewBag.ID_utilisateur = new SelectList(db.utilisateurs, "ID_utilisateur", "username");
