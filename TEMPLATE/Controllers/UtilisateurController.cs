@@ -36,10 +36,6 @@ namespace TEMPLATE.Controllers
             ViewBag.ID_profile = new SelectList(db.profiles, "ID_profile", "NOM_profile");
             return View();
         }
-
-        //
-        // POST: /Utilisateur/Create
-
         [HttpPost]
         public ActionResult Create(utilisateur utilisateur)
         {
