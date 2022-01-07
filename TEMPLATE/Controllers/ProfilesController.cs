@@ -72,8 +72,6 @@ namespace TEMPLATE.Controllers
             return View(profile);
         }
 
-       
-
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
