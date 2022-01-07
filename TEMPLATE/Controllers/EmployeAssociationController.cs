@@ -88,9 +88,6 @@ namespace TEMPLATE.Controllers
             return View(employe_association);
         }
 
-        //
-        // POST: /EmployeAssociation/Delete/5
-
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
