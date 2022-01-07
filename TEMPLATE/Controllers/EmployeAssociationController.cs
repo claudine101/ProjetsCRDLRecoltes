@@ -30,8 +30,6 @@ namespace TEMPLATE.Controllers
             return View(employe_association);
         }
 
-        //
-        // GET: /EmployeAssociation/Create
 
         public ActionResult Create()
         {
