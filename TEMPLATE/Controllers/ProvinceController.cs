@@ -58,8 +58,6 @@ namespace TEMPLATE.Controllers
             return View(province);
         }
 
-        //
-        // POST: /Province/Edit/5
 
         [HttpPost]
         public ActionResult Edit(province province)
