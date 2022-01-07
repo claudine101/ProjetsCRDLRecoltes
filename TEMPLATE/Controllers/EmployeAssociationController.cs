@@ -37,8 +37,6 @@ namespace TEMPLATE.Controllers
             return View();
         }
 
-        //
-        // POST: /EmployeAssociation/Create
 
         [HttpPost]
         public ActionResult Create(employe_association employe_association)
