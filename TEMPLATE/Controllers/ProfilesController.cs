@@ -72,8 +72,7 @@ namespace TEMPLATE.Controllers
             return View(profile);
         }
 
-        //
-        // POST: /Profiles/Delete/5
+       
 
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
