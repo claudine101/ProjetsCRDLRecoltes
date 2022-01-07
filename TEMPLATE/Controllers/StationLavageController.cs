@@ -76,7 +76,7 @@ namespace TEMPLATE.Controllers
             ViewBag.ID_zone = new SelectList(db.zones, "ID_zone", "NOM_zone");
             return View(station_lavage);
         }
-        // POST: /StationLavage/Edit/5
+
         [HttpPost]
         public ActionResult Edit(station_lavage station_lavage)
         {
