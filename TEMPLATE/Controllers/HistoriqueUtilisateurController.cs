@@ -46,11 +46,6 @@ namespace TEMPLATE.Controllers
             ViewBag.ID_utilisateur = new SelectList(db.utilisateurs, "ID_utilisateur", "username", historique_utilisateur.ID_utilisateur);
             return View(historique_utilisateur);
         }
-
-        /
-        /
-        // GET: /HistoriqueUtilisateur/Edit/5
-
         public ActionResult Edit(int id = 0)
         {
             historique_utilisateur historique_utilisateur = db.historique_utilisateur.Find(id);
