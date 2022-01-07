@@ -90,6 +90,7 @@ namespace TEMPLATE.Controllers
             return View(recolte);
         }
 
+        
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
