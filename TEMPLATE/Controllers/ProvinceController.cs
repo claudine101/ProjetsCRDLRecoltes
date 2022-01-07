@@ -29,16 +29,10 @@ namespace TEMPLATE.Controllers
             return View(province);
         }
 
-        //
-        // GET: /Province/Create
-
         public ActionResult Create()
         {
             return View();
         }
-
-        //
-        // POST: /Province/Create
 
         [HttpPost]
         public ActionResult Create(province province)
