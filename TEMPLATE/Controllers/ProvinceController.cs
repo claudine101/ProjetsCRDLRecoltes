@@ -70,10 +70,6 @@ namespace TEMPLATE.Controllers
             }
             return View(province);
         }
-
-        //
-        // GET: /Province/Delete/5
-
         public ActionResult Delete(int id = 0)
         {
             province province = db.provinces.Find(id);
