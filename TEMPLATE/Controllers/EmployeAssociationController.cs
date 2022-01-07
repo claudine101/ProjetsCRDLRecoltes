@@ -64,8 +64,6 @@ namespace TEMPLATE.Controllers
             return View(employe_association);
         }
 
-        //
-        // POST: /EmployeAssociation/Edit/5
 
         [HttpPost]
         public ActionResult Edit(employe_association employe_association)
