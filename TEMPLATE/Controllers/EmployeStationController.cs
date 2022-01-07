@@ -13,9 +13,6 @@ namespace TEMPLATE.Controllers
     {
         private RecolteEntities db = new RecolteEntities();
 
-        //
-        // GET: /EmployeStation/
-
         public ActionResult Index()
         {
             var employe_station_lavage = db.employe_station_lavage.Include(e => e.station_lavage);
