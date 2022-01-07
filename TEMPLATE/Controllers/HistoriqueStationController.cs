@@ -30,9 +30,6 @@ namespace TEMPLATE.Controllers
             return View(historique_station);
         }
 
-        //
-        // GET: /HistoriqueStation/Create
-
         public ActionResult Create()
         {
             ViewBag.ID_station = new SelectList(db.station_lavage, "ID_station", "NOM_station");
