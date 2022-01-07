@@ -694,6 +694,7 @@ namespace TEMPLATE.Controllers
             }
 
         }
+        
         public ActionResult RapportQualite()
         {
             return View();
