@@ -612,6 +612,9 @@ namespace TEMPLATE.Controllers
             db.Dispose();
             base.Dispose(disposing);
         }
+        
+
+        
         //POUR LE RAPPORT 
         public ActionResult RapportClient()
         {
