@@ -63,7 +63,7 @@ namespace TEMPLATE.Controllers
             ViewBag.ID_Zone = new SelectList(db.zones, "ID_zone", "NOM_zone", station_lavage.ID_Zone);
             return View(station_lavage);
         }
-        // GET: /StationLavage/Edit/5
+
         public ActionResult Edit(int id = 0)
         {
             station_lavage station_lavage = db.station_lavage.Find(id);
