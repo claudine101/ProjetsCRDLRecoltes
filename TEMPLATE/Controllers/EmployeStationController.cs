@@ -13,6 +13,9 @@ namespace TEMPLATE.Controllers
     {
         private RecolteEntities db = new RecolteEntities();
 
+
+
+
         public ActionResult Index()
         {
             var employe_station_lavage = db.employe_station_lavage.Include(e => e.station_lavage);
@@ -74,10 +77,13 @@ namespace TEMPLATE.Controllers
             ViewBag.ID_station = new SelectList(db.station_lavage, "ID_station", "NOM_station", employe_station_lavage.ID_station);
             return View(employe_station_lavage);
         }
+<<<<<<< HEAD
 
         //
         // GET: /EmployeStation/Delete/5
 
+=======
+>>>>>>> employe_station
         public ActionResult Delete(int id = 0)
         {
             employe_station_lavage employe_station_lavage = db.employe_station_lavage.Find(id);
