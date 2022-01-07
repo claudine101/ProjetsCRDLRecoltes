@@ -12,10 +12,6 @@ namespace TEMPLATE.Controllers
     public class HistoriqueUtilisateurController : Controller
     {
         private RecolteEntities db = new RecolteEntities();
-
-        //
-        // GET: /HistoriqueUtilisateur/
-
         public ActionResult Index()
         {
             var historique_utilisateur = db.historique_utilisateur.Include(h => h.utilisateur);
