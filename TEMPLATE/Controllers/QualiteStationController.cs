@@ -78,9 +78,6 @@ namespace TEMPLATE.Controllers
             return View(qualite);
         }
 
-        //
-        // POST: /QualiteStation/Delete/5
-
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
