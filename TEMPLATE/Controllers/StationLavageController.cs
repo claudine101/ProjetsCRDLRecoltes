@@ -41,7 +41,7 @@ namespace TEMPLATE.Controllers
             }
             return View(station_lavage);
         }
-        // GET: /StationLavage/Create
+      
         public ActionResult Create()
         {
             ViewBag.ID_province = new SelectList(db.provinces, "ID_province", "NOM_province");
