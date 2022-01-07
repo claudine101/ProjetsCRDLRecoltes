@@ -12,10 +12,6 @@ namespace TEMPLATE.Controllers
     public class ProfilesController : Controller
     {
         private RecolteEntities db = new RecolteEntities();
-
-        //
-        // GET: /Profiles/
-
         public ActionResult Index()
         {
             return View(db.profiles.ToList());
