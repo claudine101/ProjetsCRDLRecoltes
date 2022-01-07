@@ -62,9 +62,6 @@ namespace TEMPLATE.Controllers
             return View(employe_station_lavage);
         }
 
-        //
-        // POST: /EmployeStation/Edit/5
-
         [HttpPost]
         public ActionResult Edit(employe_station_lavage employe_station_lavage)
         {
