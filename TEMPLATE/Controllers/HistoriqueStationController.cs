@@ -73,10 +73,6 @@ namespace TEMPLATE.Controllers
             return View(historique_station);
         }
 
-
-        //
-        // GET: /HistoriqueStation/Delete/5
-
         public ActionResult Delete(int id = 0)
         {
             historique_station historique_station = db.historique_station.Find(id);
