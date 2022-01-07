@@ -287,6 +287,7 @@ namespace TEMPLATE.Controllers
             var recoltes = db.recoltes.Include(r => r.client).Include(r => r.qualite).Include(r => r.station_lavage);
             return View(recolt);
         }
+      
         //public ActionResult Detaill(int id = 0)
         //{
         //    var IDassocition = 0;
@@ -422,9 +423,6 @@ namespace TEMPLATE.Controllers
             ViewBag.ID_station = new SelectList(db.station_lavage, "ID_station", "NOM_station");
             return View();
         }
-
-        //
-        // POST: /Recolte/Create
 
         [HttpPost]
         public ActionResult Create(recolte recolte)
