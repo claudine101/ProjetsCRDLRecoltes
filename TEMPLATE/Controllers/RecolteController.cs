@@ -80,10 +80,6 @@ namespace TEMPLATE.Controllers
             ViewBag.ID_station = new SelectList(db.station_lavage, "ID_station", "NOM_station", recolte.ID_station);
             return View(recolte);
         }
-
-        //
-        // GET: /Recolte/Delete/5
-
         public ActionResult Delete(int id = 0)
         {
             recolte recolte = db.recoltes.Find(id);
