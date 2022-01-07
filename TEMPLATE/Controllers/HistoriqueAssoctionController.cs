@@ -33,9 +33,6 @@ namespace TEMPLATE.Controllers
             return View();
         }
 
-        //
-        // POST: /HistoriqueAssoction/Create
-
         [HttpPost]
         public ActionResult Create(historique_asscociation historique_asscociation)
         {
@@ -50,6 +47,8 @@ namespace TEMPLATE.Controllers
             return View(historique_asscociation);
         }
 
+      
+        
         //
         // GET: /HistoriqueAssoction/Edit/5
 
