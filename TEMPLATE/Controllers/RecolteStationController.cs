@@ -482,9 +482,6 @@ namespace TEMPLATE.Controllers
             return View(recolte);
         }
 
-        //
-        // POST: /Recolte/Edit/5
-
         [HttpPost]
         public ActionResult Edit(recolte recolte)
         {
