@@ -41,10 +41,6 @@ namespace TEMPLATE.Controllers
 
             return View(profile);
         }
-
-        //
-        // GET: /Profiles/Edit/5
-
         public ActionResult Edit(int id = 0)
         {
             profile profile = db.profiles.Find(id);
@@ -54,9 +50,6 @@ namespace TEMPLATE.Controllers
             }
             return View(profile);
         }
-
-        //
-        // POST: /Profiles/Edit/5
 
         [HttpPost]
         public ActionResult Edit(profile profile)
