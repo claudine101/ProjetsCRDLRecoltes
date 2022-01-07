@@ -19,8 +19,6 @@ namespace TEMPLATE.Controllers
             return View(historique_station.ToList());
         }
 
-        //
-        // GET: /HistoriqueStation/Details/5
 
         public ActionResult Details(int id = 0)
         {
