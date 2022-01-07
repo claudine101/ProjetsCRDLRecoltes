@@ -97,6 +97,8 @@ namespace TEMPLATE.Controllers
                 return View(NombreClient);
             }
         }
+        
+
         public ActionResult Indexe()
         {
             var IDemploye = 0;
