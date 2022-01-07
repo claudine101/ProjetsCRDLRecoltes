@@ -63,10 +63,6 @@ namespace TEMPLATE.Controllers
             ViewBag.ID_profile = new SelectList(db.profiles, "ID_profile", "NOM_profile", utilisateur.ID_profile);
             return View(utilisateur);
         }
-
-        //
-        // POST: /Utilisateur/Edit/5
-
         [HttpPost]
         public ActionResult Edit(utilisateur utilisateur)
         {
