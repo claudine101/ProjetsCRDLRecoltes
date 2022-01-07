@@ -52,8 +52,6 @@ namespace TEMPLATE.Controllers
             return View(employe_association);
         }
 
-        //
-        // GET: /EmployeAssociation/Edit/5
 
         public ActionResult Edit(int id = 0)
         {
