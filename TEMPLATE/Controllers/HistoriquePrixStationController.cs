@@ -46,10 +46,6 @@ namespace TEMPLATE.Controllers
             return View(historique_prix);
         }
 
-        
-
-        // GET: /HistoriquePrixStation/Edit/5
-
         public ActionResult Edit(int id = 0)
         {
             historique_prix historique_prix = db.historique_prix.Find(id);
