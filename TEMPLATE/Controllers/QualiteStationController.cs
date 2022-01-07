@@ -55,9 +55,7 @@ namespace TEMPLATE.Controllers
             return View(qualite);
         }
 
-        //
-        // POST: /QualiteStation/Edit/5
-
+   
         [HttpPost]
         public ActionResult Edit(qualite qualite)
         {
