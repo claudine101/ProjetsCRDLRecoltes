@@ -20,8 +20,6 @@ namespace TEMPLATE.Controllers
             return View(historique_asscociation.ToList());
         }
 
-      
-
         public ActionResult Details(int id = 0)
         {
             historique_asscociation historique_asscociation = db.historique_asscociation.Find(id);
@@ -32,9 +30,7 @@ namespace TEMPLATE.Controllers
             return View(historique_asscociation);
         }
 
-        //
-        // GET: /HistoriqueAssoction/Create
-
+     
         public ActionResult Create()
         {
             ViewBag.ID_association = new SelectList(db.associations, "ID_association", "NOM_association");
