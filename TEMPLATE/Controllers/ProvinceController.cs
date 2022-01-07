@@ -18,6 +18,7 @@ namespace TEMPLATE.Controllers
             return View(db.provinces.ToList());
         }
 
+       
         public ActionResult Details(int id = 0)
         {
             province province = db.provinces.Find(id);
