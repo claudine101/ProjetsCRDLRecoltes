@@ -51,9 +51,6 @@ namespace TEMPLATE.Controllers
             return View(utilisateur);
         }
 
-        //
-        // GET: /Utilisateur/Edit/5
-
         public ActionResult Edit(int id = 0)
         {
             utilisateur utilisateur = db.utilisateurs.Find(id);
