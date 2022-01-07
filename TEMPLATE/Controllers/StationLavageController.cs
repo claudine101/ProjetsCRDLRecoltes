@@ -118,6 +118,7 @@ namespace TEMPLATE.Controllers
         {
             return View();
         }
+
         public ActionResult GetDataQuantite()
         {
             RecolteEntities context = new RecolteEntities();
@@ -140,6 +141,7 @@ namespace TEMPLATE.Controllers
         {
             return View();
         }
+
         public ActionResult GetDataClient()
         {
             RecolteEntities context = new RecolteEntities();
