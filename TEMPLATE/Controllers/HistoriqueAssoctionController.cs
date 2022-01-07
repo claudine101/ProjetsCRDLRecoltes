@@ -73,8 +73,6 @@ namespace TEMPLATE.Controllers
             return View(historique_asscociation);
         }
 
-        //
-        // GET: /HistoriqueAssoction/Delete/5
 
         public ActionResult Delete(int id = 0)
         {
@@ -86,9 +84,7 @@ namespace TEMPLATE.Controllers
             return View(historique_asscociation);
         }
 
-        //
-        // POST: /HistoriqueAssoction/Delete/5
-
+     
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
