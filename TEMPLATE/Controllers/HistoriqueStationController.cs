@@ -83,8 +83,6 @@ namespace TEMPLATE.Controllers
             return View(historique_station);
         }
 
-        //
-        // POST: /HistoriqueStation/Delete/5
 
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
