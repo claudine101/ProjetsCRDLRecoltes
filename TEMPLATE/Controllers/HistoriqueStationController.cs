@@ -60,10 +60,6 @@ namespace TEMPLATE.Controllers
             ViewBag.ID_station = new SelectList(db.station_lavage, "ID_station", "NOM_station", historique_station.ID_station);
             return View(historique_station);
         }
-
-        //
-        // POST: /HistoriqueStation/Edit/5
-
         [HttpPost]
         public ActionResult Edit(historique_station historique_station)
         {
@@ -76,6 +72,7 @@ namespace TEMPLATE.Controllers
             ViewBag.ID_station = new SelectList(db.station_lavage, "ID_station", "NOM_station", historique_station.ID_station);
             return View(historique_station);
         }
+
 
         //
         // GET: /HistoriqueStation/Delete/5
