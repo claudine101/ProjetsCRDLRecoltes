@@ -28,8 +28,6 @@ namespace TEMPLATE.Controllers
             return View(utilisateur);
         }
 
-        //
-        // GET: /Utilisateur/Create
 
         public ActionResult Create()
         {
