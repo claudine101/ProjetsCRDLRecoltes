@@ -29,10 +29,6 @@ namespace TEMPLATE.Controllers
         {
             return View();
         }
-
-        //
-        // POST: /Profiles/Create
-
         [HttpPost]
         public ActionResult Create(profile profile)
         {
