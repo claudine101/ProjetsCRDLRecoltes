@@ -12,18 +12,10 @@ namespace TEMPLATE.Controllers
     public class QualiteController : Controller
     {
         private RecolteEntities db = new RecolteEntities();
-
-        //
-        // GET: /Qualite/
-
         public ActionResult Index()
         {
             return View(db.qualites.ToList());
         }
-
-        //
-        // GET: /Qualite/Details/5
-
         public ActionResult Details(int id = 0)
         {
             qualite qualite = db.qualites.Find(id);
