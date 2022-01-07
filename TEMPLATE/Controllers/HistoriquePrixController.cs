@@ -18,11 +18,6 @@ namespace TEMPLATE.Controllers
             var historique_prix = db.historique_prix.Include(h => h.qualite);
             return View(historique_prix.ToList());
         }
-
-
-        //
-        // GET: /HistoriquePrix/Details/5
-
         public ActionResult Details(int id = 0)
         {
             historique_prix historique_prix = db.historique_prix.Find(id);
