@@ -78,10 +78,6 @@ namespace TEMPLATE.Controllers
             }
             return View(historique_prix);
         }
-
-        //
-        // POST: /HistoriquePrixStation/Delete/5
-
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
