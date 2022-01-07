@@ -440,9 +440,6 @@ namespace TEMPLATE.Controllers
             return View(recolte);
         }
 
-        //
-        // GET: /Recolte/Edit/5
-
         public ActionResult Edit(int id = 0)
         {
             recolte recolte = db.recoltes.Find(id);
