@@ -69,9 +69,6 @@ namespace TEMPLATE.Controllers
             return View(historique_prix);
         }
 
-        //
-        // GET: /HistoriquePrixStation/Delete/5
-
         public ActionResult Delete(int id = 0)
         {
             historique_prix historique_prix = db.historique_prix.Find(id);
