@@ -78,9 +78,6 @@ namespace TEMPLATE.Controllers
             return View(employe_association);
         }
 
-        //
-        // GET: /EmployeAssociation/Delete/5
-
         public ActionResult Delete(int id = 0)
         {
             employe_association employe_association = db.employe_association.Find(id);
