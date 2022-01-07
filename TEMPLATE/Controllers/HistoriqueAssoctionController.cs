@@ -20,8 +20,7 @@ namespace TEMPLATE.Controllers
             return View(historique_asscociation.ToList());
         }
 
-        //
-        // GET: /HistoriqueAssoction/Details/5
+      
 
         public ActionResult Details(int id = 0)
         {
