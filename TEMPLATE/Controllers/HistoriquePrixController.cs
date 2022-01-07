@@ -47,8 +47,6 @@ namespace TEMPLATE.Controllers
             return View(historique_prix);
         }
 
-        //
-        // GET: /HistoriquePrix/Edit/5
 
         public ActionResult Edit(int id = 0)
         {
