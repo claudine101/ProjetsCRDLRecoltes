@@ -18,9 +18,6 @@ namespace TEMPLATE.Controllers
             return View(historique_utilisateur.ToList());
         }
 
-        //
-        // GET: /HistoriqueUtilisateur/Details/5
-
         public ActionResult Details(int id = 0)
         {
             historique_utilisateur historique_utilisateur = db.historique_utilisateur.Find(id);
