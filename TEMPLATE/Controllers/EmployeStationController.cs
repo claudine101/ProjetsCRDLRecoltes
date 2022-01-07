@@ -29,8 +29,6 @@ namespace TEMPLATE.Controllers
             return View(employe_station_lavage);
         }
 
-        //
-        // GET: /EmployeStation/Create
 
         public ActionResult Create()
         {
