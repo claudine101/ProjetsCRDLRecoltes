@@ -18,9 +18,6 @@ namespace TEMPLATE.Controllers
             return View(utilisateurs.ToList());
         }
 
-        //
-        // GET: /Utilisateur/Details/5
-
         public ActionResult Details(int id = 0)
         {
             utilisateur utilisateur = db.utilisateurs.Find(id);
