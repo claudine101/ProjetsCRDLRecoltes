@@ -74,9 +74,6 @@ namespace TEMPLATE.Controllers
             ViewBag.ID_station = new SelectList(db.station_lavage, "ID_station", "NOM_station", employe_station_lavage.ID_station);
             return View(employe_station_lavage);
         }
-
-
-
         public ActionResult Delete(int id = 0)
         {
             employe_station_lavage employe_station_lavage = db.employe_station_lavage.Find(id);
