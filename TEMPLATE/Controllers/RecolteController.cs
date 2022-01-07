@@ -30,9 +30,6 @@ namespace TEMPLATE.Controllers
             return View(recolte);
         }
 
-        //
-        // GET: /Recolte/Create
-
         public ActionResult Create()
         {
             ViewBag.ID_client = new SelectList(db.clients, "ID_client", "CNI");
