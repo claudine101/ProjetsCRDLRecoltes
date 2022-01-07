@@ -144,6 +144,7 @@ namespace TEMPLATE.Controllers
         }
 
 
+
         public ActionResult GetDataClient()
         {
             RecolteEntities context = new RecolteEntities();
