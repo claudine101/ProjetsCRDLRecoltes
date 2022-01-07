@@ -83,9 +83,7 @@ namespace TEMPLATE.Controllers
             return View(historique_prix);
         }
 
-        //
-        // POST: /HistoriquePrix/Delete/5
-
+     
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
