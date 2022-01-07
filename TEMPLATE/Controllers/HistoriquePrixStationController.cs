@@ -27,15 +27,12 @@ namespace TEMPLATE.Controllers
             }
             return View(historique_prix);
         }
-
-        //
-        // GET: /HistoriquePrixStation/Create
-
         public ActionResult Create()
         {
             ViewBag.ID_qualite = new SelectList(db.qualites, "ID_qualite", "NOM_qualite");
             return View();
         }
+
 
         //
         // POST: /HistoriquePrixStation/Create
