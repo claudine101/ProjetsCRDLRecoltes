@@ -67,9 +67,6 @@ namespace TEMPLATE.Controllers
             return View(qualite);
         }
 
-        //
-        // GET: /Qualite/Delete/5
-
         public ActionResult Delete(int id = 0)
         {
             qualite qualite = db.qualites.Find(id);
