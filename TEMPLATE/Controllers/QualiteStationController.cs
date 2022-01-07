@@ -32,9 +32,6 @@ namespace TEMPLATE.Controllers
             return View();
         }
 
-        //
-        // POST: /QualiteStation/Create
-
         [HttpPost]
         public ActionResult Create(qualite qualite)
         {
