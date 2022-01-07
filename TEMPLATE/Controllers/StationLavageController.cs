@@ -30,7 +30,8 @@ namespace TEMPLATE.Controllers
             ViewData["historique"] = historique.ToList();
             return View();
         }
-        // GET: /StationLavage/Details/5
+
+
         public ActionResult Details(int id = 0)
         {
             station_lavage station_lavage = db.station_lavage.Find(id);
