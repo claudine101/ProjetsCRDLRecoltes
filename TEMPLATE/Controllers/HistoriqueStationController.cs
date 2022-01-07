@@ -36,6 +36,7 @@ namespace TEMPLATE.Controllers
             return View();
         }
 
+
         [HttpPost]
         public ActionResult Create(historique_station historique_station)
         {
@@ -49,10 +50,6 @@ namespace TEMPLATE.Controllers
             ViewBag.ID_station = new SelectList(db.station_lavage, "ID_station", "NOM_station", historique_station.ID_station);
             return View(historique_station);
         }
-
-        //
-        // GET: /HistoriqueStation/Edit/5
-
         public ActionResult Edit(int id = 0)
         {
             historique_station historique_station = db.historique_station.Find(id);
