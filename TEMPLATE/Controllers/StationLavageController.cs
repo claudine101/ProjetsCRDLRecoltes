@@ -12,7 +12,6 @@ namespace TEMPLATE.Controllers
     {
         private RecolteEntities db = new RecolteEntities();
         //POUR TOUS LES DEUX(actif et inactifs)
-       
         public ActionResult Index()
         {
             var station = db.station_lavage.Include(a => a.zone);
@@ -21,6 +20,7 @@ namespace TEMPLATE.Controllers
             ViewData["historique"] = historique.ToList();
             return View();
         }
+       
         //POUR STATTION ACTIFS
         public ActionResult Indexe()
         {
