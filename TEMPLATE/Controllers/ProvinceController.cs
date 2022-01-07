@@ -48,9 +48,6 @@ namespace TEMPLATE.Controllers
             return View(province);
         }
 
-        //
-        // GET: /Province/Edit/5
-
         public ActionResult Edit(int id = 0)
         {
             province province = db.provinces.Find(id);
