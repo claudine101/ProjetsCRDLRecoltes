@@ -700,6 +700,8 @@ namespace TEMPLATE.Controllers
         {
             return View();
         }
+       
+
         public ActionResult GetDataQualite()
         {
             RecolteEntities context = new RecolteEntities();
