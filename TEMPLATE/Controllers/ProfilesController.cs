@@ -25,10 +25,6 @@ namespace TEMPLATE.Controllers
             }
             return View(profile);
         }
-
-        //
-        // GET: /Profiles/Create
-
         public ActionResult Create()
         {
             return View();
