@@ -16,6 +16,7 @@ namespace TEMPLATE.Controllers
         {
             return View(db.qualites.ToList());
         }
+
         public ActionResult Details(int id = 0)
         {
             qualite qualite = db.qualites.Find(id);
@@ -25,10 +26,6 @@ namespace TEMPLATE.Controllers
             }
             return View(qualite);
         }
-
-        //
-        // GET: /Qualite/Create
-
         public ActionResult Create()
         {
             return View();
