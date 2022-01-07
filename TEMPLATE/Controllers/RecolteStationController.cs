@@ -786,6 +786,7 @@ namespace TEMPLATE.Controllers
             List<client> client = db.clients.Where(x => x.ID_association == id).ToList();
             return Json(client, JsonRequestBehavior.AllowGet);
         }
+        
         public JsonResult getPrix(int id)
         {
             db.Configuration.ProxyCreationEnabled = false;
