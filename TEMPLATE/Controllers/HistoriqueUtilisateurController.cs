@@ -68,10 +68,6 @@ namespace TEMPLATE.Controllers
             ViewBag.ID_utilisateur = new SelectList(db.utilisateurs, "ID_utilisateur", "username", historique_utilisateur.ID_utilisateur);
             return View(historique_utilisateur);
         }
-
-        //
-        // GET: /HistoriqueUtilisateur/Delete/5
-
         public ActionResult Delete(int id = 0)
         {
             historique_utilisateur historique_utilisateur = db.historique_utilisateur.Find(id);
@@ -81,10 +77,6 @@ namespace TEMPLATE.Controllers
             }
             return View(historique_utilisateur);
         }
-
-        //
-        // POST: /HistoriqueUtilisateur/Delete/5
-
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
