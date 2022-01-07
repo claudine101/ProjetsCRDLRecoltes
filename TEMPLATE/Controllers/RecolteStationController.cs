@@ -508,9 +508,6 @@ namespace TEMPLATE.Controllers
             return View(recolte);
         }
 
-        //
-        // POST: /Recolte/Delete/5
-
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
