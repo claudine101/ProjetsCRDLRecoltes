@@ -33,8 +33,6 @@ namespace TEMPLATE.Controllers
         {
             return View();
         }
-
-
         [HttpPost]
         public ActionResult Create(province province)
         {
@@ -48,12 +46,14 @@ namespace TEMPLATE.Controllers
             return View(province);
         }
 
+
         public ActionResult Edit(int id = 0)
         {
             province province = db.provinces.Find(id);
             if (province == null)
             {
                 return HttpNotFound();
+
             }
             return View(province);
         }
