@@ -38,9 +38,6 @@ namespace TEMPLATE.Controllers
             return View();
         }
 
-        //
-        // POST: /Recolte/Create
-
         [HttpPost]
         public ActionResult Create(recolte recolte)
         {
