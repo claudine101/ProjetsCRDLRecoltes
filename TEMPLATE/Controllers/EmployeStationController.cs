@@ -36,9 +36,6 @@ namespace TEMPLATE.Controllers
             return View();
         }
 
-        //
-        // POST: /EmployeStation/Create
-
         [HttpPost]
         public ActionResult Create(employe_station_lavage employe_station_lavage)
         {
@@ -53,9 +50,7 @@ namespace TEMPLATE.Controllers
             return View(employe_station_lavage);
         }
 
-        //
-        // GET: /EmployeStation/Edit/5
-
+    
         public ActionResult Edit(int id = 0)
         {
             employe_station_lavage employe_station_lavage = db.employe_station_lavage.Find(id);
