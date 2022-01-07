@@ -59,8 +59,6 @@ namespace TEMPLATE.Controllers
             return View(historique_asscociation);
         }
 
-        //
-        // POST: /HistoriqueAssoction/Edit/5
 
         [HttpPost]
         public ActionResult Edit(historique_asscociation historique_asscociation)
