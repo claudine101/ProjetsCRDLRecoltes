@@ -99,7 +99,7 @@ namespace TEMPLATE.Controllers
             }
             return View(station_lavage);
         }
-        // POST: /StationLavage/Delete/5
+
         [HttpPost, ActionName("Delete")]
         public ActionResult DeleteConfirmed(int id)
         {
