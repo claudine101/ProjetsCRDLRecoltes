@@ -45,9 +45,6 @@ namespace TEMPLATE.Controllers
             return View(qualite);
         }
 
-        //
-        // GET: /QualiteStation/Edit/5
-
         public ActionResult Edit(int id = 0)
         {
             qualite qualite = db.qualites.Find(id);
