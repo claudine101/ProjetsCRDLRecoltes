@@ -17,10 +17,6 @@ namespace TEMPLATE.Controllers
         {
             return View(db.qualites.ToList());
         }
-
-        //
-        // GET: /QualiteStation/Details/5
-
         public ActionResult Details(int id = 0)
         {
             qualite qualite = db.qualites.Find(id);
