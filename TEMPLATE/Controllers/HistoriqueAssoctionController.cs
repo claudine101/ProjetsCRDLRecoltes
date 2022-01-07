@@ -47,10 +47,6 @@ namespace TEMPLATE.Controllers
             return View(historique_asscociation);
         }
 
-      
-        
-        //
-        // GET: /HistoriqueAssoction/Edit/5
 
         public ActionResult Edit(int id = 0)
         {
