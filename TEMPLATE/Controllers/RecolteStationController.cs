@@ -13,91 +13,6 @@ namespace TEMPLATE.Controllers
     public class RecolteStationController : Controller
     {
         private RecolteEntities db = new RecolteEntities();
-        public ActionResult Index()
-        {
-
-
-
-            RecolteEntities context = new RecolteEntities();
-            if (Session["IDEmploye"] != null)
-            {
-                var IDemploye = (int)Session["IDEmploye"];
-                var station = (from e in db.employe_station_lavage
-                               where e.ID_employ == IDemploye
-                               select new
-                               {
-                                   e.ID_station
-
-                               }).ToList();
-
-                var id = 0;
-                foreach (var vp in station)
-                {
-                    id = vp.ID_station;
-                }
-                var NombreClient = from s in db.station_lavage
-                                   join r in db.recoltes
-                                   on s.ID_station equals r.ID_station
-                                   join q in db.qualites
-                                   on r.ID_qualite equals q.ID_qualite
-                                   join c in db.clients
-                                   on r.ID_client equals c.ID_client
-                                   where s.ID_station == id
-                                   select new
-                                   {
-                                       c.NOM_client,
-                                       c.PRENOM_client,
-                                       q.NOM_qualite,
-                                       r.quantite
-                                   } into x
-                                   group x by new { x.NOM_qualite } into g
-                                   select new recoltModel
-                                   {
-                                       name = g.Key.NOM_qualite,
-                                       count = g.Select(x => x.quantite).Sum()
-
-                                   };
-                return View(NombreClient);
-
-            }
-            else
-            {
-                var IDemploye = (int)Session["IDEmploy"];
-                var association = (from e in db.employe_association
-                                   where e.ID_employe == IDemploye
-                                   select new
-                                   {
-                                       e.ID_association
-
-                                   }).ToList();
-
-                var id = 0;
-                foreach (var vp in association)
-                {
-                    id = vp.ID_association;
-                }
-                var NombreClient = from s in db.station_lavage
-                                   join r in db.recoltes
-                                   on s.ID_station equals r.ID_station
-                                   join q in db.qualites
-                                   on r.ID_qualite equals q.ID_qualite
-                                   join c in db.clients
-                                   on r.ID_client equals c.ID_client
-                                   join a in db.associations on
-                                   c.ID_association equals a.ID_association
-                                   where a.ID_association == id
-                                   select new { c.NOM_client, c.PRENOM_client, q.NOM_qualite, r.quantite } into x
-                                   group x by new { x.NOM_qualite } into g
-                                   select new recoltModel
-                                   {
-                                       name = g.Key.NOM_qualite,
-                                       count = g.Select(x => x.quantite).Sum()
-
-                                   };
-                return View(NombreClient);
-            }
-        }
-        
 
         public ActionResult Indexe()
         {
@@ -698,7 +613,84 @@ namespace TEMPLATE.Controllers
 
         public ActionResult RapportQualite()
         {
-            return View();
+             RecolteEntities context = new RecolteEntities();
+            if (Session["IDEmploye"] != null)
+            {
+                var IDemploye = (int)Session["IDEmploye"];
+                var station = (from e in db.employe_station_lavage
+                               where e.ID_employ == IDemploye
+                               select new
+                               {
+                                   e.ID_station
+
+                               }).ToList();
+
+                var id = 0;
+                foreach (var vp in station)
+                {
+                    id = vp.ID_station;
+                }
+                var NombreClient = from s in db.station_lavage
+                                   join r in db.recoltes
+                                   on s.ID_station equals r.ID_station
+                                   join q in db.qualites
+                                   on r.ID_qualite equals q.ID_qualite
+                                   join c in db.clients
+                                   on r.ID_client equals c.ID_client
+                                   where s.ID_station == id
+                                   select new
+                                   {
+                                       c.NOM_client,
+                                       c.PRENOM_client,
+                                       q.NOM_qualite,
+                                       r.quantite
+                                   } into x
+                                   group x by new { x.NOM_qualite } into g
+                                   select new recoltModel
+                                   {
+                                       name = g.Key.NOM_qualite,
+                                       count = g.Select(x => x.quantite).Sum()
+
+                                   };
+                return View(NombreClient);
+
+            }
+            else
+            {
+                var IDemploye = (int)Session["IDEmploy"];
+                var association = (from e in db.employe_association
+                                   where e.ID_employe == IDemploye
+                                   select new
+                                   {
+                                       e.ID_association
+
+                                   }).ToList();
+
+                var id = 0;
+                foreach (var vp in association)
+                {
+                    id = vp.ID_association;
+                }
+                var NombreClient = from s in db.station_lavage
+                                   join r in db.recoltes
+                                   on s.ID_station equals r.ID_station
+                                   join q in db.qualites
+                                   on r.ID_qualite equals q.ID_qualite
+                                   join c in db.clients
+                                   on r.ID_client equals c.ID_client
+                                   join a in db.associations on
+                                   c.ID_association equals a.ID_association
+                                   where a.ID_association == id
+                                   select new { c.NOM_client, c.PRENOM_client, q.NOM_qualite, r.quantite } into x
+                                   group x by new { x.NOM_qualite } into g
+                                   select new recoltModel
+                                   {
+                                       name = g.Key.NOM_qualite,
+                                       count = g.Select(x => x.quantite).Sum()
+
+                                   };
+                return View(NombreClient);
+            }
         }
        
 
