@@ -116,6 +116,18 @@ namespace TEMPLATE.Controllers
         //POUR RAPPORT 
         public ActionResult RapportQuantite()
         {
+            RecolteEntities context = new RecolteEntities();
+            var quantite = from d in db.recoltes
+                           join f in db.station_lavage
+                           on d.ID_station equals f.ID_station
+                           select new { f.NOM_station, f.ID_station, d.quantite } into x
+                           group x by new { x.NOM_station, x.ID_station } into g
+                           select new recoltModel
+                           {
+                               name = g.Key.NOM_station,
+                               count = g.Select(x => x.quantite).Sum()
+
+                           };
             return View();
         }
 
