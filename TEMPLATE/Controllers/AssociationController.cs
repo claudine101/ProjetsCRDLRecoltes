@@ -17,11 +17,37 @@ namespace TEMPLATE.Controllers
         // GET: /Association/
         public ActionResult RapportQuantite()
         {
-            return View();
+            RecolteEntities context = new RecolteEntities();
+            var quantite = from a in db.associations
+                           join c in db.clients
+                           on a.ID_association equals c.ID_association
+                           join r in db.recoltes
+                           on c.ID_client equals r.ID_client
+                           select new { a.NOM_association, a.ID_association, r.quantite } into x
+                           group x by new { x.NOM_association, x.ID_association } into g
+                           select new  recoltModel
+                           {
+                               name = g.Key.NOM_association,
+                               count = g.Select(x => x.quantite).Sum()
+
+                           };
+            return View(quantite);
         }
         public ActionResult RapportClient()
         {
-            return View();
+            RecolteEntities context = new RecolteEntities();
+            var NombreClient = from a in db.associations
+                               join c in db.clients
+                               on a.ID_association equals c.ID_association
+                               select new { a.NOM_association, a.ID_association, c.ID_client } into x
+                               group x by new { x.NOM_association, x.ID_association } into g
+                               select new recoltModel
+                               {
+                                   name = g.Key.NOM_association,
+                                   count = g.Select(x => x.ID_client).Count()
+
+                               };
+            return View(NombreClient);
         }
 
 
@@ -42,56 +68,130 @@ namespace TEMPLATE.Controllers
                                };
             return Json(NombreClient, JsonRequestBehavior.AllowGet);
         }
+        //POUR ASSOCIATION INACTIF ET ACTIFS
         public ActionResult Index()
         {
-
-            //var associations = db.associations.Include(a => a.colline);
-            //return View(associations.ToList());
-            //var donne = from a in db.associations
-            //            join c in db.collines
-            //            on a.ID_colline equals c.ID_colline
-            //            join z in db.zones
-            //            on c.ID_zone equals z.ID_zone
-            //            join co in db.communes
-            //            on z.ID_commune equals co.ID_commune
-            //            join p in db.provinces
-            //            on co.ID_province equals p.ID_province
-            //            select new recoltModel
-            //            {
-            //                ID=a.ID_association,
-            //                assocition = a.NOM_association,
-            //                tel = a.TEL_association,
-            //                date = (a.DATE_association).Value,
-            //                colline = c.NOM_colline,
-            //                zone = z.NOM_zone,
-            //                commune = co.NOM_commune,
-            //                province = p.NOM_province
-            //            };
-            string query = "select * from  association a join collines c"
-                           + "on a.ID_colline=c.ID_colline"
-                            + "join zones	z ON z.ID_zone=c.ID_zone"
-                            + "JOIN communes co on co.ID_commune=z.ID_commune"
-                            + " join provinces p on p.ID_province=co.ID_province ";
-            var queryData = db.Database.SqlQuery<associations>(query);
-            var association = db.associations.Include(a => a.colline);
+            var donne = from a in db.associations
+                        join c in db.collines
+                        on a.ID_colline equals c.ID_colline
+                        join z in db.zones
+                        on c.ID_zone equals z.ID_zone
+                        join co in db.communes
+                        on z.ID_commune equals co.ID_commune
+                        join p in db.provinces
+                        on co.ID_province equals p.ID_province
+                        select new recoltModel
+                        {
+                            ID = a.ID_association,
+                            assocition = a.NOM_association,
+                            tel = a.TEL_association,
+                            date = (a.DATE_association).Value,
+                            colline = c.NOM_colline,
+                            zone = z.NOM_zone,
+                            commune = co.NOM_commune,
+                            province = p.NOM_province
+                        };
             var historique = db.historique_asscociation;
-            ViewData["association"] = association.ToList();
+            ViewData["association"] = donne.ToList();
             ViewData["historique"] = historique.ToList();
             ViewBag.ID_provinc = new SelectList(db.provinces, "ID_province", "NOM_province");
             ViewBag.ID_commun = new SelectList(db.communes, "ID_commune", "NOM_commune");
-            ViewBag.ID_zone = new SelectList(db.zones, "ID_zone", "NOM_zone");
-            ViewBag.ID_colline = new SelectList(db.collines, "ID_colline", "NOM_colline");
             return View();
         }
-        //POUR ASSOCITION INACTIF
-        
-        
+
+        [HttpPost]
+        public ActionResult Index(int? ID_provinc,int? ID_commun)
+        {
+            var donne = from a in db.associations
+                        join c in db.collines
+                        on a.ID_colline equals c.ID_colline
+                        join z in db.zones
+                        on c.ID_zone equals z.ID_zone
+                        join co in db.communes
+                        on z.ID_commune equals co.ID_commune
+                        join p in db.provinces
+                        on co.ID_province equals p.ID_province
+                        where p.ID_province == ID_provinc || co.ID_commune == ID_commun
+                        select new recoltModel
+                        {
+                            ID = a.ID_association,
+                            assocition = a.NOM_association,
+                            tel = a.TEL_association,
+                            date = (a.DATE_association).Value,
+                            colline = c.NOM_colline,
+                            zone = z.NOM_zone,
+                            commune = co.NOM_commune,
+                            province = p.NOM_province
+                        };
+            var historique = db.historique_asscociation;
+            ViewData["association"] = donne.ToList();
+            ViewData["historique"] = historique.ToList();
+            ViewBag.ID_provinc = new SelectList(db.provinces, "ID_province", "NOM_province");
+            ViewBag.ID_commun = new SelectList(db.communes, "ID_commune", "NOM_commune");
+            return View();
+        }
+
+
+        //POUR ASSOCITION ACTIF
         public ActionResult Indexe()
         {
-            var association = db.associations.Include(a => a.colline);
+            var donne = from a in db.associations
+                        join c in db.collines
+                        on a.ID_colline equals c.ID_colline
+                        join z in db.zones
+                        on c.ID_zone equals z.ID_zone
+                        join co in db.communes
+                        on z.ID_commune equals co.ID_commune
+                        join p in db.provinces
+                        on co.ID_province equals p.ID_province
+                        
+                        select new recoltModel
+                        {
+                            ID = a.ID_association,
+                            assocition = a.NOM_association,
+                            tel = a.TEL_association,
+                            date = (a.DATE_association).Value,
+                            colline = c.NOM_colline,
+                            zone = z.NOM_zone,
+                            commune = co.NOM_commune,
+                            province = p.NOM_province
+                        };
             var historique = db.historique_asscociation;
-            ViewData["association"] = association.ToList();
+            ViewData["association"] = donne.ToList();
             ViewData["historique"] = historique.ToList();
+            ViewBag.ID_provinceActifs = new SelectList(db.provinces, "ID_province", "NOM_province");
+            ViewBag.ID_communeActifs = new SelectList(db.communes, "ID_commune", "NOM_commune");
+            return View();
+        }
+        [HttpPost]
+        public ActionResult Indexe(int? ID_provinceActifs, int? ID_communeActifs)
+        {
+            var donne = from a in db.associations
+                        join c in db.collines
+                        on a.ID_colline equals c.ID_colline
+                        join z in db.zones
+                        on c.ID_zone equals z.ID_zone
+                        join co in db.communes
+                        on z.ID_commune equals co.ID_commune
+                        join p in db.provinces
+                        on co.ID_province equals p.ID_province
+                        where p.ID_province == ID_provinceActifs || co.ID_commune == ID_communeActifs
+                        select new recoltModel
+                        {
+                            ID = a.ID_association,
+                            assocition = a.NOM_association,
+                            tel = a.TEL_association,
+                            date = (a.DATE_association).Value,
+                            colline = c.NOM_colline,
+                            zone = z.NOM_zone,
+                            commune = co.NOM_commune,
+                            province = p.NOM_province
+                        };
+            var historique = db.historique_asscociation;
+            ViewData["association"] = donne.ToList();
+            ViewData["historique"] = historique.ToList();
+            ViewBag.ID_provinceActifs = new SelectList(db.provinces, "ID_province", "NOM_province");
+            ViewBag.ID_communeActifs = new SelectList(db.communes, "ID_commune", "NOM_commune");
             return View();
         }
         
@@ -280,6 +380,29 @@ namespace TEMPLATE.Controllers
                         join p in db.provinces
                         on co.ID_province equals p.ID_province
                         where co.ID_province == id
+                        select new
+                        {
+                            assocition = a.NOM_association,
+                            tel = a.TEL_association,
+                            Date = a.DATE_association.Value,
+                            colline = c.NOM_colline,
+                        };
+            return Json(donne.ToList(), JsonRequestBehavior.AllowGet);
+        }
+        //AFFICHAGE DES ASSOCIATIONS POUR COMMUNE
+        public JsonResult getDonne1(int id)
+        {
+
+            db.Configuration.ProxyCreationEnabled = false;
+
+            var donne = from a in db.associations
+                        join c in db.collines
+                        on a.ID_colline equals c.ID_colline
+                        join z in db.zones
+                        on c.ID_zone equals z.ID_zone
+                        join co in db.communes
+                        on z.ID_commune equals co.ID_commune
+                        where co.ID_commune == id
                         select new
                         {
                             assocition = a.NOM_association,
