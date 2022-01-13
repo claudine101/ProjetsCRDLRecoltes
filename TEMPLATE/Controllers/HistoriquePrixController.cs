@@ -40,10 +40,13 @@ namespace TEMPLATE.Controllers
             {
                 db.historique_prix.Add(historique_prix);
                 db.SaveChanges();
+               ViewBag.sms= "Data Berhasil disimpan...";
                 return RedirectToAction("Index");
             }
 
             ViewBag.ID_qualite = new SelectList(db.qualites, "ID_qualite", "NOM_qualite", historique_prix.ID_qualite);
+            TempData["pesan"] = "Data Berhasil disimpan...";
+                        
             return View(historique_prix);
         }
 
@@ -93,6 +96,42 @@ namespace TEMPLATE.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult GetDataPrix()
+        {
+            RecolteEntities context = new RecolteEntities();
+            var prix = from h in db.historique_prix
+                       
+                           
+                           select new {h.DATE_insertion, h.PRIX ,h.ID_qualite} into x
+                           group x by new {x.DATE_insertion, x.PRIX,x.ID_qualite } into g
+                           select new
+                           {
+                               name = g.Key.DATE_insertion,
+                               id=g.Key.ID_qualite,
+                               count = g.Key.PRIX
+
+
+                           };
+
+            return Json(prix,JsonRequestBehavior.AllowGet);
+        }
+        public ActionResult GetDataPrixSeriseB()
+        {
+            RecolteEntities context = new RecolteEntities();
+            var prix = from h in db.historique_prix
+                       where h.ID_qualite == 2
+
+                       select new { h.DATE_insertion, h.PRIX } into x
+                       group x by new { x.DATE_insertion, x.PRIX } into g
+                       select new
+                       {
+                           name = g.Key.DATE_insertion,
+                           count = g.Key.PRIX
+
+                       };
+
+            return Json(prix, JsonRequestBehavior.AllowGet);
+        }
         protected override void Dispose(bool disposing)
         {
             db.Dispose();
