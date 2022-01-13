@@ -13,13 +13,70 @@ namespace TEMPLATE.Controllers
     {
         private RecolteEntities db = new RecolteEntities();
 
-
+        //POUR LES ASSOCTIATION INACTIFS
         public ActionResult Index()
         {
-            var historique_asscociation = db.historique_asscociation.Include(h => h.association);
-            return View(historique_asscociation.ToList());
+            var donne = from a in db.associations
+                        join c in db.collines
+                        on a.ID_colline equals c.ID_colline
+                        join z in db.zones
+                        on c.ID_zone equals z.ID_zone
+                        join co in db.communes
+                        on z.ID_commune equals co.ID_commune
+                        join p in db.provinces
+                        on co.ID_province equals p.ID_province
+                        join h in db.historique_asscociation 
+                        on a.ID_association equals h.ID_association
+                        select new recoltModel
+                        {
+                            ID = h.ID_histoAssoc,
+                            assocition = a.NOM_association,
+                            tel = a.TEL_association,
+                            date = (a.DATE_association).Value,
+                            colline = c.NOM_colline,
+                            zone = z.NOM_zone,
+                            commune = co.NOM_commune,
+                            province = p.NOM_province
+                        };
+            ViewData["association"] = donne.ToList();
+            ViewBag.ID_provinceInactifs = new SelectList(db.provinces, "ID_province", "NOM_province");
+            ViewBag.ID_communeInactifs = new SelectList(db.communes, "ID_commune", "NOM_commune");
+            return View();
+     
         }
+        [HttpPost]
+        public ActionResult Index(int? ID_provinceInactifs, int? ID_communeInactifs)
+        {
+            var donne = from a in db.associations
+                        join c in db.collines
+                        on a.ID_colline equals c.ID_colline
+                        join z in db.zones
+                        on c.ID_zone equals z.ID_zone
+                        join co in db.communes
+                        on z.ID_commune equals co.ID_commune
+                        join p in db.provinces
+                        on co.ID_province equals p.ID_province
+                        join h in db.historique_asscociation
+                        on a.ID_association equals h.ID_association
+                        where p.ID_province == ID_provinceInactifs || co.ID_commune == ID_communeInactifs
+                        select new recoltModel
+                        {
+                            ID = h.ID_histoAssoc,
+                            assocition = a.NOM_association,
+                            tel = a.TEL_association,
+                            Date_insertion = (a.DATE_association).Value,
+                            colline = c.NOM_colline,
+                            zone = z.NOM_zone,
+                            commune = co.NOM_commune,
+                            province = p.NOM_province,
+                            date=h.DATE_desactive.Value
+                        };
+            ViewData["association"] = donne.ToList();
+            ViewBag.ID_provinceInactifs = new SelectList(db.provinces, "ID_province", "NOM_province");
+            ViewBag.ID_communeInactifs = new SelectList(db.communes, "ID_commune", "NOM_commune");
+            return View();
 
+        }
         public ActionResult Details(int id = 0)
         {
             historique_asscociation historique_asscociation = db.historique_asscociation.Find(id);
