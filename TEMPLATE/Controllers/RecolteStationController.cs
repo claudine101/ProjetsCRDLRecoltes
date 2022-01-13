@@ -332,6 +332,7 @@ namespace TEMPLATE.Controllers
             }
             ViewBag.prixSerieA = PRIXSERIEA;
             ViewBag.prixSerieB = PRIXSERIEB;
+            ViewBag.ID_province = new SelectList(db.provinces, "ID_province", "NOM_province");
             ViewBag.ID_association = new SelectList(db.associations, "ID_association", "NOM_association");
             ViewBag.ID_client = new SelectList(db.clients, "ID_client", "CNI");
             ViewBag.ID_qualite = new SelectList(db.qualites, "ID_qualite", "NOM_qualite");
@@ -348,6 +349,7 @@ namespace TEMPLATE.Controllers
                 db.SaveChanges();
                 return RedirectToAction("Indexe");
             }
+            ViewBag.ID_province = new SelectList(db.provinces, "ID_province", "NOM_province");
             ViewBag.ID_client = new SelectList(db.clients, "ID_client", "CNI", recolte.ID_client);
             ViewBag.ID_client = new SelectList(db.clients, "ID_client", "CNI", recolte.ID_client);
             ViewBag.ID_qualite = new SelectList(db.qualites, "ID_qualite", "NOM_qualite", recolte.ID_qualite);
@@ -952,20 +954,20 @@ namespace TEMPLATE.Controllers
             List<client> client = db.clients.Where(x => x.ID_association == id).ToList();
             return Json(client, JsonRequestBehavior.AllowGet);
         }
-        
+      
         public JsonResult getPrix(int id)
         {
+            var PRIX = (from H in db.historique_prix
+                       where H.ID_qualite == id 
+                       select new { H.PRIX ,H.DATE_insertion});
+
+            var result = PRIX.OrderByDescending(a => a.DATE_insertion);
             db.Configuration.ProxyCreationEnabled = false;
             List<historique_prix> historique_prix = db.historique_prix.Where(x => x.ID_qualite == id).ToList();
-            return Json(historique_prix, JsonRequestBehavior.AllowGet);
+            return Json(result.FirstOrDefault(), JsonRequestBehavior.AllowGet);
         }
-        //POUR LA PRIX DE LA RECOLTE
-        //public JsonResult getPrix(int ID_qualite)
-        //{
-        //    db.Configuration.ProxyCreationEnabled = false;
-        //    var product = db.historique_prix.Where(p => p.ID_qualite == ID_qualite).ToList().FirstOrDefault();
-        //    return Json(product, JsonRequestBehavior.AllowGet);
-        //}
 
+       
+ 
     }
 }
