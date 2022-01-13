@@ -128,7 +128,7 @@ namespace TEMPLATE.Controllers
                                count = g.Select(x => x.quantite).Sum()
 
                            };
-            return View();
+            return View(quantite);
         }
 
         public ActionResult GetDataQuantite()
@@ -152,7 +152,20 @@ namespace TEMPLATE.Controllers
         
         public ActionResult RapportClient()
         {
-            return View();
+            var NombreClient = from s in db.station_lavage
+                               join r in db.recoltes
+                               on s.ID_station equals r.ID_station
+                               join c in db.clients
+                               on r.ID_client equals c.ID_client
+                               select new { s.NOM_station, s.ID_station, c.ID_client } into x
+                               group x by new { x.NOM_station, x.ID_station } into g
+                               select new recoltModel
+                               {
+                                   name = g.Key.NOM_station,
+                                   count = g.Select(x => x.ID_client).Count()
+
+                               };
+            return View(NombreClient);
         }
 
 
