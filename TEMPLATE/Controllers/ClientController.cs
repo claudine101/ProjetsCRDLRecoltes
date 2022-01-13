@@ -21,20 +21,7 @@ namespace TEMPLATE.Controllers
             var clients = db.clients.Include(a => a.association).Include(c => c.colline);
             return View(clients.ToList());
 
-            //var clients = (db.Database.SqlQuery<List<TEMPLATE.Models.client>>("SELECT * from client "
-            //                      + "inner join association on client.ID_association = association.ID_association"
-            //                      )).ToList();
-            // return View(clients);
-
-            //     string query = "SELECT EnrollmentDate, COUNT(*) AS StudentCount "
-            //+ "FROM Person "
-            //+ "WHERE Discriminator = 'Student' "
-            //+ "GROUP BY EnrollmentDate";
-            //     string query = "SELECT  *  FROM   association join client "
-            //     +"on association.ID_association=client.ID_association  "
-            //;
-            //     IEnumerable<client > data = db.Database.SqlQuery<client>(query);
-            //     return View(data.ToList());
+            
         }
 
         //
