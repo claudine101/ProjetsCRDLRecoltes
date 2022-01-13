@@ -5,6 +5,11 @@
     ViewBag.Title = "Index";
     Layout = "~/Views/Layouts/_Default.cshtml";
 }
+
+       
+
+               <script src="~/Scripts/sweetAlert.js"></script>
+       
 <div class="main-panel">
  <div class="container">
 
@@ -36,6 +41,7 @@
 </div>
 </div>
 </div>
+    
     <div class="card-body rec-pat" >
      <a href="@Url.Action("create","HistoriquePrix")" class=" btn btn-sm  btn-success pull-right  " style="margin-top:5px; margin-bottom:5px"><i class="fa fa-plus mr-2"></i>Ajouter</a>
      <div class="table-responsive">
@@ -85,9 +91,13 @@
               </table>
             </div>
      </div>
+     
 </div>
-
-
+@section scripts
+{
+    <script src="~/Scripts/sweetAlert.js"></script>
+    <script src="~/Scripts/ChartsPrix.js"></script>
+}
 
 
 
