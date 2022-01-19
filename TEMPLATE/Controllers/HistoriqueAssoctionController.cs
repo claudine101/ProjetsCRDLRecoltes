@@ -45,8 +45,21 @@ namespace TEMPLATE.Controllers
      
         }
         [HttpPost]
-        public ActionResult Index(int? ID_provinceInactifs, int? ID_communeInactifs)
+        public ActionResult Index(int? ID_provinceInactifs)
         {
+            var province = (from p in db.provinces
+                            where p.ID_province == ID_provinceInactifs
+                            select new
+                            {
+
+                                province = p.NOM_province
+                            }).ToList();
+            var nomprovinc = "";
+            foreach (var vp in province)
+            {
+                nomprovinc = vp.province;
+            }
+            ViewBag.nomprovince = "qui se trouve dans le province " + nomprovinc;
             var donne = from a in db.associations
                         join c in db.collines
                         on a.ID_colline equals c.ID_colline
@@ -58,7 +71,7 @@ namespace TEMPLATE.Controllers
                         on co.ID_province equals p.ID_province
                         join h in db.historique_asscociation
                         on a.ID_association equals h.ID_association
-                        where p.ID_province == ID_provinceInactifs || co.ID_commune == ID_communeInactifs
+                        where p.ID_province == ID_provinceInactifs 
                         select new recoltModel
                         {
                             ID = h.ID_histoAssoc,
