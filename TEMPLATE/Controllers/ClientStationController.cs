@@ -58,7 +58,14 @@ namespace TEMPLATE.Controllers
                           join r in db.recoltes 
                           on  c.ID_client equals r.ID_client 
                           join  s in db.station_lavage  on r.ID_station    equals  s.ID_station
-                          join  co in db.collines  on c.ID_colline equals co.ID_colline
+                          join  co in db.collines  
+                          on c.ID_colline equals co.ID_colline
+                          join z in db.zones
+                          on co.ID_zone equals z.ID_zone
+                          join coo in db.communes
+                          on z.ID_commune equals coo.ID_commune
+                          join p in db.provinces
+                          on coo.ID_province equals p.ID_province
                           where s.ID_station == id
                           select new recoltModel
                           {   
@@ -73,7 +80,10 @@ namespace TEMPLATE.Controllers
                               ID_recolte = r.ID_recolte,
                               ID_client = c.ID_client,
                               ID_station = s.ID_station,
-                              Date_insertion =c.DATE_insertion.Value
+                              Date_insertion =c.DATE_insertion.Value,
+                              zone = z.NOM_zone,
+                              //commune = coo.NOM_commune,
+                              province = p.NOM_province
 
                           }).Distinct().OrderByDescending(s=>s.CNI).ToList();
 
@@ -120,7 +130,7 @@ namespace TEMPLATE.Controllers
             ViewBag.nom = nom;
             ViewBag.id = id;
 
-
+            ViewBag.ID_provincestation = new SelectList(db.provinces, "ID_province", "NOM_province");
             var recoltes = db.recoltes.Include(r => r.client).Include(r => r.qualite).Include(r => r.station_lavage);
             return View(recolt);
         }
@@ -135,6 +145,8 @@ namespace TEMPLATE.Controllers
         }
         public ActionResult Create()
         {
+
+
             ViewBag.ID_province = new SelectList(db.provinces, "ID_province", "NOM_province");
             ViewBag.ID_commune = new SelectList(db.communes, "ID_commune", "NOM_commune");
             ViewBag.ID_zone = new SelectList(db.zones, "ID_zone", "NOM_zone");
@@ -156,6 +168,31 @@ namespace TEMPLATE.Controllers
             ViewBag.ID_colline = new SelectList(db.collines, "ID_colline", "NOM_colline", client.ID_colline);
             return View(client);
         }
+
+        //
+        //public ActionResult Create()
+        //{
+        //    ViewBag.ID_province = new SelectList(db.provinces, "ID_province", "NOM_province");
+        //    ViewBag.ID_commune = new SelectList(db.communes, "ID_commune", "NOM_commune");
+        //    ViewBag.ID_zone = new SelectList(db.zones, "ID_zone", "NOM_zone");
+        //    ViewBag.ID_association = new SelectList(db.associations, "ID_association", "NOM_association");
+        //    ViewBag.ID_colline = new SelectList(db.collines, "ID_colline", "NOM_colline");
+        //    return View();
+        //}
+        //[HttpPost]
+        //public ActionResult Create(client client)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        db.clients.Add(client);
+        //        db.SaveChanges();
+        //        return RedirectToAction("Index");
+        //    }
+
+        //    ViewBag.ID_association = new SelectList(db.associations, "ID_association", "NOM_association", client.ID_association);
+        //    ViewBag.ID_colline = new SelectList(db.collines, "ID_colline", "NOM_colline", client.ID_colline);
+        //    return View(client);
+        //}
         public ActionResult Edit(int id = 0)
         {
             client client = db.clients.Find(id);
