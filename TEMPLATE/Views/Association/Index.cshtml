@@ -11,7 +11,7 @@
           <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
              <div>
               <h2 class="text-white pb-2 fw-bold">
-                Association
+                Les associations @ViewBag.nomprovince
             </h2>
         </div>
         <div class="ml-md-auto py-2 py-md-0">
@@ -22,7 +22,7 @@
                   <a href="#">Home</a>
               </li>
               <li class="breadcrumb-item">
-                <a href="#">Association</a>
+                <a href="#">Associations </a>
             </li>
             <li class="breadcrumb-item active" aria-current="page">
               Liste 
@@ -37,17 +37,18 @@
  <div class="card-body rec-pat"> 
         @{
             IEnumerable<TEMPLATE.Models.recoltModel> associations = ViewData["association"] as IEnumerable<TEMPLATE.Models.recoltModel>;
-            IEnumerable<TEMPLATE.Models.historique_asscociation> historiques = ViewData["historique"] as IEnumerable<TEMPLATE.Models.historique_asscociation>;
+            IEnumerable<TEMPLATE.Models.recoltModel> historiques = ViewData["historique"] as IEnumerable<TEMPLATE.Models.recoltModel>;
         }
         @{
             List<int> IDassocition = new List<int>();
         }
-        @foreach (TEMPLATE.Models.historique_asscociation iteme in historiques)
+        @foreach (TEMPLATE.Models.recoltModel iteme in historiques)
         {
-            IDassocition.Add(iteme.ID_association);
+            IDassocition.Add(iteme.ID);
+           
         }
         <div class="container-fluid">
-             <H1 style="color:blue">AFFICHER PAR:</H1>
+             
               <div class="container-fluid " >  
                    @using (Html.BeginForm("Index", "Association", FormMethod.Post))
                    {
@@ -55,10 +56,6 @@
                             <article  class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                                 <h2 style="color:blue">Provinces</h2>
                                 @Html.DropDownList("ID_provinc", null, "Choisir la province", htmlAttributes: new { @class = "form-control " })      
-                            </article>
-                            <article  class="col-xs-12 col-sm-12 col-md-6 col-lg-4"> 
-                                <h2 style="color:blue">Communes </h2>
-                                @Html.DropDownList("ID_commun", null, "Choisir la province", htmlAttributes: new { @class = "form-control " })     
                             </article>
                             <article  class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
                                 <h2 style="color:blue">Afficher</h2>
@@ -87,7 +84,7 @@
                 @foreach (TEMPLATE.Models.recoltModel item in associations)
                 {
                         NO=NO+1;
-                        if (IDassocition.Contains(item.ID_association) == true)
+                        if (IDassocition.Contains(item.ID) != true)
                         {
                           <tr>
                                 <td>
