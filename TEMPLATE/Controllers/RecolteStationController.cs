@@ -51,7 +51,7 @@ namespace TEMPLATE.Controllers
                     nomStation = n.NOM_station;
                     IDSTATION = n.ID_station;
                 }
-                Session["association"] = "UNE STATION DE LAVAGE " + nomStation;
+                Session["association"] = "LES MEMBRES QUI AMENE LES RECOLTES DANS UNE STATION DE LAVAGE " + nomStation;
                 Session["associat"] = nomStation;
                 Session["associatID"] = IDSTATION;
                 Session["station"] = "une station de lavage " + nomStation;
@@ -133,8 +133,9 @@ namespace TEMPLATE.Controllers
                 {
                     nomStation = n.NOM_association;
                 }
-                Session["association"] = "UNE ASSOCIATION " + nomStation;
+                Session["association"] = "MEMBRES QUI FORMENT UNE ASSOCIATION " + nomStation;
                 Session["associat"] = nomStation;
+                Session["associatID"] = Idstation;
                 Session["station"] = "une association " + nomStation;
                 recolt = (from d in db.recoltes
                           join c in db.clients
