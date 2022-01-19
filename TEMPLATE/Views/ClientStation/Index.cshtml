@@ -10,7 +10,7 @@
           <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
              <div>
               <h2 class="text-white pb-2 fw-bold">
-                ENREGISTREMENT DES RECOLTES DANS @Session["association"]
+                 @Session["association"]
             </h2>
         </div>
         <div class="ml-md-auto py-2 py-md-0">
@@ -18,10 +18,10 @@
          <div class="page-header">
             <ol class="breadcrumb">
                <li class="breadcrumb-item">
-                  <a href="#">Home</a>
+                  <a href="#">@Session["associat"]</a>
               </li>
               <li class="breadcrumb-item">
-                <a href="#">Clients</a>
+                <a href="#">Membres</a>
             </li>
             <li class="breadcrumb-item active" aria-current="page">
               Liste 
@@ -33,7 +33,23 @@
 </div>
 </div>
 </div>
-<div class="card-body rec-pat" >      
+<div class="card-body rec-pat" >
+     <div class="container-fluid " >  
+                   @using (Html.BeginForm("Indexe", "Association", FormMethod.Post))
+                   {
+                      <div class="row">
+                            <article  class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                                <h2 style="color:blue">Provinces</h2>
+                                @Html.DropDownList("ID_provincestation", null, "Choisir la province", htmlAttributes: new { @class = "form-control " })      
+                            </article>
+                            
+                            <article  class="col-xs-12 col-sm-12 col-md-6 col-lg-5">
+                                <h2 style="color:blue">Afficher</h2>
+                                 <input type="submit" name="submit" value="Affiche"  class="btn btn-info"/>  
+                            </article>
+                      </div>  
+                   }
+              </div>       
  <div class="container-fluid">
       @if (Session["IDEmploye"] != null)
       { 
@@ -93,6 +109,9 @@
         <th>PRENOM</th>
         <th>TEL</th>
         <th>COLLINE</th>
+        <th>ZONE</th>
+        <th>COMMUNE</th>
+        <th>PROVINCE</th>
         <th>DATE D'INSERTION</th>
         <th>OPTIONS</th>
     </tr>
@@ -117,6 +136,15 @@
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.colline)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.zone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.commune)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.province)
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.date)
