@@ -49,51 +49,25 @@
                             @Html.HiddenFor(model => model.ID_association)
                             @Html.ValidationMessageFor(model => model.ID_association)
                         </div>
-
                         <div class="form-group">
-                        
-                            <div class="col-md-12">
-                            <label> Provinces :</label>
-                            @Html.DropDownList("ID_province", null, "Choisir la province", htmlAttributes: new { @class = "form-control " })
-                            </div>
-                        </div>
-                        <div class="form-group">
-                        
-                            <div class="col-md-12">
-                                <label> Commune :</label>
-                            @Html.DropDownList("ID_commune", new SelectList(new List<string>()), "Choisir le commune", htmlAttributes: new { @class = "form-control" })
-                            </div>
-                            </div>
-                        <div class="form-group">
-                        
-                            <div class="col-md-12">
-                                <label> zone:</label>
-                            @Html.DropDownList("ID_zone", new SelectList(new List<string>()), "Choisir la zone", htmlAttributes: new { @class = "form-control" })
-                            </div>
-                            </div>
-                        <div class="form-group">
-                        
-                            <div class="col-md-12">
-                            <label> colline:</label>
-                            @Html.DropDownList("ID_colline", new SelectList(new List<string>()), "Choisir colline", htmlAttributes: new { @class = "form-control" })
-                            @Html.ValidationMessageFor(model => model.ID_colline, "", new { @class = "text-danger" })
-                            </div>
+                            @Html.HiddenFor(model => model.ID_colline)
+                            @Html.ValidationMessageFor(model => model.ID_colline)
                         </div> 
-
                         <div class="form-group">
                             <div class="col-md-12"  >
-                                <label>Nom</label>
+                                <label><b style="font-size:20px">Nom:</b></label>
                                 @Html.TextBoxFor(model => model.NOM_association, new { @class = "form-control" })
                                 @Html.ValidationMessageFor(model => model.NOM_association)
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-md-12"  >
-                                <label>Tel</label>
+                                <label><b style="font-size:20px">Tel:</b></label>
                                 @Html.TextBoxFor(model => model.TEL_association, new { @class = "form-control" })
                                 @Html.ValidationMessageFor(model => model.TEL_association)
                             </div>
                         </div>
+                     
                         <div class="form-group">
                             <div class="col-md-12"  >
                                 <label>Date de creation</label>
@@ -101,11 +75,13 @@
                                 @Html.ValidationMessageFor(model => model.DATE_association)
                             </div>
                         </div>
+                     
                         <div class="form-group">
                             <div class="col-md-offset-4 col-md-10">
                                 <input type="submit" value="Create" class="btn btn-success pull-right" />
                             </div>
                         </div>
+                        
                     </div>
                    
                     <div>
