@@ -13,28 +13,66 @@ namespace TEMPLATE.Controllers
     {
         private RecolteEntities db = new RecolteEntities();
 
-        //
-        // GET: /Client/
-
+      
         public ActionResult Index()
         {
-            var clients = db.clients.Include(a => a.association).Include(c => c.colline);
-            return View(clients.ToList());
 
-            //var clients = (db.Database.SqlQuery<List<TEMPLATE.Models.client>>("SELECT * from client "
-            //                      + "inner join association on client.ID_association = association.ID_association"
-            //                      )).ToList();
-            // return View(clients);
+            var donne = from c in db.clients
+                        join a in db.associations
+                        on c.ID_association equals a.ID_association
+                        join co in db.collines
+                        on c.ID_client equals co.ID_colline
+                        select new recoltModel
+                        {
+                            ID = c.ID_client,
+                            CNI=c.CNI,
+                            NOM_client=c.NOM_client,
+                            PRENOM_client=c.PRENOM_client,
+                            assocition = a.NOM_association,
+                            tel = c.TEL_client,
+                            date = (c.DATE_insertion).Value,
+                            colline = co.NOM_colline,
+                        };
+            ViewBag.ID_associationClients = new SelectList(db.associations, "ID_association", "NOM_association");
+            return View(donne.ToList());
 
-            //     string query = "SELECT EnrollmentDate, COUNT(*) AS StudentCount "
-            //+ "FROM Person "
-            //+ "WHERE Discriminator = 'Student' "
-            //+ "GROUP BY EnrollmentDate";
-            //     string query = "SELECT  *  FROM   association join client "
-            //     +"on association.ID_association=client.ID_association  "
-            //;
-            //     IEnumerable<client > data = db.Database.SqlQuery<client>(query);
-            //     return View(data.ToList());
+        }
+        [HttpPost]
+        public ActionResult Index(int?ID_associationClients)
+        {
+            var assoc = (from a in db.associations
+                            where a.ID_association == ID_associationClients
+                            select new
+                            {
+
+                                association = a.NOM_association
+                            }).ToList();
+            var associationse = "";
+            foreach (var vp in assoc)
+            {
+                associationse = vp.association;
+            }
+            ViewBag.associ = "qui se trouve dans l'association " + associationse;
+            var donne = from c in db.clients
+                        join a in db.associations
+                        on c.ID_association equals a.ID_association
+                        join co in db.collines
+                        on c.ID_client equals co.ID_colline
+                        where a.ID_association == ID_associationClients
+                        select new recoltModel
+                        {
+                            ID = c.ID_client,
+                            CNI = c.CNI,
+                            NOM_client = c.NOM_client,
+                            PRENOM_client = c.PRENOM_client,
+                            assocition = a.NOM_association,
+                            tel = c.TEL_client,
+                            date = (c.DATE_insertion).Value,
+                            colline = co.NOM_colline,
+                        };
+            ViewBag.ID_associationClients = new SelectList(db.associations, "ID_association", "NOM_association");
+            return View(donne.ToList());
+
         }
 
         //
