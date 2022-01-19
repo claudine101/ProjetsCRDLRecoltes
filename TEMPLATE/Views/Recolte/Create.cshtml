@@ -42,58 +42,56 @@
                         <h4 style="text-align:center ;color:blue">Ajouter une nouvelle recolte</h4>
                         <hr />
                         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-                      <div class="form-group">
+                       <div class="form-group">
                             <div class="col-md-12">
-                            <label> Client:</label>
-                            @Html.DropDownList("ID_client", null, "Choisir le client", htmlAttributes: new { @class = "form-control " })
-                            @Html.ValidationMessageFor(model => model.ID_client, "", new { @class = "text-danger" })
+                            <label><b style="font-size:20px">Assciation:</b></label>
+                            @Html.DropDownList("ID_association", null, "Choisir l'association", htmlAttributes: new { @class = "form-control " })              
                             </div>
                         </div> 
-                       <div class="form-group">
-                         <div class="col-md-12">
-                            <label> Qualite:</label>
-                            @Html.DropDownList("ID_qualite", null, "Choisir la qualite", htmlAttributes: new { @class = "form-control " })
-                            @Html.ValidationMessageFor(model => model.ID_qualite, "", new { @class = "text-danger" })
-                           </div>
-                        </div>
-                       
-
-                      <div class="form-group">
-                          <div class="col-md-12">
-                            <label>Prix:</label>
-                            <input type="text" name="unit_price" class="form-control unit-price"/>
-                           </div>
-                       </div>
-                      <div class="form-group">
-                            <div class="col-md-12"  >
-                                <label>Prix</label>
-                                @Html.TextBoxFor(model => model.Prix, new { @class = "form-control" })
-                                @Html.ValidationMessageFor(model => model.Prix)
+                       <div class="form-group">          
+                            <div class="col-md-12">
+                                <label><b style="font-size:20px"> Clients:</b></label>
+                            @Html.DropDownList("ID_client", new SelectList(new List<string>()), "Choisir le client", htmlAttributes: new { @class = "form-control" })
                             </div>
-                        </div>
-
+                       </div>
+                      
                       <div class="form-group">
                          <div class="col-md-12">
-                            <label> Station:</label>
+                            <label><b style="font-size:20px"> Station:</b></label>
                             @Html.DropDownList("ID_station", null, "Choisir la station", htmlAttributes: new { @class = "form-control " })
                             @Html.ValidationMessageFor(model => model.ID_station, "", new { @class = "text-danger" })
                            </div>
                         </div>
+                      
+                       <div class="form-group">
+                         <div class="col-md-12">
+                            <label><b style="font-size:20px"> Qualite:</b></label>
+                            @Html.DropDownList("ID_qualite", null, "Choisir la qualite", htmlAttributes: new { @class = "form-control " })
+                            @Html.ValidationMessageFor(model => model.ID_qualite, "", new { @class = "text-danger" })
+                           </div>
+                        </div>
                       <div class="form-group">
                             <div class="col-md-12"  >
-                                <label>Quantite</label>
+                                <label><b style="font-size:20px">Prix:</b></label>
+                                @Html.TextBoxFor(model => model.Prix, new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.Prix)
+                            </div>
+                        </div>
+                      <div class="form-group">
+                            <div class="col-md-12"  >
+                                <label><b style="font-size:20px">Quantite</b></label>
                                 @Html.TextBoxFor(model => model.quantite, new { @class = "form-control" })
                                 @Html.ValidationMessageFor(model => model.quantite)
                             </div>
                         </div>
                       
-                     <div class="form-group">
-                            <div class="col-md-12"  >
-                                <label>Date</label>
-                                @Html.TextBoxFor(model => model.Date_insertion, new { @class = "form-control" })
-                                @Html.ValidationMessageFor(model => model.Date_insertion)
-                            </div>
-                        </div>
+                      <div class="form-group">
+                          <div class="col-md-12">
+                            <label><b style="font-size:20px">Date :</b></label>
+                            <input type="Datetime-local" name="Date_insertion" class="form-control total" />
+                            
+                          </div>
+                       </div>
                        <div class="form-group">
                             <div class="col-md-offset-4 col-md-10">
                                 <input type="submit" value="Enregistrer" class="btn btn-success pull-right" />
