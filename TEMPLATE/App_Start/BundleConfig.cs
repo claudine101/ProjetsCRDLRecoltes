@@ -134,7 +134,8 @@ namespace TEMPLATE
             "~/Assets/js/atlantis.js",
              "~/Assets/js/setting-demo2.js",
               "~/Assets/js/demo.js",
-              "~/Assets/js/MainDonne.js", 
+              "~/Assets/js/MainDonne.js",
+              "~/Assets/js/PROVINCE.js", 
               "~/Assets/js/tables.js",
               "~/Assets/js/highcharts.js",
               "~/Assets/js/highcharts-more.js",
@@ -143,6 +144,9 @@ namespace TEMPLATE
                 //"~/Assets/js/jquery-3.5.1.js",
                 //"~/Assets/js/dataTables.buttons.js",
               "~/Assets/js/buttons.print.js"
+                //,
+                //"~/Assets/js/bootstrap.bundle.js",
+                // "~/Assets/js/all.js"
 
 
               ));
