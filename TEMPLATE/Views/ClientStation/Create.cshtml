@@ -1,7 +1,7 @@
 ﻿@model TEMPLATE.Models.client
 @{
     ViewBag.Title = "Index";
-    Layout = "~/Views/Layouts/_Default.cshtml";
+    Layout = "~/Views/Layouts/_DefaultStation.cshtml";
 }
 <div class="main-panel">
     <div class="container">
@@ -16,7 +16,7 @@
 			    <div class="page-header">
 				    <ol class="breadcrumb">
 					    <li class="breadcrumb-item">
-						    ENREGISTREMENT DES RECOLTES DANS @Session["association"]
+						     @Session["association"]
 					    </li>
 					    <li class="breadcrumb-item active" aria-current="page">
 						    Ajouter
@@ -38,12 +38,19 @@
                     @Html.AntiForgeryToken()
                     <div class="bg-light border  margin-top">
                     <div class="form-horizontal  "   >
-                        <h4 style="text-align:center ;color:blue">Ajouter une nouveau client</h4>
+                        <h4 style="text-align:center ;color:blue">Ajouter  nouveau membre</h4>
                         <hr />
                         @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                         <div class="form-group">
+                          <div class="col-md-12">
+                            <label><b style="font-size:20px">Association:</b></label>
+                            <input type="text" readonly="" value="@Session["associat"]" class="form-control total" />
+                            <input type="hidden" name="ID_association" value="@Session["associatID"]" class="form-control total" />
+                          </div>
+                       </div>
                         <div class="form-group">
                             <div class="col-md-12"  >
-                                <label>CNI</label>
+                                <label><b style="font-size:20px">CNI:</label>
                                 @Html.TextBoxFor(model => model.CNI, new { @class = "form-control" })
                                 @Html.ValidationMessageFor(model => model.CNI)
                             </div>
@@ -51,7 +58,7 @@
 
                         <div class="form-group">
                             <div class="col-md-12"  >
-                                <label>NOM</label>
+                                <label><b style="font-size:20px">NOM:</label>
                                 @Html.TextBoxFor(model => model.NOM_client, new { @class = "form-control" })
                                 @Html.ValidationMessageFor(model => model.NOM_client)
                             </div>
@@ -59,70 +66,57 @@
 
                         <div class="form-group">
                             <div class="col-md-12"  >
-                                <label>PRENOM</label>
+                                <label><b style="font-size:20px">PRENOM:</label>
                                 @Html.TextBoxFor(model => model.PRENOM_client, new { @class = "form-control" })
                                 @Html.ValidationMessageFor(model => model.PRENOM_client)
                             </div>
                         </div>
                         <div class="form-group">
                             <div class="col-md-12"  >
-                                <label>TEL</label>
+                                <label><b style="font-size:20px">TEL:</label>
                                 @Html.TextBoxFor(model => model.TEL_client, new { @class = "form-control" })
                                 @Html.ValidationMessageFor(model => model.TEL_client)
                             </div>
                         </div>
                          <div class="form-group">
                             <div class="col-md-12">
-                            <label> Provinces :</label>
+                            <label><b style="font-size:20px"> Provinces :</label>
                             @Html.DropDownList("ID_province", null, "Choisir la province", htmlAttributes: new { @class = "form-control " })
                             </div>
                         </div>
                         <div class="form-group">
                         
                             <div class="col-md-12">
-                                <label> Commune :</label>
+                                <label><b style="font-size:20px"> Commune :</label>
                             @Html.DropDownList("ID_commune", new SelectList(new List<string>()), "Choisir le commune", htmlAttributes: new { @class = "form-control" })
                             </div>
                             </div>
                         <div class="form-group">
                         
                             <div class="col-md-12">
-                                <label> zone:</label>
+                                <label> <b style="font-size:20px">zone:</label>
                             @Html.DropDownList("ID_zone", new SelectList(new List<string>()), "Choisir la zone", htmlAttributes: new { @class = "form-control" })
                             </div>
                             </div>
                         <div class="form-group">
                         
                             <div class="col-md-12">
-                            <label> colline:</label>
+                            <label> <b style="font-size:20px">colline:</label>
                             @Html.DropDownList("ID_colline", new SelectList(new List<string>()), "Choisir colline", htmlAttributes: new { @class = "form-control" })
                             @Html.ValidationMessageFor(model => model.ID_colline, "", new { @class = "text-danger" })
                             </div>
                         </div> 
-                        <div class="form-group">
-                            <div class="col-md-12">
-                            <label> Provinces :</label>
-                            @Html.DropDownList("ID_association", null, "Choisir l'association", htmlAttributes: new { @class = "form-control " })
-                            </div>
-                        </div>
+                       
                         <div class="form-group">
                           <div class="col-md-12">
-                            <label><b style="font-size:20px">Association:</b></label>
-                            <input type="text" readonly="" value="@Session["associat"]" class="form-control total" />
-                            <input type="hidden" name="ID_association" value="@Session["associatID"]" class="form-control total" />
+                            <label><b style="font-size:20px">Date:</b></label>
+                              <input type="datetime-local" name="DATE_insertion" class="form-control total " />
+                            
                           </div>
                        </div>
-
-                        <div class="form-group">
-                            <div class="col-md-12"  >
-                                <label>Date de creation</label>
-                                    @Html.TextBoxFor(model => model.DATE_insertion, new { @class = "form-control" })
-                                @Html.ValidationMessageFor(model => model.DATE_insertion)
-                            </div>
-                        </div>
                         <div class="form-group">
                             <div class="col-md-offset-4 col-md-10">
-                                <input type="submit" value="Create" class="btn btn-success pull-right" />
+                                <input type="submit" value="Enregistrer" class="btn btn-success pull-right" />
                             </div>
                         </div>
                     </div>
@@ -137,35 +131,6 @@
         </div>
       </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
