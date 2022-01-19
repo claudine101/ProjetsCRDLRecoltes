@@ -1,6 +1,6 @@
 ﻿
 
-@model IEnumerable<TEMPLATE.Models.employe_station_lavage>
+@model IEnumerable<TEMPLATE.Models.recoltModel>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Layouts/_Default.cshtml";
@@ -13,7 +13,7 @@
           <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
              <div>
               <h2 class="text-white pb-2 fw-bold">
-                Les employes des stations
+                Les employes des stations @ViewBag.nomprovince
             </h2>
         </div>
         <div class="ml-md-auto py-2 py-md-0">
@@ -36,6 +36,21 @@
 </div>
 </div>
 </div>
+     <div class="container-fluid " >  
+                   @using (Html.BeginForm("Index", "EmployeStation", FormMethod.Post))
+                   {
+                      <div class="row">
+                            <article  class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                                <h2 style="color:blue">Station</h2>
+                                @Html.DropDownList("station", null, "Choisir la station", htmlAttributes: new { @class = "form-control " })      
+                            </article>
+                            <article  class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                                <h2 style="color:blue">Afficher</h2>
+                                 <input type="submit" name="submit" value="Affiche"  class="btn btn-info"/>  
+                            </article>
+                      </div>  
+                   }
+              </div> 
  <div class="card-body rec-pat" >
     <a href="@Url.Action("create","EmployeStation")" class=" btn btn-sm  btn-success pull-right  " style="margin-top:5px; margin-bottom:5px"><i class="fa fa-plus mr-2"></i>Ajouter</a>
      <div class="table-responsive">
@@ -49,7 +64,6 @@
                         <th>PRENOM</th>
                         <th>TEL</th>
                         <th>EMAIL</th>
-                        <th>STATUT</th>
                         <th>OPTIONS</th>
                    </tr>
                 </thead>
@@ -66,7 +80,7 @@
                                 @Html.DisplayFor(modelItem => item.CNI)
                             </td>
                             <td>
-                                @Html.DisplayFor(modelItem => item.station_lavage.NOM_station)
+                                @Html.DisplayFor(modelItem => item.NOM_station)
                             </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.NOM_employe)
@@ -75,26 +89,16 @@
                                 @Html.DisplayFor(modelItem => item.PRENOM_employe)
                             </td>
                             <td>
-                                @Html.DisplayFor(modelItem => item.TEL_employe)
+                                @Html.DisplayFor(modelItem => item.Tel_employe)
                             </td>
                             <td>
                                 @Html.DisplayFor(modelItem => item.EMAIL_employe)
                             </td>
-                            <td>
-                                @Html.DisplayFor(modelItem => item.Statut)
+                           <td>
+                                   @Html.ActionLink("Modifier", "Edit", new { id = item.ID }, new { @class = "btn btn-sm btn-info " })
+                                 
                             </td>
-                            <td>
-                            <div class="dropdown">
-                                <span class="dropdown-toggle dropdown-bg btn btn-outline-primary" role="button" id="dropdownMenuButton5"
-                                        data-toggle="dropdown" aria-expanded="false">
-                                    Actions
-                                </span>
-                                <div class="dropdown-menu dropdown-menu-right shadow-none" aria-labelledby="dropdownMenuButton5">
-                                    @Html.ActionLink("Modifier", "Edit", new { id = item.ID_employ }, new { @class = "btn btn-sm btn-success " })
-                                    @Html.ActionLink("Supprime", "Delete", new { id = item.ID_employ }, new { @class = "btn btn-sm btn-danger" })
-                                </div>
-                            </div>
-                            </td>
+                            
                         </tr>
                     }
                </tbody>
