@@ -37,37 +37,49 @@
 <div class="card-body rec-pat" >
   <div class="container-fluid">
       <div class="row">
-         @if (Session["IDEmploye"] != null)
-         { 
-             <div class="col-md-12" id="containerClient1"  style="border: 1px solid #d2d7db;"></div>
-               @section scripts
-              {
-                <script src="~/Scripts/stationClientDashboard.js"></script>
-               }
-           }
-          else
-          { 
-                  <div class="col-md-12" id="containerClient"  style="border: 1px solid #d2d7db;"></div>
-                    @section scripts
-                    {
-                      <script src="~/Scripts/stationClient.js"></script>
-                    }
-           } 
+         <div class="col-md-12" id="containerClient"  style="border: 1px solid #d2d7db;"></div>
+
+     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6" id="containerQualite"  style="border: 1px solid #d2d7db;"></div>
+          
         </div>
+
 </div>
-<div class="modal fade" id="myModal" role="dialog">
-  <div class="modal-dialog modal-lg" style ="width:1000px;">
-        <!-- Modal -->
-    <div class="modal-content  modal-lg" >
-          <div class="modal-header">
-             <h4 class="modal-title"><span id="titre"></span></h4>
-          </div>
-    
-    </div>            
-  </div>
-</div>
+
 
    </div>
 </div>
  
+              @section scripts
+                    {
+                      <script src="~/Scripts/ChartDashboardAssociation.js"></script>
+                        
+                    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
    
