@@ -22,6 +22,20 @@ namespace TEMPLATE.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Login(utilisateur user)
         {
+            var station = (from e in db.historique_utilisateur
+                           select new
+                           {
+                               e.ID_utilisateur
+
+                           }).ToList();
+
+
+            List<int> IDassocition = new List<int>();
+    
+         foreach (var vp in station)
+        {
+            IDassocition.Add(vp.ID_utilisateur);
+        }
             var v = from p in db.profiles
                     join u in db.utilisateurs
                         on p.ID_profile equals u.ID_profile
@@ -33,7 +47,8 @@ namespace TEMPLATE.Controllers
                         employeStation = u.ID_employ,
                         passord=u.passwords,
                         employeAssociation = u.ID_employe,
-                        a=u.ID_profile
+                        a=u.ID_profile,
+                        ide=u.ID_utilisateur
                     };
 
             var result = v.FirstOrDefault();
@@ -45,35 +60,18 @@ namespace TEMPLATE.Controllers
                 Session["IDEmploy"] = result.employeStation;
                 Session["association"] = "";
                 ;
-                //if (result.profile_name == "employe")
-                //{
-                   ///Session["IDEmploye"] = result.employeAssociation;
-                //    Session["IDEmploy"] = result.employeStation;
-                //    return RedirectToAction("Index", "Dashboard");
-                    
-                //}
                 if (result.profile_name == "Admin")
-                {
+                {if (IDassocition.Contains(result.ide) != true)
+                    {
                     return RedirectToAction("Index", "Dashboard");
+                    }
                 }
                 if (result.profile_name == "employe")
                 {
-                    // var aa=@Session["IDEmploy"];
-                    // var IDS = from e in db.employe_station_lavage
-                    //        join s in db.station_lavage
-                    //            on e.ID_station equals s.ID_station
-                    //          where (e.ID_employ == 2)
-                    //        select new
-                    //        {
-                    //            station = s.ID_station,
-                               
-                    //        };
-                    // var resultE = IDS.FirstOrDefault();
-                    //if (resultE != null)
-                    //{
-                    //    Session["station"] = resultE.station ;
-                    //}
-                    return RedirectToAction("Dashboard", "ClientStation");
+                    if (IDassocition.Contains(result.ide) != true)
+                    {
+                        return RedirectToAction("Index", "DashboardClientAssociation");
+                    }
                 }
             }
 
