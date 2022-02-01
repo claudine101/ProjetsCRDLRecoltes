@@ -1,7 +1,24 @@
-﻿@{
+﻿ 
+
+
+
+
+
+
+
+
+
+
+
+
+@{
     ViewBag.Title = "_Footer";
 }
+@*<?php include VIEWPATH.'template/includes/sidebar_right.php';?>*@
 @RenderPage("~/Views/Partials/_SidebarRight.cshtml")
+		<!-- Custom template | don't include it in your project! -->
+@*<?php include VIEWPATH.'template/includes/sidebar_settings.php';?>*@
+
 @RenderPage("~/Views/Partials/_SidebarSetting.cshtml")
 	<footer class="footer" style="background-color:#050008 ">
 		<div class="container-fluid">
@@ -24,35 +41,100 @@
 				Made with <a href="facebook.com/clauaine.ndayisaba">NDAYISABA Claudine</a>
 			</div>				
 		</div>
-	   </footer>
-        @Scripts.Render("~/Assets/js/plugin/jquery-ui-1.12.1.custom")
-        @Scripts.Render("~/Assets/js/plugin/jquery-ui-touch-punch")
-        @Scripts.Render("~/Assets/js/plugin/jquery-scrollbar")
-        @Scripts.Render("~/Assets/js/plugin/moment")
-        @Scripts.Render("~/Assets/js/plugin/chart.js")
-        @Scripts.Render("~/Assets/js/plugin/jquery.sparkline")  
-        @Scripts.Render("~/Assets/js/plugin/chart-circle")  
-        @Scripts.Render("~/Assets/js/plugin/datatables")  
-        @Scripts.Render("~/Assets/js/plugin/bootstrap-notify")
-        @Scripts.Render("~/Assets/js/plugin/bootstrap-toggle")
-        @Scripts.Render("~/Assets/js/plugin/jqvmap")
-        @Scripts.Render("~/Assets/js/plugin/jqvmap/maps")
-        @Scripts.Render("~/Assets/js/plugin/gmaps")
-        @Scripts.Render("~/Assets/js/plugin/dropzone")
-        @Scripts.Render("~/Assets/js/plugin/fullcalendar")    
-        @Scripts.Render("~/Assets/js/plugin/datepicker")
-        @Scripts.Render("~/Assets/js/plugin/bootstrap-tagsinput")
-        @Scripts.Render("~/Assets/js/plugin/bootstrap-wizard")
-        @Scripts.Render("~/Assets/js/plugin/jquery.validate")
-        @Scripts.Render("~/Assets/js/plugin/summernote")
-        @Scripts.Render("~/Assets/js/plugin/select2")
-        @Scripts.Render("~/Assets/js/plugin/sweetalert")
-        @Scripts.Render("~/Assets/js/plugin/owl-carousel")
-        @Scripts.Render("~/Assets/js/plugin/jquery.magnific-popup")
-        @Scripts.Render("~/Assets/js")
-        @Styles.Render("~/Assets/css")
+	</footer>
+@*</div>
 
-<script>
+
+</div>*@
+	<!--   Core JS Files   -->
+	@*<script src="<?= base_url()?>assets/js/core/jquery.3.2.1.min.js"></script>
+	<script src="<?= base_url()?>assets/js/core/popper.min.js"></script>
+	<script src="<?= base_url()?>assets/js/core/bootstrap.min.js"></script>*@
+    @Scripts.Render("~/Assets/js/core")
+   @* <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" >
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" ></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" ></script>*@
+
+<!-- jQuery UI -->
+	@*<script src="<?= base_url()?>assets/js/plugin/jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>*@
+	@Scripts.Render("~/Assets/js/plugin/jquery-ui-1.12.1.custom")
+    @*<script src="<?= base_url()?>assets/js/plugin/jquery-ui-touch-punch/jquery.ui.touch-punch.min.js"></script>*@
+   @Scripts.Render("~/Assets/js/plugin/jquery-ui-touch-punch")
+	<!-- jQuery Scrollbar -->
+	@*<script src="<?= base_url()?>assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>*@
+      @Scripts.Render("~/Assets/js/plugin/jquery-scrollbar")
+	<!-- Moment JS -->
+	@*<script src="<?= base_url()?>assets/js/plugin/moment/moment.min.js"></script>*@
+    @Scripts.Render("~/Assets/js/plugin/moment")
+	<!-- Chart JS -->
+	@*<script src="<?= base_url()?>assets/js/plugin/chart.js/chart.min.js"></script>*@
+    @Scripts.Render("~/Assets/js/plugin/chart.js")
+	<!-- jQuery Sparkline -->
+
+    @*<script src="<?= base_url()?>assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>*@
+    @Scripts.Render("~/Assets/js/plugin/jquery.sparkline")  
+	<!-- Chart Circle -->
+	@*<script src="<?= base_url()?>assets/js/plugin/chart-circle/circles.min.js"></script>*@
+    @Scripts.Render("~/Assets/js/plugin/chart-circle")  
+	<!-- Datatables -->
+
+	@*<script src="<?= base_url()?>assets/js/plugin/datatables/datatables.min.js"></script>*@
+    @Scripts.Render("~/Assets/js/plugin/datatables")  
+	<!-- Bootstrap Notify -->
+	@*<script src="<?= base_url()?>assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>*@
+    @Scripts.Render("~/Assets/js/plugin/bootstrap-notify")
+	<!-- Bootstrap Toggle -->
+	@*<script src="<?= base_url()?>assets/js/plugin/bootstrap-toggle/bootstrap-toggle.min.js"></script>*@
+    @Scripts.Render("~/Assets/js/plugin/bootstrap-toggle")
+	<!-- jQuery Vector Maps -->
+	@*<script src="<?= base_url()?>assets/js/plugin/jqvmap/jquery.vmap.min.js"></script>*@
+    @Scripts.Render("~/Assets/js/plugin/jqvmap")
+	@*<script src="<?= base_url()?>assets/js/plugin/jqvmap/maps/jquery.vmap.world.js"></script>*@
+    @Scripts.Render("~/Assets/js/plugin/jqvmap/maps")
+	<!-- Google Maps Plugin -->
+	@*<script src="<?= base_url()?>assets/js/plugin/gmaps/gmaps.js"></script>*@
+    @Scripts.Render("~/Assets/js/plugin/gmaps")
+	<!-- Dropzone -->
+	@*<script src="<?= base_url()?>assets/js/plugin/dropzone/dropzone.min.js"></script>*@
+    @Scripts.Render("~/Assets/js/plugin/dropzone")
+	<!-- Fullcalendar -->
+	@*<script src="<?= base_url()?>assets/js/plugin/fullcalendar/fullcalendar.min.js"></script>*@
+    @Scripts.Render("~/Assets/js/plugin/fullcalendar")
+	<!-- DateTimePicker -->
+	@*<script src="<?= base_url()?>assets/js/plugin/datepicker/bootstrap-datetimepicker.min.js"></script>*@
+    @Scripts.Render("~/Assets/js/plugin/datepicker")
+	<!-- Bootstrap Tagsinput -->
+	@*<script src="<?= base_url()?>assets/js/plugin/bootstrap-tagsinput/bootstrap-tagsinput.min.js"></script>*@
+    @Scripts.Render("~/Assets/js/plugin/bootstrap-tagsinput")
+	<!-- Bootstrap Wizard -->
+	@*<script src="<?= base_url()?>assets/js/plugin/bootstrap-wizard/bootstrapwizard.js"></script>*@
+    @Scripts.Render("~/Assets/js/plugin/bootstrap-wizard")
+	<!-- jQuery Validation -->
+	@*<script src="<?= base_url()?>assets/js/plugin/jquery.validate/jquery.validate.min.js"></script>*@
+    @Scripts.Render("~/Assets/js/plugin/jquery.validate")
+	<!-- Summernote -->
+	@*<script src="<?= base_url()?>assets/js/plugin/summernote/summernote-bs4.min.js"></script>*@
+    @Scripts.Render("~/Assets/js/plugin/summernote")
+	<!-- Select2 -->
+	@*<script src="<?= base_url()?>assets/js/plugin/select2/select2.full.min.js"></script>*@
+     @Scripts.Render("~/Assets/js/plugin/select2")
+	<!-- Sweet Alert -->
+	@*<script src="<?= base_url()?>assets/js/plugin/sweetalert/sweetalert.min.js"></script>*@
+    @Scripts.Render("~/Assets/js/plugin/sweetalert")
+	<!-- Owl Carousel -->
+	@*<script src="<?= base_url()?>assets/js/plugin/owl-carousel/owl.carousel.min.js"></script>*@
+    @Scripts.Render("~/Assets/js/plugin/owl-carousel")
+	<!-- Magnific Popup -->
+	@*<script src="<?= base_url()?>assets/js/plugin/jquery.magnific-popup/jquery.magnific-popup.min.js"></script>*@
+     @Scripts.Render("~/Assets/js/plugin/jquery.magnific-popup")
+	<!-- Atlantis JS -->
+	@*<script src="<?= base_url()?>assets/js/atlantis.min.js"></script>*@
+    @Scripts.Render("~/Assets/js")
+	<!-- Atlantis DEMO methods, don't include it in your project! -->
+	@*<script src="<?= base_url()?>assets/js/setting-demo.js"></script>
+	<script src="<?= base_url()?>assets/js/demo.js"></script>*@
+	<script>
 		Circles.create({
 			id:'circles-1',
 			radius:45,
@@ -146,6 +228,160 @@
 			fillColor: 'rgba(255, 165, 52, .14)'
 		});
 	</script>
+@*</body>
+
+<!-- Mirrored from demo.themekita.com/atlantis/livepreview/examples/demo1/ by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 24 Jul 2021 21:36:26 GMT -->
+</html>*@
+
+
+@*@{
+    ViewBag.Title = "_Footer";
+}
+@RenderPage("~/Views/Partials/_SidebarRight.cshtml")
+@RenderPage("~/Views/Partials/_SidebarSetting.cshtml")
+	<footer class="footer" style="background-color:#050008 ">
+		<div class="container-fluid">
+			<nav class="pull-left">
+				<ul class="nav">
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							Enregistrement de recoltes 
+						</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="#">
+							Cafe
+						</a>
+					</li>
+				</ul>
+			</nav>
+			<div class="copyright ml-auto">
+                @DateTime.Now.ToString("dddd, dd-MMMM-yyyy HH:mm:ss")
+				Made with <a href="facebook.com/clauaine.ndayisaba">NDAYISABA Claudine</a>
+			</div>				
+		</div>
+	   </footer>
+        @Scripts.Render("~/Assets/js/plugin/jquery-ui-1.12.1.custom")
+        @Scripts.Render("~/Assets/js/plugin/jquery-ui-touch-punch")
+        @Scripts.Render("~/Assets/js/plugin/jquery-scrollbar")
+        @Scripts.Render("~/Assets/js/plugin/moment")
+        @Scripts.Render("~/Assets/js/plugin/chart.js")
+        @Scripts.Render("~/Assets/js/plugin/jquery.sparkline")  
+        @Scripts.Render("~/Assets/js/plugin/chart-circle")  
+        @Scripts.Render("~/Assets/js/plugin/datatables")  
+        @Scripts.Render("~/Assets/js/plugin/bootstrap-notify")
+        @Scripts.Render("~/Assets/js/plugin/bootstrap-toggle")
+        @Scripts.Render("~/Assets/js/plugin/jqvmap")
+        @Scripts.Render("~/Assets/js/plugin/jqvmap/maps")
+        @Scripts.Render("~/Assets/js/plugin/gmaps")
+        @Scripts.Render("~/Assets/js/plugin/dropzone")
+        @Scripts.Render("~/Assets/js/plugin/fullcalendar")    
+        @Scripts.Render("~/Assets/js/plugin/datepicker")
+        @Scripts.Render("~/Assets/js/plugin/bootstrap-tagsinput")
+        @Scripts.Render("~/Assets/js/plugin/bootstrap-wizard")
+        @Scripts.Render("~/Assets/js/plugin/jquery.validate")
+        @Scripts.Render("~/Assets/js/plugin/summernote")
+        @Scripts.Render("~/Assets/js/plugin/select2")
+        @Scripts.Render("~/Assets/js/plugin/sweetalert")
+        @Scripts.Render("~/Assets/js/plugin/owl-carousel")
+        @Scripts.Render("~/Assets/js/plugin/jquery.magnific-popup")
+        @Scripts.Render("~/Assets/js")
+        @Styles.Render("~/Assets/css")
+
+<script>
+    Circles.create({
+        id: 'circles-1',
+        radius: 45,
+        value: 60,
+        maxValue: 100,
+        width: 7,
+        text: 5,
+        colors: ['#f1f1f1', '#FF9E27'],
+        duration: 400,
+        wrpClass: 'circles-wrp',
+        textClass: 'circles-text',
+        styleWrapper: true,
+        styleText: true
+    })
+
+    Circles.create({
+        id: 'circles-2',
+        radius: 45,
+        value: 70,
+        maxValue: 100,
+        width: 7,
+        text: 36,
+        colors: ['#f1f1f1', '#2BB930'],
+        duration: 400,
+        wrpClass: 'circles-wrp',
+        textClass: 'circles-text',
+        styleWrapper: true,
+        styleText: true
+    })
+
+    Circles.create({
+        id: 'circles-3',
+        radius: 45,
+        value: 40,
+        maxValue: 100,
+        width: 7,
+        text: 12,
+        colors: ['#f1f1f1', '#F25961'],
+        duration: 400,
+        wrpClass: 'circles-wrp',
+        textClass: 'circles-text',
+        styleWrapper: true,
+        styleText: true
+    })
+
+    var totalIncomeChart = document.getElementById('totalIncomeChart').getContext('2d');
+
+    var mytotalIncomeChart = new Chart(totalIncomeChart, {
+        type: 'bar',
+        data: {
+            labels: ["S", "M", "T", "W", "T", "F", "S", "S", "M", "T"],
+            datasets: [{
+                label: "Total Income",
+                backgroundColor: '#ff9e27',
+                borderColor: 'rgb(23, 125, 255)',
+                data: [6, 4, 9, 5, 4, 6, 4, 3, 8, 10],
+            }],
+        },
+        options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            legend: {
+                display: false,
+            },
+            scales: {
+                yAxes: [{
+                    ticks: {
+                        display: false //this will remove only the label
+                    },
+                    gridLines: {
+                        drawBorder: false,
+                        display: false
+                    }
+                }],
+                xAxes: [{
+                    gridLines: {
+                        drawBorder: false,
+                        display: false
+                    }
+                }]
+            },
+        }
+    });
+
+    $('#lineChart').sparkline([105, 103, 123, 100, 95, 105, 115], {
+        type: 'line',
+        height: '70',
+        width: '100%',
+        lineWidth: '2',
+        lineColor: '#ffa534',
+        fillColor: 'rgba(255, 165, 52, .14)'
+    });
+	</script>
 
 
 
@@ -159,34 +395,4 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+*@
