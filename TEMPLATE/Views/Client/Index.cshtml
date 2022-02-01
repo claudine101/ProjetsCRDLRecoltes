@@ -1,4 +1,4 @@
-﻿@model IEnumerable<TEMPLATE.Models.client>
+﻿@model IEnumerable<TEMPLATE.Models.recoltModel>
 @{
     ViewBag.Title = "Index";
     Layout = "~/Views/Layouts/_Default.cshtml";
@@ -11,7 +11,7 @@
           <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
              <div>
               <h2 class="text-white pb-2 fw-bold">
-                Clients
+                Les clients @ViewBag.associ
             </h2>
         </div>
         <div class="ml-md-auto py-2 py-md-0">
@@ -37,28 +37,55 @@
 
 <!-- YOUR CODE HERE
  -->            <div class="card-body rec-pat" >        
+      @Html.Raw(ViewBag.Message)
  <div class="container-fluid">
-     <a href="@Url.Action("create","client")" class=" btn btn-sm  btn-success pull-right  " style="margin-top:5px; margin-bottom:5px"><i class="fa fa-plus mr-2"></i>Ajouter</a>
+     @{ int NO=0;}
+     @using (Html.BeginForm("Index", "Client", FormMethod.Post))
+                   {
+                      <div class="row">
+                            <article  class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                                <h2 style="color:blue">Association</h2>
+                                @Html.DropDownList("ID_associationClients", null, "Choisir l'association", htmlAttributes: new { @class = "form-control " })      
+                            </article>
+                            <article  class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                                <h2 style="color:blue">Provinces</h2>
+                                @Html.DropDownList("ID_provinceActifs1", null, "Choisir la province", htmlAttributes: new { @class = "form-control " })      
+                            
+                            </article>
+                            <article  class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                                <h2 style="color:blue">Afficher</h2>
+                                 <input type="submit" name="submit" value="Affiche"  class="btn btn-info"/>  
+                            </article>
+                      </div>  
+                   }
+  
+      <a href="@Url.Action("Index","client")" class=" btn btn-sm  btn-outline-info pull-left  " style="margin-top:5px; margin-bottom:5px"><i class="fa fa-arrow-left mr-2"></i>Retour</a>
+    
+     <a href="@Url.Action("create","client")" class=" btn btn-sm  btn-info pull-right  " style="margin-top:5px; margin-bottom:5px"><i class="fa fa-plus mr-2"></i>Ajouter</a>
     <div class="table-responsive">
      <table class="table table-striped  table-bordered  " id="mytable1"  style="width:100%">
      <thead>
-        <tr style="background-color:darkturquoise">
+        <tr style="background-color:#016ce9;color:white">
         <td>NO</td>
         <th>CNI</th>
         <th>NOM</th>
         <th>PRENOM</th>
         <th>TEL</th>
-        <th>COLLINE</th>
         <th>ASSOCIATION</th>
+        <th>COLLINE</th>
+        <th>ZONE</th>
+        <th>COMMUNE</th>
+        <th>PROVINCE</th>
         <th>DATE D'INSERTION</th>
         <th>OPTIONS</th>
     </tr>
 </thead>
         <tbody>
 @foreach (var item in Model) {
-    <tr>
+    NO++;
+     <tr>
         <td>
-            @Html.DisplayFor(modelItem => item.ID_client)
+            @NO
         </td>
         <td>
             @Html.DisplayFor(modelItem => item.CNI)
@@ -70,16 +97,25 @@
             @Html.DisplayFor(modelItem => item.PRENOM_client)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.TEL_client)
+            @Html.DisplayFor(modelItem => item.tel)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.colline.NOM_colline)
+            @Html.DisplayFor(modelItem => item.assocition)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.association.NOM_association)
+            @Html.DisplayFor(modelItem => item.colline)
+        </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.zone)
+        </td>
+         <td>
+            @Html.DisplayFor(modelItem => item.commune)
         </td>
         <td>
-            @Html.DisplayFor(modelItem => item.DATE_insertion)
+            @Html.DisplayFor(modelItem => item.province)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.date)
         </td>
         <td>
              <div class="dropdown">
@@ -88,8 +124,8 @@
                     Actions
                 </span>
                 <div class="dropdown-menu dropdown-menu-right shadow-none" aria-labelledby="dropdownMenuButton5">
-                    @Html.ActionLink("Modifier", "Edit", new { id = item.ID_client }, new { @class = "btn btn-sm btn-success " })
-                    @Html.ActionLink("Supprime", "Delete", new { id = item.ID_client }, new { @class = "btn btn-sm btn-danger" })
+                    @Html.ActionLink("Modifier", "Edit", new { id = item.ID }, new { @class = "btn btn-sm btn-info " })
+                    @Html.ActionLink("Supprime", "Delete", new { id = item.ID}, new { @class = "btn btn-sm btn-danger" })
                 </div>
             </div>
         </td>
@@ -103,6 +139,7 @@
      </div> 
       @section scripts
     {
+     <script src="~/Scripts/sweetAlert.js"></script>
     <script src="~/Scripts/tableau.js"></script>
     <script src="~/Scripts/tables1.js"></script>
 }
