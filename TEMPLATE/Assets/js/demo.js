@@ -16,18 +16,18 @@ Circles.create({
 })
 
 //Notify
-$.notify({
-	icon: 'flaticon-alarm-1',
-	title: 'Developpe par Claudine',
-	message: 'Enregistrement des recoltes dans des associations du cafe BURUNDI  dans des stations de lavage',
-},{
-	type: 'secondary',
-	placement: {
-		from: "bottom",
-		align: "right"
-	},
-	time: 1000,
-});
+//$.notify({
+//	icon: 'flaticon-alarm-1',
+//	title: 'Developpe par Claudine',
+//	message: 'Enregistrement des recoltes dans des associations du cafe BURUNDI  dans des stations de lavage',
+//},{
+//	type: 'secondary',
+//	placement: {
+//		from: "bottom",
+//		align: "right"
+//	},
+//	time: 1000,
+//});
 
 // JQVmap
 $('#map-example').vectorMap(
