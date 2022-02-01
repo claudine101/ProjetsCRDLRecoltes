@@ -9,14 +9,14 @@
 	    <div class="page-inner py-5">
 		    <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
 			    <div>
-				    <h2 class="text-white pb-2 fw-bold">Station lavage</h2>
+				    <h2 class="text-white pb-2 fw-bold">Station lavage inactifs</h2>
 			    </div>
 			    <div class="ml-md-auto py-2 py-md-0">
 			    <!-- PAGE-HEADER -->
 			    <div class="page-header">
 				    <ol class="breadcrumb">
 					    <li class="breadcrumb-item">
-						    <a href="#">Station lavage</a>
+						    <a href="#">Station lavage inactifs</a>
 					    </li>
 					    <li class="breadcrumb-item active" aria-current="page">
 						    Active
@@ -28,12 +28,14 @@
 		    </div>
 	    </div>
     </div>
-    <div class="container-fluid" style="background-color:moccasin">
+    <div class="container-fluid">
         <div class="row">
-            <article class="col-xs-12 col-sm-12 col-md-3 col-lg-3">     
+            <article class="col-xs-12 col-sm-12 col-md-3 col-lg-3">   
+                 <a href="@Url.Action("Index","HistoriqueStation")" class=" btn btn-sm  btn-outline-info pull-left  " style="margin-top:5px; margin-bottom:5px"><i class="fa fa-arrow-left mr-2"></i>Retour</a>
+             
             </article>
-            <article class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="background-color:#D291BC;margin-top:4px;margin-bottom:4px">
-                <h3>Voulez vous active cette station ?</h3>
+            <article class="col-xs-12 col-sm-12 col-md-6 col-lg-6" style="background-color:#016ce9;color:white;margin-top:60px;margin-bottom:4px">
+                <h3>Voulez vous active cette station de lavage ?</h3>
                 <div class="display-label">
                      @Html.DisplayNameFor(model => model.ID_histoStation)
                 </div>
