@@ -33,5 +33,15 @@ namespace TEMPLATE.Models
         public string Tel_client { get; set; }
         public string  name { get; set; }
         public double count { get; set; }
+        public int id { get; set; }
+         //public string  Nom_association { get; set; }
+          public string NOM_employe { get; set; }
+           public string PRENOM_employe { get; set; }
+            public string Tel_employe { get; set; }
+             public string EMAIL_employe { get; set; }
+              //public string CNI { get; set; }
+               public string statut { get; set; }
+                public string  username { get; set; }
+                  public string password { get; set; }
     }
 }
