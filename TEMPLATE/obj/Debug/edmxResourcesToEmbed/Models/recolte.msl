@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="RecolteModelStoreContainer" CdmEntityContainer="RecolteEntities">
+    <EntitySetMapping Name="associations">
+      <EntityTypeMapping TypeName="RecolteModel.association">
+        <MappingFragment StoreEntitySet="association">
+          <ScalarProperty Name="ID_association" ColumnName="ID_association" />
+          <ScalarProperty Name="ID_colline" ColumnName="ID_colline" />
+          <ScalarProperty Name="NOM_association" ColumnName="NOM_association" />
+          <ScalarProperty Name="TEL_association" ColumnName="TEL_association" />
+          <ScalarProperty Name="DATE_association" ColumnName="DATE_association" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="clients">
+      <EntityTypeMapping TypeName="RecolteModel.client">
+        <MappingFragment StoreEntitySet="client">
+          <ScalarProperty Name="ID_client" ColumnName="ID_client" />
+          <ScalarProperty Name="CNI" ColumnName="CNI" />
+          <ScalarProperty Name="NOM_client" ColumnName="NOM_client" />
+          <ScalarProperty Name="PRENOM_client" ColumnName="PRENOM_client" />
+          <ScalarProperty Name="TEL_client" ColumnName="TEL_client" />
+          <ScalarProperty Name="ID_colline" ColumnName="ID_colline" />
+          <ScalarProperty Name="ID_association" ColumnName="ID_association" />
+          <ScalarProperty Name="DATE_insertion" ColumnName="DATE_insertion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="collines">
+      <EntityTypeMapping TypeName="RecolteModel.colline">
+        <MappingFragment StoreEntitySet="collines">
+          <ScalarProperty Name="ID_colline" ColumnName="ID_colline" />
+          <ScalarProperty Name="NOM_colline" ColumnName="NOM_colline" />
+          <ScalarProperty Name="ID_zone" ColumnName="ID_zone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="communes">
+      <EntityTypeMapping TypeName="RecolteModel.commune">
+        <MappingFragment StoreEntitySet="communes">
+          <ScalarProperty Name="ID_commune" ColumnName="ID_commune" />
+          <ScalarProperty Name="NOM_commune" ColumnName="NOM_commune" />
+          <ScalarProperty Name="ID_province" ColumnName="ID_province" />
+          <ScalarProperty Name="LATITUDE_commune" ColumnName="LATITUDE_commune" />
+          <ScalarProperty Name="LONGITUDE_commune" ColumnName="LONGITUDE_commune" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="employe_association">
+      <EntityTypeMapping TypeName="RecolteModel.employe_association">
+        <MappingFragment StoreEntitySet="employe_association">
+          <ScalarProperty Name="ID_employe" ColumnName="ID_employe" />
+          <ScalarProperty Name="CNI" ColumnName="CNI" />
+          <ScalarProperty Name="ID_association" ColumnName="ID_association" />
+          <ScalarProperty Name="NOM_employe" ColumnName="NOM_employe" />
+          <ScalarProperty Name="PRENOM_employe" ColumnName="PRENOM_employe" />
+          <ScalarProperty Name="TEL_employe" ColumnName="TEL_employe" />
+          <ScalarProperty Name="EMAIL_employe" ColumnName="EMAIL_employe" />
+          <ScalarProperty Name="Statut" ColumnName="Statut" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="employe_station_lavage">
+      <EntityTypeMapping TypeName="RecolteModel.employe_station_lavage">
+        <MappingFragment StoreEntitySet="employe_station_lavage">
+          <ScalarProperty Name="ID_employ" ColumnName="ID_employ" />
+          <ScalarProperty Name="CNI" ColumnName="CNI" />
+          <ScalarProperty Name="ID_station" ColumnName="ID_station" />
+          <ScalarProperty Name="NOM_employe" ColumnName="NOM_employe" />
+          <ScalarProperty Name="PRENOM_employe" ColumnName="PRENOM_employe" />
+          <ScalarProperty Name="TEL_employe" ColumnName="TEL_employe" />
+          <ScalarProperty Name="EMAIL_employe" ColumnName="EMAIL_employe" />
+          <ScalarProperty Name="Statut" ColumnName="Statut" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="historique_asscociation">
+      <EntityTypeMapping TypeName="RecolteModel.historique_asscociation">
+        <MappingFragment StoreEntitySet="historique_asscociation">
+          <ScalarProperty Name="ID_histoAssoc" ColumnName="ID_histoAssoc" />
+          <ScalarProperty Name="ID_association" ColumnName="ID_association" />
+          <ScalarProperty Name="DATE_desactive" ColumnName="DATE_desactive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="historique_prix">
+      <EntityTypeMapping TypeName="RecolteModel.historique_prix">
+        <MappingFragment StoreEntitySet="historique_prix">
+          <ScalarProperty Name="ID_histoPrix" ColumnName="ID_histoPrix" />
+          <ScalarProperty Name="ID_qualite" ColumnName="ID_qualite" />
+          <ScalarProperty Name="PRIX" ColumnName="PRIX" />
+          <ScalarProperty Name="DATE_insertion" ColumnName="DATE_insertion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="historique_station">
+      <EntityTypeMapping TypeName="RecolteModel.historique_station">
+        <MappingFragment StoreEntitySet="historique_station">
+          <ScalarProperty Name="ID_histoStation" ColumnName="ID_histoStation" />
+          <ScalarProperty Name="ID_station" ColumnName="ID_station" />
+          <ScalarProperty Name="DATE_desactive" ColumnName="DATE_desactive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="historique_utilisateur">
+      <EntityTypeMapping TypeName="RecolteModel.historique_utilisateur">
+        <MappingFragment StoreEntitySet="historique_utilisateur">
+          <ScalarProperty Name="ID_histoUtilisateur" ColumnName="ID_histoUtilisateur" />
+          <ScalarProperty Name="ID_utilisateur" ColumnName="ID_utilisateur" />
+          <ScalarProperty Name="DATE_desactive" ColumnName="DATE_desactive" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="profiles">
+      <EntityTypeMapping TypeName="RecolteModel.profile">
+        <MappingFragment StoreEntitySet="profiles">
+          <ScalarProperty Name="ID_profile" ColumnName="ID_profile" />
+          <ScalarProperty Name="NOM_profile" ColumnName="NOM_profile" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="provinces">
+      <EntityTypeMapping TypeName="RecolteModel.province">
+        <MappingFragment StoreEntitySet="provinces">
+          <ScalarProperty Name="ID_province" ColumnName="ID_province" />
+          <ScalarProperty Name="NOM_province" ColumnName="NOM_province" />
+          <ScalarProperty Name="LATITUDE_province" ColumnName="LATITUDE_province" />
+          <ScalarProperty Name="LONGITUDE_province" ColumnName="LONGITUDE_province" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="qualites">
+      <EntityTypeMapping TypeName="RecolteModel.qualite">
+        <MappingFragment StoreEntitySet="qualite">
+          <ScalarProperty Name="ID_qualite" ColumnName="ID_qualite" />
+          <ScalarProperty Name="NOM_qualite" ColumnName="NOM_qualite" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="recoltes">
+      <EntityTypeMapping TypeName="RecolteModel.recolte">
+        <MappingFragment StoreEntitySet="recolte">
+          <ScalarProperty Name="ID_recolte" ColumnName="ID_recolte" />
+          <ScalarProperty Name="ID_client" ColumnName="ID_client" />
+          <ScalarProperty Name="ID_qualite" ColumnName="ID_qualite" />
+          <ScalarProperty Name="ID_station" ColumnName="ID_station" />
+          <ScalarProperty Name="quantite" ColumnName="quantite" />
+          <ScalarProperty Name="Prix" ColumnName="Prix" />
+          <ScalarProperty Name="Date_insertion" ColumnName="Date_insertion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="station_lavage">
+      <EntityTypeMapping TypeName="RecolteModel.station_lavage">
+        <MappingFragment StoreEntitySet="station_lavage">
+          <ScalarProperty Name="ID_station" ColumnName="ID_station" />
+          <ScalarProperty Name="ID_Zone" ColumnName="ID_Zone" />
+          <ScalarProperty Name="NOM_station" ColumnName="NOM_station" />
+          <ScalarProperty Name="TEL_station" ColumnName="TEL_station" />
+          <ScalarProperty Name="DATE_insertion" ColumnName="DATE_insertion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="utilisateurs">
+      <EntityTypeMapping TypeName="RecolteModel.utilisateur">
+        <MappingFragment StoreEntitySet="utilisateur">
+          <ScalarProperty Name="ID_utilisateur" ColumnName="ID_utilisateur" />
+          <ScalarProperty Name="ID_profile" ColumnName="ID_profile" />
+          <ScalarProperty Name="ID_employ" ColumnName="ID_employ" />
+          <ScalarProperty Name="ID_employe" ColumnName="ID_employe" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="passwords" ColumnName="passwords" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="zones">
+      <EntityTypeMapping TypeName="RecolteModel.zone">
+        <MappingFragment StoreEntitySet="zones">
+          <ScalarProperty Name="ID_zone" ColumnName="ID_zone" />
+          <ScalarProperty Name="NOM_zone" ColumnName="NOM_zone" />
+          <ScalarProperty Name="ID_commune" ColumnName="ID_commune" />
+          <ScalarProperty Name="LATITUDE_zone" ColumnName="LATITUDE_zone" />
+          <ScalarProperty Name="LONGITUDE_zone" ColumnName="LONGITUDE_zone" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

@@ -1,0 +1,59 @@
+﻿
+
+@model TEMPLATE.Models.utilisateur
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>utilisateur</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ID_utilisateur)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ID_utilisateur)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.profile.NOM_profile)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.profile.NOM_profile)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.employe_association.CNI)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.employe_association.CNI)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.employe_station_lavage.CNI)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.employe_station_lavage.CNI)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.username)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.username)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.passwords)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.passwords)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

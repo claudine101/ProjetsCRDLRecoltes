@@ -1,0 +1,51 @@
+﻿@model TEMPLATE.Models.zone
+
+@{
+    ViewBag.Title = "Details";
+}
+
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>zone</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ID_zone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ID_zone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NOM_zone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NOM_zone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.commune.NOM_commune)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.commune.NOM_commune)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LATITUDE_zone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LATITUDE_zone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LONGITUDE_zone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LONGITUDE_zone)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,51 @@
+﻿
+@model TEMPLATE.Models.commune
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>commune</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ID_commune)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ID_commune)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NOM_commune)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NOM_commune)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.province.NOM_province)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.province.NOM_province)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LATITUDE_commune)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LATITUDE_commune)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.LONGITUDE_commune)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.LONGITUDE_commune)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,30 @@
+﻿
+@model TEMPLATE.Models.profile
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>profile</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ID_profile)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ID_profile)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NOM_profile)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NOM_profile)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

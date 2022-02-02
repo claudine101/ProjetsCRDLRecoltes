@@ -1,0 +1,297 @@
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\TEMPLATE.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\TEMPLATE.pdb
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\Antlr3.Runtime.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.Core.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\EntityFramework.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\Newtonsoft.Json.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\System.Net.Http.Formatting.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\System.Web.Helpers.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\System.Web.Http.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\System.Web.Http.WebHost.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\System.Web.Mvc.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\System.Web.Optimization.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\System.Web.Razor.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\System.Web.WebPages.Deployment.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\System.Web.WebPages.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\System.Web.WebPages.Razor.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\WebGrease.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\WebMatrix.Data.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\WebMatrix.WebData.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\EntityFramework.xml
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\Newtonsoft.Json.xml
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\System.Net.Http.Formatting.xml
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\System.Web.Helpers.xml
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\System.Web.Http.xml
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\System.Web.Http.WebHost.xml
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\System.Web.Mvc.xml
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\System.Web.Razor.xml
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\System.Web.WebPages.xml
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\System.Web.WebPages.Deployment.xml
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\System.Web.WebPages.Razor.xml
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\WebMatrix.Data.xml
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\WebMatrix.WebData.xml
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.Core.xml
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\fr\EntityFramework.resources.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\fr\System.Net.Http.Formatting.resources.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\fr\System.Web.Helpers.resources.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\fr\System.Web.Http.resources.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\fr\System.Web.Http.WebHost.resources.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\fr\System.Web.Mvc.resources.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\fr\System.Web.Optimization.resources.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\fr\System.Web.Razor.resources.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\fr\System.Web.WebPages.resources.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\fr\System.Web.WebPages.Deployment.resources.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\fr\System.Web.WebPages.Razor.resources.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\fr\WebMatrix.Data.resources.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\fr\Microsoft.Web.WebPages.OAuth.resources.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\bin\fr\WebMatrix.WebData.resources.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\obj\Debug\TEMPLATE.csprojResolveAssemblyReference.cache
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\obj\Debug\TEMPLATE.dll
+C:\Users\HP ProBook\Desktop\TEMPLATE\TEMPLATE\obj\Debug\TEMPLATE.pdb
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\TEMPLATE.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\TEMPLATE.pdb
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\Antlr3.Runtime.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.Core.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\EntityFramework.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\Newtonsoft.Json.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\System.Web.Helpers.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\System.Web.Mvc.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\System.Web.Optimization.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\System.Web.Razor.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\System.Web.WebPages.Deployment.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\System.Web.WebPages.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\System.Web.WebPages.Razor.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\WebGrease.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\WebMatrix.Data.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\WebMatrix.WebData.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\EntityFramework.xml
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\Newtonsoft.Json.xml
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\System.Web.Helpers.xml
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\System.Web.Mvc.xml
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\System.Web.Razor.xml
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\System.Web.WebPages.xml
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\System.Web.WebPages.Deployment.xml
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\System.Web.WebPages.Razor.xml
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\WebMatrix.Data.xml
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\WebMatrix.WebData.xml
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.Core.xml
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\fr\EntityFramework.resources.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\fr\System.Web.Helpers.resources.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\fr\System.Web.Mvc.resources.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\fr\System.Web.Optimization.resources.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\fr\System.Web.Razor.resources.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\fr\System.Web.WebPages.resources.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\fr\System.Web.WebPages.Deployment.resources.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\fr\System.Web.WebPages.Razor.resources.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\fr\WebMatrix.Data.resources.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\fr\Microsoft.Web.WebPages.OAuth.resources.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\bin\fr\WebMatrix.WebData.resources.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\obj\Debug\TEMPLATE.csprojResolveAssemblyReference.cache
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\obj\Debug\TEMPLATE.dll
+C:\Users\MFASHA Theos\Desktop\TEMPLATE\TEMPLATE\obj\Debug\TEMPLATE.pdb
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\TEMPLATE.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\TEMPLATE.pdb
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\Antlr3.Runtime.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.AspNet.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.Core.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.OAuth.Consumer.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.OAuth.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.OpenId.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\EntityFramework.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\Microsoft.Web.WebPages.OAuth.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\Newtonsoft.Json.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\System.Web.Helpers.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\System.Web.Mvc.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\System.Web.Optimization.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\System.Web.Razor.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\System.Web.WebPages.Deployment.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\System.Web.WebPages.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\System.Web.WebPages.Razor.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\WebGrease.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\WebMatrix.Data.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\WebMatrix.WebData.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\EntityFramework.xml
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\Newtonsoft.Json.xml
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\System.Web.Helpers.xml
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\System.Web.Mvc.xml
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\System.Web.Razor.xml
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\System.Web.WebPages.xml
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\System.Web.WebPages.Deployment.xml
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\System.Web.WebPages.Razor.xml
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\WebMatrix.Data.xml
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\Microsoft.Web.WebPages.OAuth.xml
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\WebMatrix.WebData.xml
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.AspNet.xml
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.Core.xml
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.OAuth.Consumer.xml
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.OAuth.xml
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.OpenId.xml
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\fr\EntityFramework.resources.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\fr\System.Web.Helpers.resources.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\fr\System.Web.Mvc.resources.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\fr\System.Web.Optimization.resources.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\fr\System.Web.Razor.resources.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\fr\System.Web.WebPages.resources.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\fr\System.Web.WebPages.Deployment.resources.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\fr\System.Web.WebPages.Razor.resources.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\fr\WebMatrix.Data.resources.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\fr\Microsoft.Web.WebPages.OAuth.resources.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\bin\fr\WebMatrix.WebData.resources.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\obj\Debug\TEMPLATE.csprojResolveAssemblyReference.cache
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\obj\Debug\TEMPLATE.dll
+C:\Users\MFASHA Theos\Desktop\claudine\TEMPLATE\TEMPLATE\obj\Debug\TEMPLATE.pdb
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\TEMPLATE.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\TEMPLATE.pdb
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\Antlr3.Runtime.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.AspNet.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.Core.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.OAuth.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.OpenId.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\EntityFramework.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\Microsoft.Web.Infrastructure.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\Newtonsoft.Json.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\System.Net.Http.Formatting.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\System.Web.Helpers.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\System.Web.Http.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\System.Web.Http.WebHost.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\System.Web.Mvc.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\System.Web.Optimization.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\System.Web.Razor.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\System.Web.WebPages.Deployment.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\System.Web.WebPages.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\System.Web.WebPages.Razor.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\WebGrease.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\WebMatrix.Data.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\WebMatrix.WebData.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\EntityFramework.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\Newtonsoft.Json.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\System.Net.Http.Formatting.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\System.Web.Helpers.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\System.Web.Http.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\System.Web.Http.WebHost.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\System.Web.Mvc.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\System.Web.Razor.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\System.Web.WebPages.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\System.Web.WebPages.Deployment.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\System.Web.WebPages.Razor.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\WebMatrix.Data.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\WebMatrix.WebData.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.AspNet.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.Core.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.OAuth.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.OpenId.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\fr\EntityFramework.resources.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\fr\System.Net.Http.Formatting.resources.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\fr\System.Web.Helpers.resources.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\fr\System.Web.Http.resources.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\fr\System.Web.Http.WebHost.resources.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\fr\System.Web.Mvc.resources.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\fr\System.Web.Optimization.resources.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\fr\System.Web.Razor.resources.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\fr\System.Web.WebPages.resources.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\fr\System.Web.WebPages.Deployment.resources.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\fr\System.Web.WebPages.Razor.resources.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\fr\WebMatrix.Data.resources.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\fr\Microsoft.Web.WebPages.OAuth.resources.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\bin\fr\WebMatrix.WebData.resources.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\obj\Debug\TEMPLATE.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\obj\Debug\TEMPLATE.pdb
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\TEMPLATE\TEMPLATE\obj\Debug\TEMPLATE.csprojResolveAssemblyReference.cache
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\TEMPLATE.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\TEMPLATE.pdb
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\Antlr3.Runtime.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\DotNetOpenAuth.AspNet.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\DotNetOpenAuth.Core.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\DotNetOpenAuth.OAuth.Consumer.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\DotNetOpenAuth.OAuth.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\DotNetOpenAuth.OpenId.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\DotNetOpenAuth.OpenId.RelyingParty.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\EntityFramework.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\Microsoft.Web.Infrastructure.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\Microsoft.Web.WebPages.OAuth.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\Newtonsoft.Json.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\System.Net.Http.Formatting.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\System.Web.Helpers.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\System.Web.Http.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\System.Web.Http.WebHost.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\System.Web.Mvc.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\System.Web.Optimization.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\System.Web.Razor.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\System.Web.WebPages.Deployment.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\System.Web.WebPages.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\System.Web.WebPages.Razor.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\WebGrease.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\WebMatrix.Data.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\WebMatrix.WebData.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\EntityFramework.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\Newtonsoft.Json.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\System.Net.Http.Formatting.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\System.Web.Helpers.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\System.Web.Http.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\System.Web.Http.WebHost.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\System.Web.Mvc.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\System.Web.Razor.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\System.Web.WebPages.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\System.Web.WebPages.Deployment.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\System.Web.WebPages.Razor.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\WebMatrix.Data.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\Microsoft.Web.WebPages.OAuth.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\WebMatrix.WebData.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\DotNetOpenAuth.AspNet.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\DotNetOpenAuth.Core.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\DotNetOpenAuth.OAuth.Consumer.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\DotNetOpenAuth.OAuth.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\DotNetOpenAuth.OpenId.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\DotNetOpenAuth.OpenId.RelyingParty.xml
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\fr\EntityFramework.resources.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\fr\System.Net.Http.Formatting.resources.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\fr\System.Web.Helpers.resources.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\fr\System.Web.Http.resources.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\fr\System.Web.Http.WebHost.resources.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\fr\System.Web.Mvc.resources.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\fr\System.Web.Optimization.resources.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\fr\System.Web.Razor.resources.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\fr\System.Web.WebPages.resources.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\fr\System.Web.WebPages.Deployment.resources.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\fr\System.Web.WebPages.Razor.resources.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\fr\WebMatrix.Data.resources.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\fr\Microsoft.Web.WebPages.OAuth.resources.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\bin\fr\WebMatrix.WebData.resources.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\obj\Debug\TEMPLATE.csprojResolveAssemblyReference.cache
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\obj\Debug\TEMPLATE.dll
+D:\claudine\Documents\crdl\NDAYISABA_Claudine\WebAppicationRecolte\TEMPLATE\obj\Debug\TEMPLATE.pdb

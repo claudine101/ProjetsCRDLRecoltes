@@ -1,0 +1,123 @@
+﻿
+@{
+    ViewBag.Title = "_SidebarMenu";
+}
+<div class="sidebar sidebar-style-2" style="background-color:#2B0341">			
+<div class="sidebar-wrapper scrollbar scrollbar-inner">
+	<div class="sidebar-content">
+		<div class="user">
+           
+            <div class="profile-usertitle">
+				<div class="profile-usertitle-name"><strong><h1 style="color:blue">@Session["username"]</h1> </strong></div>
+				
+				<div class="profile-usertitle-status"><span class="indicator label-success"></span><i class="fa fa-circle"style="color:green"></i>&emsp;En ligne</div>
+           </div>
+			<div class="avatar-sm float-left mr-2"></div>
+			
+		</div>
+        @{
+          var pageName = ViewContext.RouteData.Values["controller"].ToString();
+        }
+        <ul class="nav nav-primary">
+            <li class="nav-item   active ">
+                <a href="@Url.Action("Dashboard","ClientStation")">
+                    <i class="fa fa-dashboard"style="font-size:24px;color:blue"></i>
+                    <p>Dashboard</p>
+                </a>
+
+            </li>
+            <li class="nav-item  @(pageName == "clientStation" ? "active" : "")">
+                <a href="@Url.Action("Index","clientStation")">
+                    <i class="fa fa-female"style="font-size:36px;color:blue"></i>
+                    <p>Clients</p>
+                </a>
+            </li>
+            
+            <li class="nav-item  @(pageName == "RecolteStation" ? "active" : "")">
+                <a data-toggle="collapse" href="#forms">
+                    <i class="fa fa-balance-scale" style="font-size:24px;color:blue"></i>
+                    <p>Statistique et rapport</p>
+                    <span class="caret"></span>
+                </a>
+                <div class="collapse" id="forms">
+                    <ul class="nav nav-collapse">
+                        
+                        <li  @(pageName == "RecolteStation" ? "active" : "")>
+                            <a href="@Url.Action("Indexe","RecolteStation")">
+                               <span class="sub-item">
+                                    Rapport des recoltes  qui existe dans 
+                                    @Session["station"]
+                               </span>
+                            </a>
+                         </li>
+                        <li  @(pageName == "RecolteStation" ? "active" : "")>
+                            <a href="@Url.Action("Index","RecolteStation")">
+                               <span class="sub-item">
+                                   Rapport des serise  qui existe dans 
+                                    @Session["station"]
+                               </span>
+                            </a>
+                         </li>
+                         <li  @(pageName == "RecolteStation" ? "active" : "")>
+                            <a href="@Url.Action("RapportQualite","RecolteStation")">
+                               <span class="sub-item">
+                                    Statistique des serise qui existe dans 
+                                    @Session["station"]
+                               </span>
+                            </a>
+                         </li>
+                         <li >
+                            <a href="@Url.Action("RapportClient","RecolteStation")">
+                               <span class="sub-item">
+                                    Statistique des client qui amene la recolte  dans 
+                                    @Session["station"]
+                               </span>
+                            </a>
+                         </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item  @(pageName == "QualiteStation" ? "active" : "")">
+                <a href="@Url.Action("Index","QualiteStation")">
+                    <i class="fas fa-gifts"style="font-size:24px;color:blue"></i>
+                    <p>Qualite</p>
+                </a>
+            </li>
+            <li class="nav-item  @(pageName == "HistoriquePrixStation" ? "active" : "")">
+                <a href="@Url.Action("Index","HistoriquePrixStation")">
+                    <i class="fas fa-ruler-vertical" style="font-size:24px;color:blue"></i>
+                    <p>Prix</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="@Url.Action("Logout","Dashboard")">
+                    <i class="fas fa-power-off" style="font-size:24px;color:red"></i>
+                    <p> Se déconnecter</p>
+                </a>
+            </li>
+        </ul>
+          
+	</div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

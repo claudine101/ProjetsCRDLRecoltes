@@ -1,0 +1,162 @@
+﻿@model IEnumerable<TEMPLATE.Models.recoltModel>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Layouts/_Default.cshtml";
+}
+<div class="main-panel">
+ <div class="container">
+
+    <div class="panel-header bg-primary-gradient">
+       <div class="page-inner py-3">
+          <div class="d-flex align-items-left align-items-md-center flex-column flex-md-row">
+             <div>
+              <h2 class="text-white pb-2 fw-bold">
+                Les stations de lavage actifs et inactifs @ViewBag.nomprovince
+            </h2>
+        </div>
+        <div class="ml-md-auto py-2 py-md-0">
+         <!-- PAGE-HEADER -->
+         <div class="page-header">
+            <ol class="breadcrumb">
+               <li class="breadcrumb-item">
+                  <a href="#">Home</a>
+              </li>
+              <li class="breadcrumb-item">
+                <a href="#">Les stations de lavage actifs et inactifs</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              Liste 
+          </li>
+      </ol>
+  </div>
+  <!-- PAGE-HEADER END -->
+</div>
+</div>
+</div>
+</div>
+ <div class="card-body rec-pat"> 
+        @{
+            IEnumerable<TEMPLATE.Models.recoltModel> stations = ViewData["station"] as IEnumerable<TEMPLATE.Models.recoltModel>;
+            IEnumerable<TEMPLATE.Models.historique_station> historiques = ViewData["historique"] as IEnumerable<TEMPLATE.Models.historique_station>;
+        }
+        @{
+            List<int> IDassocition = new List<int>();
+        }
+        @foreach (TEMPLATE.Models.historique_station iteme in historiques)
+        {
+            IDassocition.Add(iteme.ID_station);
+        }
+        <div class="container-fluid">
+             <H1 style="color:blue">AFFICHER PAR:</H1>
+              <div class="container-fluid " >  
+                   @using (Html.BeginForm("Index", "StationLavage", FormMethod.Post))
+                   {
+                      <div class="row">
+                            <article  class="col-xs-12 col-sm-12 col-md-7 col-lg-4">
+                                <h2 style="color:blue">Provinces</h2>
+                                @Html.DropDownList("ID_provinceStation", null, "Choisir la province", htmlAttributes: new { @class = "form-control " })      
+                            </article>
+                            <article  class="col-xs-12 col-sm-12 col-md-6 col-lg-4">
+                                <h2 style="color:blue">Afficher</h2>
+                                 <input type="submit" name="submit" value="Affiche"  class="btn btn-info"/>  
+                            </article>
+                      </div>  
+                   }
+              </div> 
+              <div class="table-responsive" style="margin-top:40px">
+             <table class="table table-striped  table-bordered  " id="mytable1"  style="width:100%">
+                <thead>
+                <tr style="background-color:darkturquoise">
+                    <th>NO</th>
+                    <th>NOM </th>
+                    <th>TEL</th>
+                    <th>DATE DE CREATION</th>
+                    <th>ZONE</th>
+                    <th>COMMUNE</th>
+                    <th>PROVINCE</th>
+                    <th>ETAT</th>
+                </tr>
+                    </thead>
+                @{ int NO=0;}
+                <tbody >
+                @foreach (TEMPLATE.Models.recoltModel item in stations)
+                {
+                        NO=NO+1;
+                        if (IDassocition.Contains(item.ID_station) == true)
+                        {
+                          <tr>
+                                <td>
+                                    @NO
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NOM_station)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.tel)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.date)
+                                </td>
+                                
+                              <td>
+                                    @Html.DisplayFor(modelItem => item.zone)
+                                </td>
+                              <td>
+                                    @Html.DisplayFor(modelItem => item.commune)
+                                </td>
+                              <td>
+                                    @Html.DisplayFor(modelItem => item.province)
+                                </td>
+                                <td>
+                                    Inactifs
+                                </td>
+                                
+                            </tr>
+                                
+                        }
+                        else
+                        {
+                             <tr>
+                                <td>
+                                    @NO
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.NOM_station)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.tel)
+                                </td>
+                                <td>
+                                    @Html.DisplayFor(modelItem => item.date)
+                                </td>
+                                
+                              <td>
+                                    @Html.DisplayFor(modelItem => item.zone)
+                                </td>
+                              <td>
+                                    @Html.DisplayFor(modelItem => item.commune)
+                                </td>
+                              <td>
+                                    @Html.DisplayFor(modelItem => item.province)
+                                </td>
+                                <td>
+                                    Inactifs
+                                </td>
+                                
+                            </tr>
+                          
+                        }
+                    }
+                    </tbody>
+                </table>
+        </div>
+           </div> 
+
+    </div>
+ </div>
+     @section scripts
+    {
+    <script src="~/Scripts/tables1.js"></script>
+}
+
+

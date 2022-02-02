@@ -1,0 +1,72 @@
+﻿
+@model TEMPLATE.Models.employe_station_lavage
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>employe_station_lavage</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ID_employ)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ID_employ)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CNI)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CNI)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.station_lavage.NOM_station)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.station_lavage.NOM_station)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NOM_employe)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NOM_employe)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PRENOM_employe)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PRENOM_employe)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TEL_employe)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TEL_employe)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EMAIL_employe)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EMAIL_employe)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Statut)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Statut)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

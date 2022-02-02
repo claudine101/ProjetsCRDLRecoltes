@@ -1,0 +1,74 @@
+﻿@model TEMPLATE.Models.employe_association
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>employe_association</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ID_employe)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ID_employe)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CNI)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CNI)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.association.NOM_association)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.association.NOM_association)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NOM_employe)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NOM_employe)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PRENOM_employe)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PRENOM_employe)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TEL_employe)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TEL_employe)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.EMAIL_employe)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.EMAIL_employe)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Statut)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Statut)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

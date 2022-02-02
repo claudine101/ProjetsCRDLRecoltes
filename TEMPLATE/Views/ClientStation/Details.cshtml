@@ -1,0 +1,82 @@
+﻿@model TEMPLATE.Models.client
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2
+<fieldset>
+    <legend>client</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ID_client)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ID_client)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.CNI)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.CNI)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.NOM_client)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.NOM_client)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.PRENOM_client)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.PRENOM_client)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.TEL_client)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.TEL_client)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.colline.NOM_colline)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.colline.NOM_colline)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.association.NOM_association)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.association.NOM_association)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DATE_insertion)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DATE_insertion)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+
+
+
+
+
+
+
+
+
+
+

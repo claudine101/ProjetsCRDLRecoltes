@@ -1,0 +1,201 @@
+﻿@{
+    ViewBag.Title = "_SidebarMenu";
+}
+<div class="sidebar sidebar-style-2" style="background-color:#2B0341">			
+<div class="sidebar-wrapper scrollbar scrollbar-inner">
+	<div class="sidebar-content">
+		<div class="user">
+           <div class="profile-usertitle">
+				<div class="profile-usertitle-name"><strong><h1 style="color:blue">@Session["username"]</h1> </strong></div>
+               
+				<div class="profile-usertitle-status"><span class="indicator label-success"></span><i class="fa fa-circle"style="color:green"></i>&emsp;En ligne</div>
+           </div>
+			<div class="avatar-sm float-left mr-2">
+				
+			</div>
+			<div class="info">	
+			</div>
+		</div>
+        @{
+          var pageName = ViewContext.RouteData.Values["controller"].ToString();
+        }
+          <ul class="nav nav-primary">
+            <li class="nav-item  @(pageName == "Dashboard" ? "active" : "")">
+                <a href="@Url.Action("Index","Dashboard")">
+                    <i class="fa fa-dashboard"style="font-size:24px;color:blue"></i>
+                    <p>Dashboard</p>
+                </a>
+            </li>
+            <li class="nav-item  @(pageName == "association"||pageName == "HistoriqueAssoction" ? "active" : "")">
+                <a data-toggle="collapse" href="#forms">
+                    <i class="fas fa-users"style="font-size:24px;color:blue"></i>
+                    <p>Associations</p>
+                    <span class="caret"></span>
+                </a>
+                <div class="collapse" id="forms">
+                    <ul class="nav nav-collapse">
+                        <li>
+                            <a href="@Url.Action("Index","association")">
+                                <span class="sub-item">Tous les deux</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Indexe","association")">
+                                <span class="sub-item">Associations actifs</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Index","HistoriqueAssoction")">
+                                <span class="sub-item">Associations inactifs</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("RapportQuantite","association")">
+                                <span class="sub-item">Rapport de quantite par chaque associations</span>
+                            </a>
+                        </li>
+                         <li>
+                            <a href="@Url.Action("RapportClient","association")">
+                                <span class="sub-item">Rapport de membre  par chaque associations</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li class="nav-item  @(pageName == "client" ? "active" : "")">
+                <a href="@Url.Action("Index","client")">
+                    <i class="fa fa-female"style="font-size:36px;color:blue"></i>
+
+                    <p>Clients</p>
+                </a>
+            </li>
+            <li class="nav-item  @(pageName == "StationLavage"||pageName == "historiqueStation" ? "active" : "")">       
+                <a data-toggle="collapse" href="#collapseExample">
+                    <i class="fa fa-university" style="font-size:30px;color:blue"></i>
+                    <p>Stations de lavage</p>
+                    <span class="caret"></span>
+                </a>
+                <div class="collapse" id="collapseExample">
+                    <ul class="nav nav-collapse">
+                        <li>
+                            <a href="@Url.Action("Index","StationLavage")">
+                                <span class="sub-item">Tous les deux</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Indexe","StationLavage")">
+                                <span class="sub-item">Stations de lavage actifs</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Index","historiqueStation")">
+                                <span class="sub-item">Stations de lavage inactifs</span>
+                            </a>
+                        </li>
+                         <li>
+                            <a href="@Url.Action("RapportQuantite","StationLavage")">
+                                <span class="sub-item">Rapport de quantite par chaque station de lavage</span>
+                            </a>
+                        </li>
+                         <li>
+                            <a href="@Url.Action("RapportClient","StationLavage")">
+                                <span class="sub-item">Rapport de membre  par chaque station de lavage</span>
+                            </a>
+                        </li>
+                        
+                    </ul>
+                </div>
+            </li>
+
+            <li class="nav-item  @(pageName == "recolte" ? "active" : "")">
+
+                <a href="@Url.Action("Index","recolte")">
+                    <i class="fa fa-balance-scale" style="font-size:24px;color:blue"></i>
+                    <p>Recoltes</p>
+                </a>
+            </li>
+
+            <li class="nav-item  @(pageName == "EmployeAssociation"||pageName == "EmployeStation" ? "active" : "")">
+                <a data-toggle="collapse" href="#tables">
+                    <i class="fas fa-people-carry"style="font-size:30px;color:blue"></i>
+                    <p>Employes</p>
+                    <span class="caret"></span>
+                </a>
+                <div class="collapse" id="tables">
+                    <ul class="nav nav-collapse">
+                        <li >
+                            <a href="@Url.Action("Index","EmployeAssociation")">
+                                <span class="sub-item">Employes des associtions</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="@Url.Action("Index","EmployeStation")">
+                                <span class="sub-item">Employes des station de lavage</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="nav-item  @(pageName == "qualite" ? "active" : "")">
+                <a href="@Url.Action("Index","qualite")">
+                    <i class="fas fa-gifts"style="font-size:24px;color:blue"></i>
+                    <p>Qualite</p>
+                </a>
+            </li>
+            <li class="nav-item  @(pageName == "HistoriquePrix" ? "active" : "")">
+                <a href="@Url.Action("Index","HistoriquePrix")">
+                   <i class="fas fa-ruler-vertical" style="font-size:24px;color:blue"></i>
+                    <p>Prix</p>
+                </a>
+            </li>
+            <li class="nav-item  @(pageName == "Utilisateur" ? "active" : "")">
+                <a href="@Url.Action("Index","Utilisateur")">
+                    <i class="fa fa-user" style="font-size:24px;color:blue"></i>
+                    <p>Utilisateurs</p>
+                </a>
+            </li>
+            <li class="nav-item  @(pageName == "Profiles" ? "active" : "")">
+                <a href="@Url.Action("Index","Profiles")">
+                    <i class="fas fa-info-circle"style="font-size:30px;color:blue"></i>
+                    <p>Profile</p>
+                </a>
+            </li>
+             <li class="nav-item  @(pageName == "Province" ? "active" : "")">
+
+                <a href="@Url.Action("Index","Province")">
+                    <i class="fas fa-home"style="font-size:30px;color:blue"></i>
+                    <p>Provinces</p>
+                </a>
+            </li>
+             <li class="nav-item  @(pageName == "Commune" ? "active" : "")">
+
+                <a href="@Url.Action("Index","Commune")">
+                    <i class="fas fa-home"style="font-size:28px;color:blue"></i>
+                    <p>Communes</p>
+                </a>
+            </li>
+             <li class="nav-item  @(pageName == "Zone" ? "active" : "")">
+
+                <a href="@Url.Action("Index","Zone")">
+                    <i class="fas fa-home"style="font-size:26px;color:blue"></i>
+                    <p>Zones</p>
+                </a>
+            </li>
+             <li class="nav-item  @(pageName == "Colline" ? "active" : "")">
+
+                <a href="@Url.Action("Index","Colline")">
+                    <i class="fas fa-home"style="font-size:24px;color:blue"></i>
+                    <p>Collines</p>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="@Url.Action("Logout","Dashboard")">
+                    <i class="fas fa-power-off" style="font-size:24px;color:red"></i>
+                    <p> Se déconnecter</p>
+                </a>
+            </li>
+        </ul>  
+	</div>
+</div>
+</div>
