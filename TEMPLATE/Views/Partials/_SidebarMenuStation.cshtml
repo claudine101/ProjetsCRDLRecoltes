@@ -19,8 +19,8 @@
           var pageName = ViewContext.RouteData.Values["controller"].ToString();
         }
         <ul class="nav nav-primary">
-            <li class="nav-item   active ">
-                <a href="@Url.Action("Dashboard","ClientStation")">
+            <li class="nav-item   @(pageName == "DashboardClientAssociation" ? "active" : "")">
+                <a href="@Url.Action("Index","DashboardClientAssociation")">
                     <i class="fa fa-dashboard"style="font-size:24px;color:blue"></i>
                     <p>Dashboard</p>
                 </a>
@@ -29,11 +29,16 @@
             <li class="nav-item  @(pageName == "clientStation" ? "active" : "")">
                 <a href="@Url.Action("Index","clientStation")">
                     <i class="fa fa-female"style="font-size:36px;color:blue"></i>
-                    <p>Clients</p>
+                    <p>Membres</p>
                 </a>
             </li>
-            
             <li class="nav-item  @(pageName == "RecolteStation" ? "active" : "")">
+                <a href="@Url.Action("Indexe","RecolteStation")">
+                    <i class="fa fa-balance-scale" style="font-size:24px;color:blue"></i>
+                    <p>Recoltes</p>
+                </a>
+            </li>
+            <li class="nav-item ">
                 <a data-toggle="collapse" href="#forms">
                     <i class="fa fa-balance-scale" style="font-size:24px;color:blue"></i>
                     <p>Statistique et rapport</p>
@@ -41,27 +46,10 @@
                 </a>
                 <div class="collapse" id="forms">
                     <ul class="nav nav-collapse">
-                        
-                        <li  @(pageName == "RecolteStation" ? "active" : "")>
-                            <a href="@Url.Action("Indexe","RecolteStation")">
-                               <span class="sub-item">
-                                    Rapport des recoltes  qui existe dans 
-                                    @Session["station"]
-                               </span>
-                            </a>
-                         </li>
-                        <li  @(pageName == "RecolteStation" ? "active" : "")>
-                            <a href="@Url.Action("Index","RecolteStation")">
-                               <span class="sub-item">
-                                   Rapport des serise  qui existe dans 
-                                    @Session["station"]
-                               </span>
-                            </a>
-                         </li>
                          <li  @(pageName == "RecolteStation" ? "active" : "")>
                             <a href="@Url.Action("RapportQualite","RecolteStation")">
                                <span class="sub-item">
-                                    Statistique des serise qui existe dans 
+                                    Statistique  et rapport des serise qui existe dans 
                                     @Session["station"]
                                </span>
                             </a>
@@ -69,7 +57,7 @@
                          <li >
                             <a href="@Url.Action("RapportClient","RecolteStation")">
                                <span class="sub-item">
-                                    Statistique des client qui amene la recolte  dans 
+                                    Statistique et rapport des client qui amene la recolte  dans 
                                     @Session["station"]
                                </span>
                             </a>
@@ -100,7 +88,6 @@
 	</div>
 </div>
 </div>
-
 
 
 
